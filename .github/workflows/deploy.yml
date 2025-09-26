@@ -1,8 +1,7 @@
 name: Deploy to Development Server
 
 on:
-  push:
-    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -19,13 +18,8 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.DEV_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Build Vue project
+      - name: Deploy to server
         run: |
-          npm ci
-          npm run build
-
-      - name: Deploy build to server
-        run: |
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa" \
-            ./dist/ \
-            ${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }}:${{ vars.DEV_PATH }}
+          ssh -i ~/.ssh/id_rsa \
+            ${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }} \
+            "cd ${{ vars.DEV_PATH }} && git pull origin main"
