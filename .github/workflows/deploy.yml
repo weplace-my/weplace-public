@@ -24,4 +24,4 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_rsa \
             ${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }} \
-            "cd ${{ vars.DEV_PATH }} && git pull origin main"
+            "cd ${{ vars.DEV_PATH }} && git fetch origin && git reset --hard origin/main"
