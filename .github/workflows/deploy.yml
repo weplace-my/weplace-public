@@ -1,18 +1,16 @@
-name: Deploy to Development Server
+name: Deploy
 
 on:
   push:
     branches:
-      - main
+      - master
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -20,8 +18,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.DEV_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to server
+      - name: Deploy
         run: |
-          ssh -i ~/.ssh/id_rsa \
-            ${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }} \
-            "cd ${{ vars.DEV_PATH }} && git fetch origin && git reset --hard origin/main"
+          ssh -i ~/.ssh/id_rsa ${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }} "
+            cd ${{ vars.DEV_PATH }} &&
+            git pull &&
+            sudo systemctl reload nginx
+          "
+
