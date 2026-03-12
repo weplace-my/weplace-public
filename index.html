@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html data-bs-theme="light" lang="en-US" dir="ltr">
 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weplace | Connect Your Neighbourhood</title>
+
+    <!-- ===============================================--><!--    Document Title--><!-- ===============================================-->
+    <title>brainwaveio | Landing Page Template</title>
+
+    <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
@@ -13,683 +17,491 @@
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
-    <link href="assets/css/theme.css" rel="stylesheet" />
+
+    <!-- ===============================================--><!--    Stylesheets--><!-- ===============================================-->
+    <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet">
+    <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   </head>
 
-
   <body>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
+    <!-- ===============================================--><!--    Main Content--><!-- ===============================================-->
     <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="index.html">
-            <div class="text-success">Weplace</div>
-          </a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">Home</a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#features">Key Features</a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#pricing">Pricing</a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#testimonial">Testimonial</a></li>
-              <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium" href="#faq">FAQ</a></li>
-            </ul>
-            <form class="ps-lg-5">
-              <button class="btn btn-lg btn-primary rounded-pill order-0" type="submit">Download Now</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <section class="py-0" id="home">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/hero-bg.png);background-position:bottom;background-size:cover;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container position-relative">
-          <div class="row align-items-center py-8">
-            <div class="col-md-5 col-lg-6 order-md-1 text-center text-md-end"><img class="img-fluid" src="assets/img/illustrations/mobile.png" width="350" alt="" /></div>
-            <div class="col-md-7 col-lg-6 text-center text-md-start"><span class="badge bg-light rounded-pill text-dark align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-75 w-sm-50 w-md-75 w-xl-50 mb-3">Connecting Communities Together<img class="img-fluid float-start me-3" src="assets/img/illustrations/arrow-right.png" alt=""/></span>
-              <h1 class="mb-4 display-3 fw-bold lh-sm">Shop from your <br class="d-block d-lg-none d-xl-block" />neighbours, sell from home</h1>
-              <p class="mt-3 mb-4 fs-1">Zero delivery cost. Better prices. <br class="d-none d-lg-block" />Your neighbourhood marketplace that connects communities.</p><a class="btn btn-lg btn-primary rounded-pill hover-top" href="#" role="button">Download App</a><a class="btn btn-link ps-md-4" href="#" role="button">Learn More</a>
+      <div class="content">
+        <nav class="navbar navbar-expand-md fixed-top" id="navbar" data-navbar-soft-on-scroll="data-navbar-soft-on-scroll">
+          <div class="container-fluid px-0"><a href="/"><img class="navbar-brand w-75 d-md-none" src="assets/img/logos/logo.svg" alt="logo" /></a><a class="navbar-brand fw-bold d-none d-md-block" href="/">Brainwave.io</a><a class="btn btn-primary btn-sm ms-md-x1 mt-lg-0 order-md-1 ms-auto" href="#">Get Started Now </a><button class="navbar-toggler border-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbar-content" data-navbar-collapse="data-navbar-collapse">
+              <ul class="navbar-nav gap-md-2 gap-lg-3 pt-x1 pb-1 pt-md-0 pb-md-0" data-navbar-nav="data-navbar-nav">
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#home">Home</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#about">About us</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#service">Support</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#pricing">Pricing</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#contact">Contact</a></li>
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-7 bg-white">
-        <div class="container">
-          <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-              <h2 class="fw-bold display-4 mb-3">Welcome to Weplace!</h2>
-              <p class="lead mb-4">Weplace is your neighborhood’s social app, designed to help you connect with people nearby and make everyday life better. Whether you want to buy or sell, share news, join local events, or lend a helping hand, Weplace brings your community together—all in one place.</p>
-            </div>
-          </div>
-          <div class="row text-center mb-5">
-            <div class="col-md-4 mb-4">
-              <div class="p-4 h-100 shadow rounded-3 bg-light">
-                <h5 class="fw-bold mb-2">Shop & Sell Locally</h5>
-                <p class="mb-0">Discover great deals or sell your items easily to people around you.</p>
+        </nav>
+        <div data-bs-target="#navbar" data-bs-spy="scroll" tabindex="0">
+          <section class="hero-section overflow-hidden position-relative z-0 mb-4 mb-lg-0" id="home">
+            <div class="hero-background">
+              <div class="container">
+                <div class="row gy-4 gy-md-8 pt-9 pt-lg-0">
+                  <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-3 mt-lg-0"> Manage your remote <span class="text-nowrap">team work</span></h1>
+                    <p class="fs-8 text-white mb-3 mb-lg-4 lh-lg">With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start"><a class="btn btn-primary btn-lg lh-xl mb-4 mb-md-5 mb-lg-7" href="#!">Explore more</a></div>
+                    <p class="mb-x1 fs-10 button-text text-uppercase fw-bold lh-base text-300">Download our app</p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 position-relative z-2"><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!"> <img class="img-fluid" src="assets/img/logos/App_Store.webp" alt="assets/img/logos/App_Store.webp" /></a><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!"> <img class="img-fluid" src="assets/img/logos/Play_Store.webp" alt="assets/img/logos/Play_Store.webp" /></a></div>
+                  </div>
+                  <div class="col-lg-6 position-lg-relative">
+                    <div class="position-lg-absolute z-1 text-center"><img class="img-fluid chat-image" src="assets/img/Hero/Frame.webp" alt="" />
+                      <div class="position-absolute dots d-none d-md-block"> <img class="img-fluid w-50 w-lg-75" src="assets/img/illustrations/Dots.webp" alt="" /></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
-              <div class="p-4 h-100 shadow rounded-3 bg-light">
-                <h5 class="fw-bold mb-2">Stay Informed</h5>
-                <p class="mb-0">Get the latest updates and news from your neighborhood.</p>
+            <div class="position-absolute bottom-0 start-0 end-0 z-1"><img class="wave mb-md-n2" src="assets/img/illustrations/Wave.svg" alt="" />
+              <div class="bg-white py-2 py-md-5"></div>
+            </div>
+          </section>
+          <section class="container border-bottom mb-8 mb-lg-10">
+            <div class="row pb-6 pb-lg-8 g-3 g-lg-8 px-3">
+              <div class="col-12 col-md-4">
+                <h2 class="fs-3 fw-bold lh-sm mb-2 text-center" data-countup='{"endValue":6,"prefix":"0"}'>0</h2>
+                <h6 class="fs-8 fw-normal lh-lg mb-0 opacity-70 text-center">Offices are available on different countries</h6>
+              </div>
+              <div class="col-12 col-md-4">
+                <h2 class="fs-3 fw-bold lh-sm mb-2 text-center" data-countup='{"endValue":238}'>0</h2>
+                <h6 class="opacity-70 fs-8 fw-normal lh-lg mb-0 text-center">Seats are available right now with support</h6>
+              </div>
+              <div class="col-12 col-md-4">
+                <h2 class="fs-3 fw-bold lh-sm mb-2 text-center" data-countup='{"endValue":1395,"autoIncreasing":true}'>0</h2>
+                <h5 class="opacity-70 fs-8 fw-normal lh-lg mb-0 text-center">People are using our co-work spaces right now</h5>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
-              <div class="p-4 h-100 shadow rounded-3 bg-light">
-                <h5 class="fw-bold mb-2">Join Events</h5>
-                <p class="mb-0">Find and participate in fun activities and gatherings close to home.</p>
+          </section>
+          <section class="container mb-8 mb-lg-13" id="about">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-6 col-xl-7"><img class="img-fluid" src="assets/img/Hero/Team.webp" alt="" /></div>
+              <div class="col-12 col-lg-6 col-xl-5">
+                <div class="row justify-content-center justify-content-lg-start">
+                  <div class="col-sm-10 col-md-8 col-lg-12">
+                    <h2 class="fs-4 fs-lg-3 fw-bold mb-2 text-center text-lg-start">Collaborate with team members.</h2>
+                    <p class="fs-8 mb-4 mb-lg-5 lh-lg text-center text-lg-start fw-normal">We share common trends and strategies for improving your rental income</p>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-x1 mb-lg-3">
+                      <h5 class="fs-8 fw-bold lh-lg mb-1">Project Based Groups </h5>
+                      <p class="mb-0 lh-xl">You can use this module to monitor ongoing projects seamlessly.</p>
+                    </div>
+                    <div>
+                      <h5 class="fs-8 fw-bold lh-lg mb-1"> Unlimited Video Meetings</h5>
+                      <p class="lh-xl mb-0">Conduct unlimited video meetings with us for better business operations.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
-              <div class="p-4 h-100 shadow rounded-3 bg-light">
-                <h5 class="fw-bold mb-2">Help & Be Helped</h5>
-                <p class="mb-0">Offer support or ask for help from friendly neighbors.</p>
+          </section>
+          <section class="container mb-8 mb-lg-13">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-6 col-xl-5 order-lg-1"><img class="img-fluid" src="assets/img/Hero/Collaborator.webp" alt="" /></div>
+              <div class="col-12 col-lg-6 col-xl-7">
+                <div class="row justify-content-center justify-content-lg-start">
+                  <div class="col-sm-10 col-md-8 col-lg-11">
+                    <h2 class="fs-4 fs-lg-3 fw-bold mb-2 text-center text-lg-start"> Organize remote team fast & easily.</h2>
+                    <p class="fs-8 mb-4 mb-lg-5 lh-lg text-center text-lg-start fw-normal">Organizing and managing your remote teams has never been this easy!</p>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-x1 mb-lg-3">
+                      <h5 class="fs-8 fw-bold lh-lg mb-1">Create Unlimited Teams </h5>
+                      <p class="b-0 lh-xl">Create unlimited teams and boost productivity with efficient collaboration.</p>
+                    </div>
+                    <div>
+                      <h5 class="fs-8 fw-bold lh-lg mb-1"> Hasslefree Chat with Everyone</h5>
+                      <p class="lh-xl mb-0">With unique and simple UIs, keep yourself connected across all the teams.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
-              <div class="p-4 h-100 shadow rounded-3 bg-light">
-                <h5 class="fw-bold mb-2">Instant Messaging</h5>
-                <p class="mb-0">Chat directly with people nearby and build real connections.</p>
+          </section>
+          <section class="container mb-8 mb-lg-11">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-7">
+                <h3 class="fs-4 fs-lg-3 fw-bold text-center mb-2 mb-lg-x1"> How does <span class="text-nowrap">it work?</span></h3>
+                <p class="fs-8 mb-7 mb-lg-8 text-center lh-lg">You can use this as it is or tweak it as you seem necessary. you seem necessary.</p>
+              </div>
+              <div class="col-12">
+                <div class="row g-sm-2 g-lg-3 align-items-center timeline">
+                  <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-center gap-2 gap-sm-x1 gap-md-4 gap-lg-0">
+                    <div class="timeline-step-1 w-25 w-lg-100 mb-4 mb-lg-5 mb-xl-6">
+                      <div class="timeline-item d-flex justify-content-center">
+                        <div class="timeline-icon bg-primary rounded-circle d-flex justify-content-center align-items-center"><span class="fs-6 fs-lg-5 fs-xl-4 text-white"> 1</span></div>
+                      </div>
+                    </div>
+                    <div class="py-1 py-lg-0 px-lg-5 w-75 w-sm-50 w-lg-100 timeline-content">
+                      <h6 class="fs-8 fw-bold text-lg-center lh-lg mb-2">Install App</h6>
+                      <p class="text-lg-center lh-xl mb-0">Install the app with a single click.</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-center gap-2 gap-sm-x1 gap-md-4 gap-lg-0">
+                    <div class="timeline-step-2 w-25 w-lg-100 mb-4 mb-lg-5 mb-xl-6">
+                      <div class="timeline-item d-flex justify-content-center">
+                        <div class="timeline-icon bg-success rounded-circle d-flex justify-content-center align-items-center"><span class="fs-6 fs-lg-5 fs-xl-4 text-white"> 2</span></div>
+                      </div>
+                    </div>
+                    <div class="py-1 py-lg-0 px-lg-5 w-75 w-sm-50 w-lg-100 timeline-content">
+                      <h6 class="fs-8 fw-bold text-lg-center lh-lg mb-2">Add Team Members</h6>
+                      <p class="text-lg-center lh-xl mb-0">Start with adding team members to <span class="text-nowrap">your channels. </span></p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-center gap-2 gap-sm-x1 gap-md-4 gap-lg-0">
+                    <div class="timeline-step-3 position-relative z-1 overflow-hidden w-25 w-lg-100 mb-4 mb-lg-5 mb-xl-6">
+                      <div class="timeline-item d-flex justify-content-center">
+                        <div class="timeline-icon bg-info rounded-circle d-flex justify-content-center align-items-center"><span class="fs-6 fs-lg-5 fs-xl-4 text-white"> 3</span></div>
+                      </div>
+                    </div>
+                    <div class="py-1 py-lg-0 px-lg-5 w-75 w-sm-50 w-lg-100 timeline-content">
+                      <h6 class="fs-8 fw-bold text-lg-center lh-lg mb-2">Start Rolling</h6>
+                      <p class="text-lg-center lh-xl mb-0">Start operating your business in a simpler way <span class="text-nowrap">and grow!</span></p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-              <h3 class="fw-bold mb-3">Our Mission</h3>
-              <p class="mb-4">Weplace is here to make your neighborhood friendlier, safer, and more connected. Join us and experience how easy it is to be part of a caring community!</p>
+          </section>
+          <section class="experience position-relative overflow-hidden" id="service">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="position-relative z-1 text-center mb-8 mb-lg-9 video-player-paused" data-video-player-container="data-video-player-container"><video class="w-100 h-100 rounded-4" src="assets/video/Tech_video.mp4" poster="assets/img/Hero/experiences.webp" type="video/mp4" data-video-player="data-video-player"></video>
+                    <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 rounded-4 bg-1100 object-cover" data-overlay="data-overlay"> </div><button class="btn play-button position-absolute justify-content-center align-items-center bg-white rounded-circle cursor-pointer" data-play-button="data-play-button"> <img class="play-icon w-25" src="assets/img/illustrations/play-solid.svg" alt="" data-play-icon="data-play-icon" /><img class="pause-icon w-25" src="assets/img/illustrations/pause-solid.svg" alt="" data-pause-icon="data-pause-icon" /></button>
+                    <div class="position-absolute dots d-none d-sm-block"><img class="img-fluid w-100" src="assets/img/illustrations/Dots.webp" alt="" /></div>
+                  </div>
+                </div>
+                <div class="col-md-8 col-lg-7">
+                  <h2 class="fs-4 fs-lg-3 fw-bold text-center text-white mb-5 mb-lg-9 lh-sm">We made this app to solve your problems.</h2>
+                </div>
+                <div class="col-12">
+                  <div class="row gy-4 g-md-3 pb-8 pb-lg-11 px-1">
+                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-start gap-2"><img src="assets/img/icons/roadmap.svg" alt="" />
+                      <div>
+                        <h5 class="fs-8 text-white lh-lg fw-bold">Unlimited Projects</h5>
+                        <p class="text-white text-opacity-50 lh-xl mb-0">Manage multiple projects at once and for seamless business operation.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-start gap-2"><img src="assets/img/icons/users-wm.svg" alt="" />
+                      <div>
+                        <h5 class="fs-8 text-white lh-lg fw-bold">Team Management</h5>
+                        <p class="text-white text-opacity-50 lh-xl mb-0">Manage your cross-functional teams better than ever with our easily manageable app.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-start gap-2"><img src="assets/img/icons/share-91.svg" alt="" />
+                      <div>
+                        <h5 class="fs-8 text-white lh-lg fw-bold">File Sharing</h5>
+                        <p class="text-white text-opacity-50 lh-xl mb-0">Easily share files where necessary and keep them safe with enhanced security and protection.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-start gap-2"><img src="assets/img/icons/video_meeting.svg" alt="" />
+                      <div>
+                        <h5 class="fs-8 text-white lh-lg fw-bold">Video Meeting</h5>
+                        <p class="text-white text-opacity-50 lh-xl mb-0">Conduct video meetings and keep records for further use with its cloud storage.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-start gap-2"><img src="assets/img/icons/opening-times.svg" alt="" />
+                      <div>
+                        <h5 class="fs-8 text-white lh-lg fw-bold">Time Tracking</h5>
+                        <p class="text-white text-opacity-50 lh-xl mb-0">Track time to ensure meeting all the deadlines and never lag behind managing multiple projects.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-start gap-2"><img src="assets/img/icons/card-favorite.svg" alt="" />
+                      <div>
+                        <h5 class="fs-8 text-white lh-lg fw-bold">Payment System</h5>
+                        <p class="text-white text-opacity-50 lh-xl mb-0">With its easy payment system create invoices and get paid all at the same place.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="card border-0 shadow-sm p-4">
-                <h4 class="fw-bold mb-3 text-success">The Power of a Local Marketplace</h4>
-                <ul class="list-unstyled mb-0">
-                  <li class="mb-2"><strong>Zero Cost:</strong> No extra fees—neighbors can buy and sell without hidden charges.</li>
-                  <li class="mb-2"><strong>Easy Delivery:</strong> Products are close by, so delivery is fast, simple, and often free.</li>
-                  <li class="mb-2"><strong>For Everyone:</strong> Sell homemade goods, business products, or even in bulk—everyone is welcome.</li>
-                  <li class="mb-2"><strong>Support Local Entrepreneurs:</strong> Weplace encourages people in your area to start and grow their own businesses.</li>
-                  <li><strong>Build Community:</strong> Buying and selling locally helps neighbors get to know each other and strengthens community bonds.</li>
+            <div class="position-absolute top-0 start-0 end-0">
+              <div class="bg-white py-3 py-md-9 py-xl-10"> </div><img class="wave" src="assets/img/illustrations/Wave_2.svg" alt="" />
+            </div>
+          </section>
+          <section class="bg-1100 mt-n1">
+            <div class="mx-auto text-center">
+              <hr class="horizontal-rule m-0 d-inline-block" />
+            </div>
+            <div class="container pb-8 pb-lg-10">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7">
+                  <h2 class="fs-6 fs-lg-5 fw-bold text-white text-center pt-7 pb-4 pt-lg-9 pb-lg-6 lh-lg"> <span class="underline"> 1,749 remote teams </span>have shared their experience with our app!</h2>
+                </div>
+                <div class="col-12 mb-4 mb-lg-6">
+                  <div class="row g-2">
+                    <div class="swiper-theme-container">
+                      <div class="swiper position-relative" data-swiper='{"spaceBetween":20,"mousewheel":{"forceToAxis":true,"sensitiviye":20,"releaseOnEdges":true},"autoplay":{"delay":3000,"disableOnInteraction":false},"breakpoints":{"0":{"slidesPerView":1,"direction":"horizontal","centeredSlide":true,"loop":true},"768":{"direction":"horizontal","centeredSlide":true,"slidesPerView":2,"loop":true},"992":{"slidesPerView":3,"direction":"vertical","loop":false}}}'>
+                        <div class="swiper-wrapper">
+                          <div class="col-12 swiper-slide">
+                            <div class="d-flex justify-content-center gap-2">
+                              <div class="d-flex flex-column flex-lg-row gap-2 px-4 py-x1 review-card-1">
+                                <div class="text-center text-lg-start"><img class="card-image rounded-circle object-fit-cover" src="assets/img/feedback/reviewer_1.webp" alt="" /></div>
+                                <div class="text-center text-lg-start">
+                                  <p class="fs-8 mb-2 lh-lg line-clamp-3 text-1100">“OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”</p>
+                                  <p class="text-800 lh-xl mb-0">Isaac Olson</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 swiper-slide">
+                            <div class="d-flex justify-content-center gap-2">
+                              <div class="d-flex flex-column flex-lg-row gap-2 px-4 py-x1 review-card-2">
+                                <div class="text-center text-lg-start"><img class="card-image rounded-circle object-fit-cover" src="assets/img/feedback/reviewer_2.webp" alt="" /></div>
+                                <div class="text-center text-lg-start">
+                                  <p class="fs-8 mb-2 lh-lg line-clamp-3 text-1100">“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users who want success.”</p>
+                                  <p class="text-800 lh-xl mb-0">Barry Young</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 swiper-slide">
+                            <div class="d-flex justify-content-center gap-2">
+                              <div class="d-flex flex-column flex-lg-row gap-2 px-4 py-x1 review-card-3">
+                                <div class="text-center text-lg-start"><img class="card-image rounded-circle object-fit-cover" src="assets/img/feedback/reviewer_3.webp" alt="" /></div>
+                                <div class="text-center text-lg-start">
+                                  <p class="fs-8 mb-2 lh-lg line-clamp-3 text-1100">“Must have book for all, who want to be Product Designer or Interaction Designer.”</p>
+                                  <p class="text-800 lh-xl mb-0">Esther Allison</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 swiper-slide">
+                            <div class="d-flex justify-content-center gap-2">
+                              <div class="d-flex flex-column flex-lg-row gap-2 px-4 py-x1 review-card-4">
+                                <div class="text-center text-lg-start"><img class="card-image rounded-circle object-fit-cover" src="assets/img/feedback/kakashi.webp" alt="" /></div>
+                                <div class="text-center text-lg-start">
+                                  <p class="fs-8 mb-2 lh-lg line-clamp-3 text-1100">“Every day, I eat, sleep, and worry about stupid things. My job is to ensure that these kids have as many days as possible where they can be idiots like this.”</p>
+                                  <p class="text-800 lh-xl mb-0">Kakashi Hatake</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 swiper-slide">
+                            <div class="d-flex justify-content-center gap-2">
+                              <div class="d-flex flex-column flex-lg-row gap-2 px-4 py-x1 review-card-5">
+                                <div class="text-center text-lg-start"><img class="card-image rounded-circle object-fit-cover" src="assets/img/feedback/obito.webp" alt="" /></div>
+                                <div class="text-center text-lg-start">
+                                  <p class="fs-8 mb-2 lh-lg line-clamp-3 text-1100">“Life isn’t permanent or predictable. You never know when you will run out of time. The best thing you can do is to be honest with those around you and let them know how you really feel. You never know if you have a tomorrow to come.”</p>
+                                  <p class="text-800 lh-xl mb-0">Obito Uchiha</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center"><a class="py-1 link-success" href="#!"><span>Read more reviews </span><span class="uil uil-arrow-right icon"></span></a></div>
+              </div>
+            </div>
+          </section>
+          <section class="bg-300" id="pricing">
+            <div class="container py-8 py-lg-10">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7">
+                  <h3 class="fs-4 fs-lg-3 fw-bold text-center mb-2 mb-lg-x1 lh-sm">Pricing made easy</h3>
+                  <p class="fs-8 mb-7 mb-lg-8 text-center lh-lg fw-normal">Show your pricing to your customers once they’re here with easily modifiable pricing cards. </p>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+                    <div class="p-x1 text-center price-card-1 bg-transparent border mb-3 mb-md-0 rounded-2 pricing-card">
+                      <p class="fs-10 text-uppercase mb-3 fw-bold text-primary ls-2"> Starter</p>
+                      <h2 class="mb-3"><span class="fs-6 fs-md-7 fw-bold">$</span><span class="fs-2 fs-md-1 fw-bold">19</span><span class="fs-9 lh-xl font-sans-serif">/ mo</span></h2>
+                      <ul class="list-unstyled fs-8 lh-xl fw-light text-1100 ls-1">
+                        <li class="py-x1 px-1 border-top"> Upto 100 Team Members </li>
+                        <li class="py-x1 px-1 border-top"> 100 GB Cloud Storage </li>
+                        <li class="py-x1 px-1 border-top"> Unlimited Meetings </li>
+                        <li class="py-x1 px-1 border-top"> Premium Support </li>
+                        <li class="mt-1 d-grid"> <button class="btn btn-secondary btn-lg lh-xl">Get Started Now</button></li>
+                      </ul>
+                    </div>
+                    <div class="p-x1 text-center bg-white border shadow-sm rounded-2 pricing-card">
+                      <p class="fs-10 text-uppercase mb-3 fw-bold text-primary ls-2"> Unlimited</p>
+                      <h2 class="mb-3"><span class="fs-6 fs-md-7 fw-bold">$</span><span class="fs-2 fs-md-1 fw-bold">99</span><span class="fs-9 lh-xl font-sans-serif">/ mo</span></h2>
+                      <ul class="list-unstyled fs-8 lh-xl fw-light text-1100 ls-1">
+                        <li class="py-x1 px-1 border-top"> Unlimited Team Members </li>
+                        <li class="py-x1 px-1 border-top"> Unlimited Cloud Storage </li>
+                        <li class="py-x1 px-1 border-top"> Unlimited Meetings </li>
+                        <li class="py-x1 px-1 border-top"> Premium Support </li>
+                        <li class="mt-1 d-grid"> <button class="btn btn-primary btn-lg lh-xl">Get Started Now</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="bg-1100">
+            <div class="container">
+              <div class="row py-8 py-md-10 py-lg-11">
+                <div class="col-lg-6">
+                  <div class="row justify-content-center justify-content-lg-start">
+                    <div class="col-md-8 col-lg-12 col-xl-11">
+                      <h2 class="text-white fs-4 fs-lg-3 lh-sm mb-2 text-center text-lg-start fw-bold">We are always here for your backup.</h2>
+                      <p class="fs-8 text-white text-opacity-65 mb-4 mb-md-6 mb-lg-7 lh-lg mb-6 mb-lg-7 text-center text-lg-start"> We share common trends and strategies for creating & improving your text-nowrap rental income.</p>
+                    </div>
+                    <div class="col-lg-10">
+                      <div class="d-flex gap-2 gap-lg-x1 mb-4 mb-lg-5">
+                        <div>
+                          <div class="check-icon bg-success mb-1 rounded-circle d-flex align-items-center justify-content-center"> <span class="uil uil-check text-white"></span></div>
+                        </div>
+                        <div>
+                          <h5 class="fs-8 fw-bold lh-lg mb-1 text-white">Noise Free Locations</h5>
+                          <p class="lh-xl text-white text-opacity-70 mb-0">We ensure noise-free locations for your peace of mind and sound sleep.</p>
+                        </div>
+                      </div>
+                      <div class="d-flex gap-2 gap-lg-x1 mb-4 mb-lg-5">
+                        <div>
+                          <div class="check-icon bg-success mb-1 rounded-circle d-flex align-items-center justify-content-center"> <span class="uil uil-check text-white"></span></div>
+                        </div>
+                        <div>
+                          <h5 class="fs-8 fw-bold lh-lg mb-1 text-white">24/7 Hour Support</h5>
+                          <p class="lh-xl text-white text-opacity-70 mb-0">Get support from our efficient customer support team, 24/7, all year round.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="accordion mt-lg-4 ps-3 pe-x1 bg-white" id="accordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading1"><button class="accordion-button fs-8 lh-lg fw-bold pt-x1 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expand="true" aria-controls="collapse1" data-accordion-button="data-accordion-button">How to setup BrainwaveIO?</button></h2>
+                      <div class="accordion-collapse collapse show" id="collapse1" data-bs-parent="#accordion">
+                        <div class="accordion-body lh-xl pt-0 pb-x1">Enjoy the easy setup process with little to no coding knowledge with us!</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading2"><button class="accordion-button fs-8 lh-lg fw-bold pt-x1 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expand="false" aria-controls="collapse2" data-accordion-button="data-accordion-button">Can I use BrainwaveIO for my clients?</button></h2>
+                      <div class="accordion-collapse collapse" id="collapse2" data-bs-parent="#accordion">
+                        <div class="accordion-body lh-xl pt-0 pb-x1">Yes, you can. Enjoy special rates for your first client!</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading3"><button class="accordion-button fs-8 lh-lg fw-bold pt-x1 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expand="false" aria-controls="collapse3" data-accordion-button="data-accordion-button">How often do you release update?</button></h2>
+                      <div class="accordion-collapse collapse" id="collapse3" data-bs-parent="#accordion">
+                        <div class="accordion-body lh-xl pt-0 pb-x1">We will keep updating the theme; stay with us to get updated!</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading4"><button class="accordion-button fs-8 lh-lg fw-bold pt-x1 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expand="false" aria-controls="collapse4" data-accordion-button="data-accordion-button">How can I access to old version?</button></h2>
+                      <div class="accordion-collapse collapse" id="collapse4" data-bs-parent="#accordion">
+                        <div class="accordion-body lh-xl pt-0 pb-x1">Go to your cloud storage and provide the password. You’ll find it there..</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading5"><button class="accordion-button fs-8 lh-lg fw-bold pt-x1 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expand="false" aria-controls="collapse5" data-accordion-button="data-accordion-button">How can I get your support?</button></h2>
+                      <div class="accordion-collapse collapse" id="collapse5" data-bs-parent="#accordion">
+                        <div class="accordion-body lh-xl pt-0 pb-x1">To reach our support team, simply send an email to support@brainwaveio.com. Our team will promptly address your inquiry and provide assistance as needed.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="bg-300 position-relative z-0" id="contact">
+            <div class="container py-8 py-lg-9">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-8">
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                      <h2 class="fs-4 fs-lg-3 fw-bold text-center mb-2 lh-sm">Get latest updates</h2>
+                      <p class="fs-8 mb-5 mb-lg-6 text-center lh-lg fw-normal"> Subscribe to our monthly newsletter to stay connected with everything you need!</p>
+                    </div>
+                    <div class="col-10 col-lg-7">
+                      <form method="POST" onsubmit="return false;">
+                        <div class="mb-2 w-100"><input class="form-control email-input" id="email" type="email" placeholder="Enter your email" required="required" /></div>
+                        <div class="d-grid"><button class="btn btn-lg btn-primary lh-xl mb-x1" type="submit"> Subscribe </button></div>
+                      </form>
+                    </div>
+                    <div class="col-10 col-lg-7">
+                      <p class="text-center lh-lg mb-0">We’ll never share your details with third parties. View our Privacy Policy for more info.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="position-absolute bottom-0 end-0 z-n1 d-none d-lg-block"><img src="assets/img/illustrations/Green_dots.svg" alt="" /></div>
+            <div class="position-relative bottom-0 start-0 z-1"><img class="img-fluid w-100" src="assets/img/illustrations/Wave_3.svg" alt="" /></div>
+          </section>
+        </div><button class="btn scroll-to-top text-white rounded-circle d-flex justify-content-center align-items-center bg-primary" data-scroll-top="data-scroll-top"><span class="uil uil-angle-up"></span></button>
+        <footer class="pt-7 pt-lg-8">
+          <div class="container">
+            <div class="row gy-4 g-md-3 border-bottom pb-8 pb-lg-9 justify-content-center">
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg ls-1">Company</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#about">About us</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#contact"> Contact us</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Careers</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Press</a></li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-7">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-12 mx-auto align-items-center text-center">
-              <p class="mb-4">Trusted by communities across Malaysia</p>
-            </div>
-          </div>
-          <div class="row align-items-center justify-content-center justify-content-lg-around">
-            <div class="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center"><img src="assets/img/gallery/company-1.png" alt="" /></div>
-            <div class="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center"><img src="assets/img/gallery/company-2.png" alt="" /></div>
-            <div class="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center"><img src="assets/img/gallery/company-3.png" alt="" /></div>
-            <div class="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center"><img src="assets/img/gallery/company-4.png" alt="" /></div>
-            <div class="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center"><img src="assets/img/gallery/company-1.png" alt="" /></div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-      <section class="py-5" id="features">
-        <div class="container-lg">
-          <div class="row align-items-center">
-            <div class="col-md-5 col-lg-6 order-md-0 text-center text-md-start"><img class="img-fluid" src="assets/img/illustrations/feature-bg.png" width="550" alt="" /></div>
-            <div class="col-md-7 col-lg-6 px-sm-5 px-md-0">
-              <h6 class="fw-bold fs-4 display-3 lh-sm">Unlock your neighbourhood's <br />potential</h6>
-              <p class="my-4">Connect with neighbours, discover local products, <br class="d-none d-xl-block" />and build a stronger community together.</p>
-              <div class="d-flex align-items-center mb-5">
-                <div><img class="img-fluid" src="assets/img/illustrations/fast-performance.png" width="90" alt="" /></div>
-                <div class="px-4">
-                  <h5 class="fw-bold text-danger">Zero Delivery Cost</h5>
-                  <p>Buy from neighbours within walking <br class="d-none d-xl-block"> distance. Self-pickup or neighbour <br class="d-none d-xl-block"> delivery at no extra cost</p>
-                </div>
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg">Product</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Features</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Pricing</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> News</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Help desk</a></li>
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="#!"> Support</a></li>
+                </ul>
               </div>
-              <div class="d-flex align-items-center mb-5">
-                <div><img class="img-fluid" src="assets/img/illustrations/prototype.png" width="90" alt="" /></div>
-                <div class="px-4">
-                  <h5 class="fw-bold text-primary">Better Prices</h5>
-                  <p>No middleman, no overhead costs. <br class="d-none d-xl-block"> Get better prices directly from <br class="d-none d-xl-block"> your neighbours</p>
-                </div>
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg"> Legal</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!">Privacy</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Terms & Conditions</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#!"> Return Policy</a></li>
+                </ul>
               </div>
-              <div class="d-flex align-items-center mb-5">
-                <div><img class="img-fluid" src="assets/img/illustrations/vector.png" width="90" alt="" /></div>
-                <div class="px-4">
-                  <h5 class="fw-bold text-success">Start From Home</h5>
-                  <p>No need for physical store setup. <br class="d-none d-xl-block"> Start your home business and <br class="d-none d-xl-block"> reach your neighbourhood instantly</p>
+              <div class="col-6 col-md-3 d-md-flex flex-column align-items-md-end pe-md-0">
+                <div>
+                  <p class="mb-2 lh-lg"> Download Our App</p>
+                  <div class="mb-1 mb-lg-2"> <a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!"> <img class="img-fluid" src="assets/img/logos/App_Store.webp" alt="assets/img/logos/App_Store.webp" /></a></div><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!"> <img class="img-fluid" src="assets/img/logos/Play_Store.webp" alt="assets/img/logos/Play_Store.webp" /></a>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-5">
-
-        <div class="container">
-          <div class="row align-items-center mb-6">
-            <div class="col-md-5 col-lg-4 offset-lg-1">
-              <h1 class="fw-bold lh-base">Your neighbourhood marketplace that empowers local entrepreneurs</h1>
-            </div>
-            <div class="col-md-6 col-lg-5 offset-lg-1 border-start py-5 ps-5">
-              <p class="mb-0">Weplace connects you with your neighbours to buy and sell locally. Support your community, reduce carbon footprint, and discover hidden gems right around the corner.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 col-lg-3 offset-lg-1 mb-4">
-              <div class="py-4"><img class="img-fluid" src="assets/img/illustrations/automatic.png" width="90" alt="" /></div>
-              <h5 class="fw-bold text-danger">Hyperlocal Market</h5>
-              <p class="mt-2 mb-0">Shop within your neighbourhood and nearby areas. Everything you need is just around the corner.</p>
-            </div>
-            <div class="col-md-4 col-lg-3 offset-lg-1 mb-4">
-              <div class="py-4"><img class="img-fluid" src="assets/img/illustrations/network.png" width="90" alt="" /></div>
-              <h5 class="fw-bold text-primary">Community Connection</h5>
-              <p class="mt-2 mb-0">Build meaningful relationships with neighbours while supporting local businesses and entrepreneurs.</p>
-            </div>
-            <div class="col-md-4 col-lg-3 offset-lg-1 mb-4">
-              <div class="py-4"><img class="img-fluid" src="assets/img/illustrations/rewards.png" width="90" alt="" /></div>
-              <h5 class="fw-bold text-success">No Store Setup Needed</h5>
-              <p class="mt-2 mb-0">Sell from the comfort of your home. No rental, no overhead, just your products and passion.</p>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-6">
-
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-5 order-md-0 text-center text-md-start"><img class="img-fluid mb-4" src="assets/img/illustrations/call-to-action.png" width="550" alt="" /></div>
-            <div class="col-md-6 text-center text-md-start offset-md-1">
-              <h6 class="fw-bold fs-4 display-3 lh-sm">Designed for<br />modern community<br />living</h6>
-              <p class="my-4 pe-xl-5">Weplace brings together technology and community spirit to create a marketplace that benefits everyone. Shop local, save money, and strengthen neighbourhood bonds.</p><a class="btn btn-lg btn-primary rounded-pill hover-top" href="#" role="button">Join Weplace</a>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-6">
-
-        <div class="container">
-          <div class="row justify-content-center mb-6">
-            <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
-              <h6 class="fw-bold fs-4 display-3 lh-sm">Why choose <br />Weplace?</h6>
-              <p class="mb-0">Transform the way you shop and sell. Join thousands of neighbours who are already enjoying the benefits of hyperlocal commerce.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/app.png" width="90" alt="" />
-                <h5 class="fw-bold">Easy to Use App</h5>
-                <p class="mb-md-0">Simple, intuitive interface designed for everyone. Start buying or selling in just a few taps.</p>
+            <div class="row gy-2 py-3 justify-content-center justify-content-md-between">
+              <div class="col-auto ps-0">
+                <p class="text-center text-md-start lh-xl text-1100"> © 2024 Copyright, All Right Reserved, Made by <a class="fw-semi-bold" href="https://themewagon.com/">ThemeWagon </a>❤️</p>
               </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/time-award.png" width="90" alt="" />
-                <h5 class="fw-bold">Save Time & Money</h5>
-                <p class="mb-md-0">No delivery fees, better prices, and instant communication with sellers just minutes away.</p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/cloud.png" width="90" alt="" />
-                <h5 class="fw-bold">Secure Platform</h5>
-                <p class="mb-md-0">Safe transactions, verified users, and built-in chat for seamless communication.</p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/customization.png" width="90" alt="" />
-                <h5 class="fw-bold">Flexible Selling</h5>
-                <p class="mb-md-0">Sell anything from homemade food to handcrafted items. Set your own prices and schedule.</p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/ux.png" width="90" alt="" />
-                <h5 class="fw-bold">Build Community</h5>
-                <p class="mb-md-0">Connect with neighbours, share recommendations, and strengthen your local community.</p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="text-center px-lg-3"><img class="img-fluid mb-3" src="assets/img/illustrations/support.png" width="90" alt="" />
-                <h5 class="fw-bold">24/7 Support</h5>
-                <p class="mb-md-0">Our dedicated team is always ready to help you with any questions or concerns.</p>
-              </div>
+              <div class="col-auto pe-0"><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-twitter"> </span></a><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-instagram"></span></a><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-linkedin"> </span></a></div>
             </div>
           </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+        </footer>
+      </div>
+    </main><!-- ===============================================--><!--    End of Main Content--><!-- ===============================================-->
 
 
 
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-6">
-
-        <div class="container">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-5 order-md-1 text-center text-md-start"><img class="img-fluid mb-4" src="assets/img/illustrations/ultimate-feature.png" alt="" /></div>
-              <div class="col-md-6 text-center text-md-start">
-                <h6 class="fw-bold fs-4 display-3 lh-sm">Everything you need<br />in one app</h6>
-                <p class="my-4 pe-xl-5">Whether you're a buyer or seller, Weplace has all the tools you need to succeed in your neighbourhood marketplace.</p>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="mb-4">
-                      <div class="py-4"><img class="img-fluid" src="assets/img/illustrations/app.png" width="90" alt="" /></div>
-                      <h5 class="fw-bold text-undefined">Smart Search</h5>
-                      <p class="mt-2 mb-0">Find products and services in your neighbourhood with advanced filtering and categories.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-4">
-                      <div class="py-4"><img class="img-fluid" src="assets/img/illustrations/ux.png" width="90" alt="" /></div>
-                      <h5 class="fw-bold text-undefined">Instant Chat</h5>
-                      <p class="mt-2 mb-0">Communicate directly with buyers and sellers for quick negotiations and arrangements.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-4">
-                      <div class="py-4"><img class="img-fluid" src="assets/img/illustrations/cloud.png" width="90" alt="" /></div>
-                      <h5 class="fw-bold text-undefined">Location-Based</h5>
-                      <p class="mt-2 mb-0">Automatically shows listings from your neighbourhood and nearby areas for convenience.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="mb-4">
-                      <div class="py-4"><img class="img-fluid" src="assets/img/illustrations/support.png" width="90" alt="" /></div>
-                      <h5 class="fw-bold text-undefined">Rating System</h5>
-                      <p class="mt-2 mb-0">Build trust with reviews and ratings from verified neighbours in your community.</p>
-                    </div>
-                  </div>
-                </div><a class="btn btn-lg btn-primary rounded-pill hover-top" href="#" role="button">Explore Features</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-8" id="pricing">
-
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 col-xxl-5 text-center mb-3">
-              <h6 class="fw-bold fs-4 display-3 lh-sm mb-3">Start selling with zero upfront cost</h6>
-              <p class="mb-4">Choose the plan that works for you. No hidden fees, no monthly charges until you make sales. Join thousands of home-based entrepreneurs in your community.</p>
-            </div>
-          </div>
-          <div class="row flex-center">
-            <div class="col-12 mb-3">
-              <div class="d-flex justify-content-center">
-                <label class="form-check-label me-2" for="customSwitch1">Monthly</label>
-                <div class="form-check form-switch">
-                  <input class="form-check-input" id="customSwitch1" type="checkbox" checked="checked" />
-                  <label class="form-check-label align-top" for="customSwitch1">Yearly</label>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card shadow-lg mb-4 border-0">
-                <div class="card-header border-bottom-0 pt-7 pb-5">
-                  <div class="d-flex justify-content-center">
-                    <h1 class="fw-bold">Free</h1>
-                  </div>
-                  <h5 class="fw-bold text-center">Buyer Account</h5><span class="text-700 text-center d-block">For shoppers & community members</span>
-                </div>
-                <div class="card-body mx-auto">
-                  <ul class="list-unstyled mb-4">
-                    <li class="text-700 py-2 text-secondary">Browse unlimited listings</li>
-                    <li class="text-700 py-2 text-secondary">Zero delivery fees</li>
-                    <li class="text-700 py-2 text-secondary">Direct chat with sellers</li>
-                    <li class="text-700 py-2 text-secondary">Rate & review purchases</li>
-                  </ul><a class="btn btn-lg btn-primary rounded-pill mb-3" href="#">Download App</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card shadow-lg mb-4">
-                <div class="card-header border-bottom-0 pt-7 pb-5">
-                  <div class="d-flex justify-content-center">
-                    <h1 class="fw-bold">5%</h1><span class="d-flex align-items-center">/sale</span>
-                  </div>
-                  <h5 class="fw-bold text-center">Seller Account</h5><span class="text-700 text-center d-block">For home-based entrepreneurs</span>
-                </div>
-                <div class="card-body mx-auto">
-                  <ul class="list-unstyled mb-4">
-                    <li class="text-700 py-2 text-secondary">Unlimited product listings</li>
-                    <li class="text-700 py-2 text-secondary">Reach nearby neighbourhoods</li>
-                    <li class="text-700 py-2 text-secondary">Built-in chat & notifications</li>
-                    <li class="text-700 py-2 text-secondary">Analytics dashboard</li>
-                  </ul>
-                  <div class="d-flex flex-column"> <a class="btn btn-lg btn-primary rounded-pill mb-3" href="#">Start Selling</a><a href="#">Only pay when you sell</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-      <section class="py-8" id="testimonial">
-        <div class="container-lg">
-          <div class="row flex-center">
-            <div class="col-sm-10 col-md-5 col-lg-5 order-md-0 text-center text-md-start"><img class="img-fluid mb-4" src="assets/img/illustrations/testimonial.png" alt="" /></div>
-            <div class="col-sm-10 col-md-6 col-lg-6 text-center text-md-start offset-md-1">
-              <h6 class="fw-bold fs-4 display-3 lh-sm">Real stories from<br />our community</h6>
-              <p class="my-4 pe-xl-5">See how Weplace is transforming neighbourhoods and empowering local entrepreneurs across Malaysia.</p>
-              <div class="carousel slide" id="carouselExampleDark" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <div class="row h-100">
-                      <div class="col-12">
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <h5 class="my-4 fw-bold lh-sm">Amazing platform for home bakers!</h5>
-                        <p class="mb-0 text-center text-md-start">I started selling my homemade kuih from home using Weplace. Within a month, I had regular customers from my neighbourhood and nearby areas. No delivery fees means better prices for my customers and more profit for me. Best decision ever!</p>
-                      </div>
-                      <div class="col-xl-6 pt-4 d-flex d-sm-block flex-center">
-                        <div class="d-flex align-items-md-center"><img class="img-fluid me-4 me-md-3 me-lg-4" src="assets/img/gallery/user.png" width="100" alt="" />
-                          <div class="w-lg-50 my-3">
-                            <h5 class="mb-0 fw-bold">Siti Ahmad</h5>
-                            <p class="fw-normal mb-0">Home Baker, Petaling Jaya</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <div class="row h-100">
-                      <div class="col-12">
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <h5 class="my-4 fw-bold lh-sm">Love supporting local businesses</h5>
-                        <p class="mb-0 text-center text-md-start">As a buyer, Weplace changed how I shop. I get fresh produce from my neighbour's garden, homemade cookies, and even handcrafted items - all within walking distance. It's convenient, affordable, and I'm supporting my community!</p>
-                      </div>
-                      <div class="col-xl-6 pt-4 d-flex d-sm-block flex-center">
-                        <div class="d-flex align-items-md-center"><img class="img-fluid me-4 me-md-3 me-lg-4" src="assets/img/gallery/user-1.png" width="100" alt="" />
-                          <div class="w-lg-50 my-3">
-                            <h5 class="mb-0 fw-bold">Marcus Tan</h5>
-                            <p class="fw-normal mb-0">Regular Buyer, Shah Alam</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100">
-                      <div class="col-12">
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFCC00" viewBox="0 0 16 16">
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
-                        </svg>
-                        <h5 class="my-4 fw-bold lh-sm">Perfect for my craft business</h5>
-                        <p class="mb-0 text-center text-md-start">I make handmade jewelry and Weplace gave me the perfect platform to reach customers without expensive shop rental. The neighbourhood focus means I can even offer same-day pickup. My sales have tripled!</p>
-                      </div>
-                      <div class="col-xl-6 pt-4 d-flex d-sm-block flex-center">
-                        <div class="d-flex align-items-md-center"><img class="img-fluid me-4 me-md-3 me-lg-4" src="assets/img/gallery/user-2.png" width="100" alt="" />
-                          <div class="w-lg-50 my-3">
-                            <h5 class="mb-0 fw-bold">Nurul Hasan</h5>
-                            <p class="fw-normal mb-0">Craft Seller, Subang Jaya</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="position-relative mt-sm-n5"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-8" id="faq">
-
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 text-center mb-3">
-              <h6 class="fw-bold fs-4 display-3 lh-sm mb-3">Frequently asked questions</h6>
-              <p class="mb-5">Got questions? We've got answers. Learn more about how Weplace works and how you can benefit from our neighbourhood marketplace.</p>
-            </div>
-          </div>
-          <div class="row flex-center">
-            <div class="col-lg-9">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item mb-2">
-                  <h2 class="accordion-header" id="heading1">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1"><span class="mb-0 fw-bold text-start fs-1 text-1000">How does Weplace ensure zero delivery cost?</span></button>
-                  </h2>
-                  <div class="accordion-collapse collapse show" id="collapse1" aria-labelledby="heading1" data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-100">Weplace connects you with sellers in your neighbourhood and nearby areas. You can choose to self-pickup from the seller's location or arrange for neighbour-to-neighbour delivery at no platform fees. Since sellers are within walking or short driving distance, there's no need for expensive courier services.</div>
-                  </div>
-                </div>
-                <div class="accordion-item mb-2">
-                  <h2 class="accordion-header" id="heading2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><span class="mb-0 fw-bold text-start fs-1 text-1000">Can I really start selling without setting up a physical store?</span></button>
-                  </h2>
-                  <div class="accordion-collapse collapse" id="collapse2" aria-labelledby="heading2" data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-100">Absolutely! Weplace is designed for home-based entrepreneurs. Whether you bake from your home kitchen, craft handmade items, or grow organic vegetables, you can list your products and reach customers in your neighbourhood instantly. No rental, no overhead costs - just you, your products, and your neighbours.</div>
-                  </div>
-                </div>
-                <div class="accordion-item mb-2">
-                  <h2 class="accordion-header" id="heading3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><span class="mb-0 fw-bold text-start fs-1 text-1000">How far does my neighbourhood marketplace reach?</span></button>
-                  </h2>
-                  <div class="accordion-collapse collapse" id="collapse3" aria-labelledby="heading3" data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-100">Weplace shows you listings from your immediate neighbourhood and nearby neighbourhoods within a configurable radius (typically 3-5km). This ensures everything is within convenient pickup distance while giving you access to a wide variety of products and services from your local community.</div>
-                  </div>
-                </div>
-                <div class="accordion-item mb-2">
-                  <h2 class="accordion-header" id="heading4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4"><span class="mb-0 fw-bold text-start fs-1 text-1000">What are the fees for selling on Weplace?</span></button>
-                  </h2>
-                  <div class="accordion-collapse collapse" id="collapse4" aria-labelledby="heading4" data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-100">Weplace charges a small commission (typically 5%) only when you make a sale. There are no monthly fees, no listing fees, and no hidden charges. You only pay when you earn, making it perfect for home-based businesses just starting out.</div>
-                  </div>
-                </div>
-                <div class="accordion-item mb-2">
-                  <h2 class="accordion-header" id="heading5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5"><span class="mb-0 fw-bold text-start fs-1 text-1000">Is Weplace safe for buyers and sellers?</span></button>
-                  </h2>
-                  <div class="accordion-collapse collapse" id="collapse5" aria-labelledby="heading5" data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-100">Yes! Weplace has a comprehensive rating and review system where buyers and sellers can rate each other. All users are verified, and we have built-in chat for transparent communication. Plus, since transactions happen locally within your community, there's an added layer of trust and accountability.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-      <section class="py-6">
-        <hr />
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-5 col-lg-7 order-md-1 text-center text-md-start z-index-2 cta-image"><img class="img-fluid mb-4 mb-md-0" src="assets/img/illustrations/cta.png" width="850" alt="" /></div>
-            <div class="col-md-7 col-lg-5 text-center text-md-start">
-              <h1 class="display-3 fw-bold lh-sm">Join your neighbourhood marketplace today</h1>
-              <p class="my-4">Connect with neighbours, discover local products, and unlock the potential of your community. Start buying or selling in minutes!</p>
-              <div class="d-flex justify-content-center d-md-inline-block"><a class="pe-2 pe-sm-3 pe-md-4" href="!#"><img src="assets/img/illustrations/google-play.png" width="160" alt="" /></a><a href="!#"><img src="assets/img/illustrations/app-store.png" width="160" alt="" /></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-8 bg-1000">
-
-        <div class="container">
-          <div class="row flex-center">
-            <div class="col-auto mb-5"><a class="pe-2 d-flex align-items-center text-decoration-none fw-bold fs-3" href="#">
-                <div class="text-success">Weplace</div>
-              </a></div>
-          </div>
-          <div class="row flex-center">
-            <div class="col-auto mb-5">
-              <ul class="list-unstyled list-inline mb-0">
-                <li class="list-inline-item me3 me-sm-4"><a class="text-light text-decoration-none" href="#!">Home</a></li>
-                <li class="list-inline-item me3 me-sm-4"><a class="text-light text-decoration-none" href="#!">Key Features</a></li>
-                <li class="list-inline-item me3 me-sm-4"><a class="text-light text-decoration-none" href="#!">Pricing</a></li>
-                <li class="list-inline-item me3 me-sm-4"><a class="text-light text-decoration-none" href="#!">Testimonial</a></li>
-                <li class="list-inline-item me3 me-sm-4"><a class="text-light text-decoration-none" href="#!">FAQ</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row flex-center">
-            <div class="col-auto mb-5">
-              <ul class="list-unstyled list-inline">
-                <li class="list-inline-item me-3"><a class="text-decoration-none" href="#!">
-                    <svg class="bi bi-facebook" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#7D7987" viewBox="0 0 16 16">
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-                    </svg></a></li>
-                <li class="list-inline-item me-3"><a href="#!">
-                    <svg class="bi bi-twitter" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#7D7987" viewBox="0 0 16 16">
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                    </svg></a></li>
-                <li class="list-inline-item me-3"><a href="#!">
-                    <svg class="bi bi-hash" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 16 16">
-                      <path d="M8.39 12.648a1.32 1.32 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1.06 1.06 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.512.512 0 0 0-.523-.516.539.539 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532 0 .312.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531 0 .313.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242l-.515 2.492zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z"></path>
-                    </svg></a></li>
-                <li class="list-inline-item me-3"><a href="#!">
-                    <svg class="bi bi-instagram" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#7D7987" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"> </path>
-                    </svg></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row flex-center">
-            <div class="col-auto">
-              <p class="mb-0 fs--1 text-700">&copy; 2025 Weplace. Connecting Communities.&nbsp;
-                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" viewBox="0 0 16 16">
-                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;Made for Malaysian neighbourhoods
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
-
-
-
-
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="vendors/@popperjs/popper.min.js"></script>
+    <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&amp;display=swap" rel="stylesheet">
   </body>
 
 </html>
