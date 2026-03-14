@@ -2,3 +2,318 @@
 /*                                brainwaveio Button                               */
 /* -------------------------------------------------------------------------- */
 /* prettier-ignore */
+
+.brand-name {
+  margin-left: 0.35rem;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-size: 2.05rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+#navbar.navbar-primary-scrolled {
+  background-color: #000000 !important;
+}
+
+#service.experience,
+.bg-1100 {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+#service.experience .overlay {
+  background-color: rgba(0, 0, 0, 0.14) !important;
+}
+
+.logo-explain {
+  max-width: 18rem;
+  margin: 0 auto;
+}
+
+.logo-explain-media {
+  min-height: 5.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo-explain-image {
+  max-width: 4.5rem;
+  max-height: 4.5rem;
+  width: auto;
+  height: auto;
+  will-change: transform;
+  transform-origin: center;
+}
+
+.logo-explain-image-home {
+  animation: logo-rise 3.8s ease-in-out infinite;
+}
+
+.logo-explain-image-flower {
+  animation: logo-spin 14s linear infinite;
+}
+
+.logo-explain-image-full {
+  animation: logo-breathe 3.4s ease-in-out infinite;
+}
+
+.logo-explain-title {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #10203d;
+}
+
+.logo-explain-text {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(16, 32, 61, 0.72);
+}
+
+.app-showcase-wrap {
+  position: relative;
+  max-width: 25rem;
+  padding: 1rem 0;
+}
+
+.app-showcase-glow {
+  position: absolute;
+  inset: 2.5rem 1.5rem;
+  background: radial-gradient(circle, rgba(20, 197, 108, 0.22) 0%, rgba(20, 197, 108, 0.02) 68%, transparent 100%);
+  filter: blur(10px);
+}
+
+.phone-shell {
+  position: relative;
+  width: 100%;
+  max-width: 19rem;
+  margin: 0 auto;
+  padding: 0.95rem;
+  border-radius: 2.3rem;
+  background: linear-gradient(180deg, #111111 0%, #000000 100%);
+  box-shadow: 0 1.75rem 4rem rgba(0, 0, 0, 0.22);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  width: 6.5rem;
+  height: 1.1rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #161616;
+  z-index: 2;
+}
+
+.phone-screen {
+  overflow: hidden;
+  height: 38rem;
+  border-radius: 1.8rem;
+  background: #f4fbf7;
+}
+
+.app-phone-carousel,
+.app-phone-carousel .carousel-inner {
+  height: 100%;
+}
+
+.app-carousel-indicators {
+  bottom: 0.9rem;
+  margin-bottom: 0;
+}
+
+.app-carousel-indicators [data-bs-target] {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgba(16, 32, 61, 0.28);
+}
+
+.app-carousel-indicators .active {
+  background-color: var(--bs-primary);
+}
+
+.app-placeholder-screen {
+  height: 100%;
+  padding: 1rem 1rem 2.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app-screen-buyer {
+  background: linear-gradient(180deg, #effbf4 0%, #ffffff 100%);
+}
+
+.app-screen-seller {
+  background: linear-gradient(180deg, #f2f8ff 0%, #ffffff 100%);
+}
+
+.app-screen-chat {
+  background: linear-gradient(180deg, #f9fff7 0%, #ffffff 100%);
+}
+
+.app-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: rgba(16, 32, 61, 0.72);
+}
+
+.app-hero-card {
+  padding: 1rem;
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0.9rem 2rem rgba(16, 32, 61, 0.08);
+}
+
+.app-screen-label {
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bs-primary);
+}
+
+.app-hero-card h4 {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #10203d;
+}
+
+.app-hero-card p:last-child {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: rgba(16, 32, 61, 0.72);
+}
+
+.app-card-list,
+.app-stat-grid,
+.app-chat-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.app-mini-card,
+.app-stat-card {
+  padding: 0.95rem 1rem;
+  border-radius: 1.2rem;
+  background: #ffffff;
+  box-shadow: 0 0.9rem 2rem rgba(16, 32, 61, 0.07);
+}
+
+.app-mini-card strong,
+.app-stat-card strong {
+  display: block;
+  color: #10203d;
+}
+
+.app-mini-card small,
+.app-stat-card small {
+  color: rgba(16, 32, 61, 0.62);
+}
+
+.app-pill {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(20, 197, 108, 0.12);
+  color: var(--bs-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.app-stat-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.app-stat-card strong {
+  font-size: 1.15rem;
+}
+
+.app-chat-list {
+  margin-top: auto;
+}
+
+.app-chat-bubble {
+  max-width: 84%;
+  padding: 0.85rem 1rem;
+  border-radius: 1.2rem 1.2rem 1.2rem 0.4rem;
+  background: #ffffff;
+  box-shadow: 0 0.8rem 1.6rem rgba(16, 32, 61, 0.07);
+  color: #10203d;
+  line-height: 1.6;
+}
+
+.app-chat-bubble.me {
+  margin-left: auto;
+  border-radius: 1.2rem 1.2rem 0.4rem 1.2rem;
+  background: rgba(20, 197, 108, 0.12);
+}
+
+@media (max-width: 991.98px) {
+  .app-showcase-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .phone-screen {
+    height: 34rem;
+  }
+}
+
+@keyframes logo-rise {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logo-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-explain-image-home,
+  .logo-explain-image-flower,
+  .logo-explain-image-full {
+    animation: none;
+  }
+}
