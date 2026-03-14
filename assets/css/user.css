@@ -334,6 +334,89 @@
   background: rgba(20, 197, 108, 0.12);
 }
 
+.value-card {
+  height: 100%;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fcf8 100%);
+  border: 1px solid rgba(20, 197, 108, 0.14);
+  box-shadow: 0 1rem 2.5rem rgba(16, 32, 61, 0.06);
+}
+
+.value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.2rem;
+  height: 3.2rem;
+  margin-bottom: 1rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  background: rgba(20, 197, 108, 0.12);
+  color: var(--bs-primary);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.trust-section {
+  position: relative;
+}
+
+.trust-checklist {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.trust-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.trust-item .check-icon {
+  width: 2.25rem;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.8rem !important;
+  background: rgba(20, 197, 108, 0.16) !important;
+  box-shadow: inset 0 0 0 1px rgba(20, 197, 108, 0.28);
+}
+
+.trust-item .check-icon .uil {
+  color: #14c56c !important;
+  font-size: 1rem;
+}
+
+.trust-item h5 {
+  margin-top: 0.1rem;
+}
+
+.trust-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.trust-panel-card {
+  padding: 1.4rem 1.35rem;
+  border-radius: 1.35rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.14);
+}
+
+.trust-panel-card-accent {
+  border-color: rgba(20, 197, 108, 0.28);
+  background: linear-gradient(180deg, rgba(20, 197, 108, 0.18) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.trust-panel-kicker {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
 @media (max-width: 991.98px) {
   .app-showcase-wrap {
     margin-bottom: 2rem;
