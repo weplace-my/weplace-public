@@ -580,20 +580,35 @@ p {
 
 .trust-card {
   border-color: rgba(255, 255, 255, 0.14);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .trust-icon {
-  min-height: 13rem;
+  width: 7.25rem;
+  min-width: 7.25rem;
+  min-height: auto;
+  padding: 1.25rem 0.9rem;
   background: linear-gradient(180deg, #ffffff 0%, #e8f7ee 100%);
 }
 
 .trust-icon .uil {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: #14c56c;
 }
 
 .trust-section {
   position: relative;
+}
+
+.trust-stack {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.trust-stack-item {
+  display: flex;
 }
 
 .trust-checklist {
@@ -773,6 +788,15 @@ p {
 }
 
 @media (max-width: 991.98px) {
+  .trust-card {
+    flex-direction: column;
+  }
+
+  .trust-icon {
+    width: 100%;
+    min-width: 100%;
+  }
+
   .language-switcher {
     margin-top: 1rem;
   }

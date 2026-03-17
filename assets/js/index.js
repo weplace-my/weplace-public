@@ -90,12 +90,12 @@ const TRANSLATIONS = {
       subtitle: 'Trust matters in neighborhood communities. That is why Weplace is designed to support real local participation and clearer seller verification.',
       cards: [
         {
-          title: 'Verified account registration',
-          text: 'Users can register as personal accounts by uploading IC front and back. Companies register with an SSM certificate. All submissions are verified within a short period.'
+          title: 'Personal Seller',
+          text: 'Malaysian personal sellers can register by uploading IC front and back for verification.'
         },
         {
-          title: 'Verified Malaysian sellers',
-          text: 'Personal and business sellers can join if they are Malaysian citizens aged 18 and above. Sellers with SSM registration can show their business verification for added buyer confidence.'
+          title: 'Company Seller',
+          text: 'Company sellers can register by uploading company address details, with halal certificate as an optional document.'
         },
         {
           title: 'Safer local interactions',
@@ -212,12 +212,12 @@ const TRANSLATIONS = {
       subtitle: 'Kepercayaan sangat penting dalam komuniti kejiranan. Itulah sebabnya Weplace direka untuk menyokong penyertaan tempatan yang sebenar dan pengesahan penjual yang lebih jelas.',
       cards: [
         {
-          title: 'Pendaftaran akaun yang disahkan',
-          text: 'Pengguna boleh mendaftar sebagai akaun peribadi dengan memuat naik IC depan dan belakang. Syarikat pula mendaftar dengan sijil SSM. Semua permohonan disahkan dalam tempoh yang singkat.'
+          title: 'Penjual Peribadi',
+          text: 'Penjual peribadi warganegara Malaysia boleh mendaftar dengan memuat naik IC depan dan belakang untuk pengesahan.'
         },
         {
-          title: 'Penjual Malaysia yang disahkan',
-          text: 'Penjual peribadi dan perniagaan boleh menyertai jika mereka merupakan warganegara Malaysia berumur 18 tahun ke atas. Penjual dengan pendaftaran SSM boleh menunjukkan pengesahan perniagaan mereka untuk meningkatkan keyakinan pembeli.'
+          title: 'Penjual Syarikat',
+          text: 'Penjual syarikat boleh mendaftar dengan memuat naik butiran alamat syarikat, dengan sijil halal sebagai dokumen pilihan.'
         },
         {
           title: 'Interaksi tempatan yang lebih selamat',
