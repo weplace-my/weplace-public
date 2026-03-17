@@ -45,9 +45,9 @@ const TRANSLATIONS = {
       title: 'Designed for buyers and sellers.',
       subtitle: 'Weplace is built for both sides in one platform. Sellers can manage sales and deliver orders more easily, while buyers enjoy a more convenient way to discover nearby products and potential great deals.',
       buyer: {
-        chip: 'Buyer side',
-        title: 'Discover nearby finds that make everyday life feel easier.',
-        text: 'From good food and useful services to surprise vouchers and local deals, Weplace helps buyers explore more value close to home with less effort.',
+        chip: 'User as Buyer',
+        title: 'Discover nearby finds that make everyday life easier and more rewarding.',
+        text: 'From good food and useful services to surprise vouchers and local deals, Weplace helps buyers discover more value close to home in one convenient place.',
         points: [
           'Spot nearby goods, foods, services, and timely local offers',
           'Enjoy a more convenient way to find potential great deals',
@@ -55,9 +55,9 @@ const TRANSLATIONS = {
         ]
       },
       seller: {
-        chip: 'Seller side',
-        title: 'Start small, grow from home, and learn with your neighbourhood.',
-        text: 'Weplace makes it easy to set up, test new ideas, and receive real feedback from nearby neighbours, so small innovations can keep improving and grow with confidence.',
+        chip: 'User as Seller',
+        title: 'Start small, grow from home, and build with your neighbourhood.',
+        text: 'Weplace makes it easy to set up, test new ideas, and receive real feedback from nearby neighbours, so small innovations can improve steadily and grow with confidence.',
         points: [
           'Start from home with an easy setup and low-friction workflow',
           'Manage sales, orders, and buyer conversations in one place',
@@ -167,9 +167,9 @@ const TRANSLATIONS = {
       title: 'Direka untuk pembeli dan penjual.',
       subtitle: 'Weplace dibina untuk kedua-dua pihak dalam satu platform. Penjual boleh mengurus jualan dan penghantaran dengan lebih mudah, manakala pembeli menikmati cara yang lebih mudah untuk menemui produk berdekatan dan tawaran menarik.',
       buyer: {
-        chip: 'Bahagian pembeli',
-        title: 'Temui pilihan berdekatan yang menjadikan hidup harian lebih mudah.',
-        text: 'Daripada makanan sedap dan perkhidmatan berguna hingga baucar kejutan dan tawaran tempatan, Weplace membantu pembeli meneroka lebih banyak nilai dekat dengan rumah dengan usaha yang lebih rendah.',
+        chip: 'Pengguna sebagai pembeli',
+        title: 'Temui pilihan berdekatan yang menjadikan hidup harian lebih mudah dan lebih berbaloi.',
+        text: 'Daripada makanan sedap dan perkhidmatan berguna hingga baucar kejutan dan tawaran tempatan, Weplace membantu pembeli menemui lebih banyak nilai dekat dengan rumah di satu tempat yang mudah.',
         points: [
           'Temui barangan, makanan, perkhidmatan, dan tawaran tempatan yang berdekatan',
           'Nikmati cara yang lebih mudah untuk mencari tawaran yang berpotensi menarik',
@@ -177,9 +177,9 @@ const TRANSLATIONS = {
         ]
       },
       seller: {
-        chip: 'Bahagian penjual',
-        title: 'Mulakan kecil, berkembang dari rumah, dan belajar bersama kejiranan anda.',
-        text: 'Weplace memudahkan anda untuk bermula, menguji idea baharu, dan menerima maklum balas sebenar daripada jiran berdekatan supaya inovasi kecil boleh terus berkembang dengan yakin.',
+        chip: 'Pengguna sebagai penjual',
+        title: 'Mulakan kecil, berkembang dari rumah, dan membina bersama kejiranan anda.',
+        text: 'Weplace memudahkan anda untuk bermula, menguji idea baharu, dan menerima maklum balas sebenar daripada jiran berdekatan supaya inovasi kecil boleh bertambah baik secara konsisten dan berkembang dengan yakin.',
         points: [
           'Mulakan dari rumah dengan persediaan mudah dan aliran kerja yang ringan',
           'Urus jualan, pesanan, dan perbualan dengan pembeli di satu tempat',

@@ -232,6 +232,8 @@ p {
   height: 38rem;
   border-radius: 1.8rem;
   background: #f4fbf7;
+  padding: 0.38rem 0;
+  box-sizing: border-box;
 }
 
 .phone-shell-hero {
@@ -245,6 +247,11 @@ p {
 .app-phone-carousel,
 .app-phone-carousel .carousel-inner {
   height: 100%;
+}
+
+.app-phone-carousel .carousel-item {
+  border-radius: 1.45rem;
+  overflow: hidden;
 }
 
 .app-carousel-indicators {
@@ -266,10 +273,12 @@ p {
 }
 
 .app-story-image {
-  width: 100%;
+  width: 94%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  margin: 0 auto;
+  border-radius: 1.45rem;
 }
 
 .app-placeholder-screen {
@@ -432,6 +441,22 @@ p {
   box-shadow: 0 1rem 2.5rem rgba(16, 32, 61, 0.08);
 }
 
+.journey-card p,
+.journey-card li {
+  text-align: left;
+  text-justify: auto;
+}
+
+.journey-card-image {
+  display: block;
+  width: 95%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
 .journey-card.buyer {
   background: linear-gradient(180deg, rgba(239, 251, 244, 0.96) 0%, rgba(255, 255, 255, 0.98) 100%);
 }
@@ -441,31 +466,62 @@ p {
 }
 
 .journey-card-top {
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.journey-card-top h5 {
+  margin-bottom: 0.75rem !important;
+  font-size: 1.65rem;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: #10203d;
+}
+
+.journey-card-top p {
+  margin-bottom: 0;
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(16, 32, 61, 0.72);
 }
 
 .journey-chip {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 0.7rem;
-  padding: 0.3rem 0.7rem;
+  margin-bottom: 0.95rem;
+  padding: 0.38rem 0.82rem;
   border-radius: 999px;
-  background: rgba(16, 32, 61, 0.08);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #10203d;
+  color: #ffffff;
+}
+
+.journey-card-buyer .journey-chip {
+  background: #14c56c;
+}
+
+.journey-card-seller .journey-chip {
+  background: #f74d4d;
 }
 
 .journey-list {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: 1.2rem;
   color: rgba(16, 32, 61, 0.8);
+  font-family: "Figtree", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
 .journey-list li + li {
-  margin-top: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.journey-list li::marker {
+  color: rgba(16, 32, 61, 0.9);
 }
 
 .journey-bridge {
