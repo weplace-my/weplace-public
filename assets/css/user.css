@@ -26,6 +26,56 @@
   background-color: #000000 !important;
 }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.language-switcher__toggle {
+  min-width: 4.5rem;
+  padding: 0.42rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.language-switcher__toggle:hover,
+.language-switcher__toggle:focus,
+.language-switcher__toggle.show {
+  border-color: #14c56c;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.language-switcher__menu {
+  min-width: 4.5rem;
+  padding: 0.35rem;
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.18);
+}
+
+.language-switcher__menu .dropdown-item {
+  border-radius: 0.55rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.language-switcher__menu .dropdown-item.active,
+.language-switcher__menu .dropdown-item:active {
+  background-color: #14c56c;
+  color: #ffffff;
+}
+
 #service.experience,
 .bg-1100 {
   background-color: #000000 !important;
@@ -667,6 +717,10 @@ p {
 }
 
 @media (max-width: 991.98px) {
+  .language-switcher {
+    margin-top: 1rem;
+  }
+
   .app-showcase-wrap {
     margin-bottom: 2rem;
   }
@@ -682,6 +736,10 @@ p {
 }
 
 @media (min-width: 992px) {
+  .language-switcher {
+    margin-top: 0;
+  }
+
   .hero-phone-stage {
     right: -1.5rem;
     bottom: -8.5rem;
