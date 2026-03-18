@@ -50,7 +50,7 @@ const TRANSLATIONS = {
       subtitle: 'Weplace is built for both sides in one platform. Sellers can manage sales and deliver orders more easily, while buyers enjoy a more convenient way to discover nearby products and potential great deals.',
       buyer: {
         chip: 'User as Buyer',
-        title: 'Discover nearby finds that make everyday life easier and more rewarding.',
+        title: 'Discover local finds that make our life easier and better',
         text: 'From good food and useful services to surprise vouchers and local deals, Weplace helps buyers discover more value close to home in one convenient place.',
         points: [
           'Spot nearby goods, foods, services, and timely local offers',
@@ -60,8 +60,8 @@ const TRANSLATIONS = {
       },
       seller: {
         chip: 'User as Seller',
-        title: 'Start small, grow from home, and build with your neighbourhood.',
-        text: 'Weplace makes it easy to set up, test new ideas, and receive real feedback from nearby neighbours, so small innovations can improve steadily and grow with confidence.',
+        title: 'Start small, grow locally, and build with your neighborhood.',
+        text: 'Weplace makes it easy to set up, test new ideas, and receive real feedback from neighbor buyers, so small innovations can improve steadily and grow with confidence.',
         points: [
           'Start from home with an easy setup and low-friction workflow',
           'Manage sales, orders, and buyer conversations in one place',
@@ -70,21 +70,22 @@ const TRANSLATIONS = {
       }
     },
     value: {
-      eyebrow: 'How Weplace Creates Value',
-      title: 'Three ways Weplace brings neighborhoods to life.',
-      subtitle: 'Weplace connects people, shops, and opportunities within the same neighbourhood so daily life feels more useful, more affordable, and more connected.',
-      cards: [
+      eyebrow: 'How Seller Plans Work',
+      title: 'Start Small, Grow Bigger',
+      subtitle: 'Start selling for free, then subscribe only when you need more products and wider reach.',
+      note: 'Registration approved sellers can start immediately with a simple local setup.',
+      visual: {
+        live: 'Radius enabled',
+        range: 'Up to 2km reach'
+      },
+      steps: [
         {
-          title: 'Resident to Resident',
-          text: 'Buy, sell, help, and connect directly with neighbors nearby. From homemade food to everyday support, residents can create value for one another, help reduce living costs, and support each other through rising prices and inflation.'
+          title: 'Free User',
+          text: 'Start selling as soon as your registration is approved, with up to 2 products and local neighbourhood visibility only.'
         },
         {
-          title: 'Resident to Commercial',
-          text: 'Local shops and verified sellers can offer vouchers, promotions, and better neighbourhood deals that feel relevant to the people around them.'
-        },
-        {
-          title: 'Resident to Office',
-          text: 'Open up business opportunities between residents, workplaces, and nearby demand with a platform designed for local discovery and real participation.'
+          title: 'Subscribed User',
+          text: 'List more products and sales, and get discovered in nearby neighbourhoods.'
         }
       ]
     },
@@ -192,21 +193,22 @@ const TRANSLATIONS = {
       }
     },
     value: {
-      eyebrow: 'Bagaimana Weplace Mencipta Nilai',
-      title: 'Tiga cara Weplace menghidupkan kejiranan.',
-      subtitle: 'Weplace menghubungkan orang, kedai, dan peluang dalam kejiranan yang sama supaya kehidupan harian terasa lebih berguna, lebih berpatutan, dan lebih terhubung.',
-      cards: [
+      eyebrow: 'Bagaimana Pelan Penjual Berfungsi',
+      title: 'Bayar hanya apabila anda mahu menjual lebih banyak.',
+      subtitle: 'Mula menjual secara percuma, kemudian langgan hanya apabila anda perlukan lebih banyak produk dan capaian lebih luas.',
+      note: 'Penjual yang pendaftaran diluluskan boleh mula segera dengan tetapan tempatan yang mudah.',
+      visual: {
+        live: 'Radius diaktifkan',
+        range: 'Capaian sehingga 2km'
+      },
+      steps: [
         {
-          title: 'Penduduk kepada Penduduk',
-          text: 'Beli, jual, bantu, dan berhubung terus dengan jiran berdekatan. Daripada makanan buatan sendiri hingga bantuan harian, penduduk boleh mencipta nilai sesama sendiri, membantu mengurangkan kos sara hidup, dan saling menyokong dalam keadaan harga yang meningkat.'
+          title: 'Pengguna Percuma',
+          text: 'Mula menjual sebaik sahaja pendaftaran anda diluluskan, dengan had sehingga 2 produk dan paparan di kejiranan tempatan sahaja.'
         },
         {
-          title: 'Penduduk kepada Komersial',
-          text: 'Kedai tempatan dan penjual yang disahkan boleh menawarkan baucar, promosi, dan tawaran kejiranan yang lebih baik dan relevan kepada penduduk di sekeliling mereka.'
-        },
-        {
-          title: 'Penduduk kepada Pejabat',
-          text: 'Buka peluang perniagaan antara penduduk, tempat kerja, dan permintaan berdekatan melalui platform yang direka untuk penemuan tempatan dan penyertaan sebenar.'
+          title: 'Pengguna Langganan',
+          text: 'Senaraikan lebih banyak produk dan jualan, serta tingkatkan penemuan di kejiranan berdekatan.'
         }
       ]
     },

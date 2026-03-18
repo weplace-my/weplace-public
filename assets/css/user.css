@@ -579,6 +579,101 @@ p {
     0 -10px 24px rgba(7, 58, 31, 0.3);
 }
 
+.seller-plan-section {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.seller-plan-visual,
+.seller-plan-content {
+  min-width: 0;
+}
+
+.radius-demo {
+  position: relative;
+  min-height: 25rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid rgba(20, 197, 108, 0.16);
+  background:
+    radial-gradient(circle at center, rgba(20, 197, 108, 0.18) 0%, rgba(20, 197, 108, 0.06) 20%, rgba(255, 255, 255, 0) 42%),
+    linear-gradient(135deg, #f8fcfa 0%, #eef8f1 48%, #f7fbf8 100%);
+  box-shadow: 0 1.25rem 2.75rem rgba(16, 32, 61, 0.08);
+}
+
+.radius-demo-map {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(16, 32, 61, 0.06) 100%),
+    url("../img/gallery/map-2.jpeg") center/contain no-repeat;
+  filter: saturate(0.95);
+}
+
+.seller-plan-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.seller-plan-note {
+  padding: 1rem 1.15rem;
+  border-radius: 1.1rem;
+  background: rgba(20, 197, 108, 0.08);
+  border: 1px solid rgba(20, 197, 108, 0.14);
+  color: rgba(16, 32, 61, 0.82);
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.seller-plan-steps {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.seller-plan-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: center;
+  padding: 1rem 1.05rem;
+  border-radius: 1.2rem;
+  background: #ffffff;
+  border: 1px solid rgba(20, 197, 108, 0.14);
+  box-shadow: 0 0.9rem 2rem rgba(16, 32, 61, 0.05);
+}
+
+.seller-plan-step-number {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  background: #14c56c;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.seller-plan-step-number i {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.seller-plan-step h5 {
+  margin-bottom: 0.3rem;
+  font-size: 1.02rem;
+  color: #10203d;
+}
+
+.seller-plan-step p {
+  margin-bottom: 0;
+  color: rgba(16, 32, 61, 0.72);
+  line-height: 1.7;
+}
+
+
 .trust-card {
   border-color: rgba(255, 255, 255, 0.14);
   display: flex;
@@ -814,6 +909,11 @@ p {
   .journey-bridge {
     text-align: left;
   }
+
+  .radius-demo {
+    min-height: 21rem;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -860,6 +960,11 @@ p {
 
   .journey-card-seller {
     grid-area: seller;
+  }
+
+  .seller-plan-section {
+    grid-template-columns: minmax(19rem, 1fr) minmax(0, 1.08fr);
+    gap: 2rem;
   }
 }
 
