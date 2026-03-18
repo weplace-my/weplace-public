@@ -232,7 +232,7 @@ p {
   height: 38rem;
   border-radius: 1.8rem;
   background: #f4fbf7;
-  padding: 0.38rem 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -273,11 +273,10 @@ p {
 }
 
 .app-story-image {
-  width: 94%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
-  margin: 0 auto;
   border-radius: 1.45rem;
 }
 
@@ -434,11 +433,12 @@ p {
 
 .journey-card {
   height: 100%;
-  padding: 1.4rem;
+  padding: 0;
   border: 1px solid rgba(16, 32, 61, 0.08);
   border-radius: 1.5rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 250, 255, 0.94) 100%);
   box-shadow: 0 1rem 2.5rem rgba(16, 32, 61, 0.08);
+  overflow: hidden;
 }
 
 .journey-card p,
@@ -449,12 +449,10 @@ p {
 
 .journey-card-image {
   display: block;
-  width: 95%;
+  width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 1rem;
-  border-radius: 1rem;
+  border-radius: 0;
 }
 
 .journey-card.buyer {
@@ -466,6 +464,7 @@ p {
 }
 
 .journey-card-top {
+  padding: 0 1.4rem;
   margin-bottom: 1.1rem;
   text-align: center;
 }
@@ -509,6 +508,8 @@ p {
 
 .journey-list {
   margin: 0;
+  padding-right: 1.4rem;
+  padding-bottom: 1.4rem;
   padding-left: 1.2rem;
   color: rgba(16, 32, 61, 0.8);
   font-family: "Figtree", sans-serif;

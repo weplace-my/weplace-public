@@ -1,5 +1,9 @@
 const DEFAULT_LANGUAGE = 'en';
 const STORAGE_KEY = 'weplace_public_language';
+const LANGUAGE_LABELS = {
+  en: 'EN',
+  ms: 'BM'
+};
 
 const TRANSLATIONS = {
   en: {
@@ -261,7 +265,7 @@ const getValueByPath = (source, path) =>
 const setActiveLanguage = (language) => {
   const current = document.querySelector('[data-language-current]');
   if (current) {
-    current.textContent = language.toUpperCase();
+    current.textContent = LANGUAGE_LABELS[language] || language.toUpperCase();
   }
 
   document.querySelectorAll('[data-language-option]').forEach((option) => {
