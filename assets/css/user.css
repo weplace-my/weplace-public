@@ -466,6 +466,41 @@ p {
   position: relative;
 }
 
+.seller-ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.seller-idea-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.9rem;
+}
+
+.seller-idea-tile img {
+  width: 100%;
+  aspect-ratio: 1 / 1.1;
+  height: auto;
+  max-height: 28rem;
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  display: block;
+  box-shadow: 0 1.25rem 2.5rem rgba(16, 32, 61, 0.12);
+}
+
+.seller-idea-tile span {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #10203d;
+  text-align: center;
+}
+
 .journey-card {
   height: 100%;
   padding: 0;
@@ -940,6 +975,10 @@ p {
     height: 34rem;
   }
 
+  .seller-ideas-grid {
+    grid-template-columns: 1fr;
+  }
+
   .journey-card,
   .journey-bridge {
     text-align: left;
@@ -999,6 +1038,12 @@ p {
 
   .journey-card-seller {
     grid-area: seller;
+  }
+
+  .journey-card-top {
+    padding: 0 1.7rem 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
   }
 
   .seller-plan-section {
