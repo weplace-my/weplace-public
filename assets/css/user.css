@@ -468,7 +468,7 @@ p {
 
 .seller-ideas-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
@@ -481,15 +481,14 @@ p {
 
 .seller-idea-tile img {
   width: 100%;
-  aspect-ratio: 1 / 1.1;
+  aspect-ratio: 1 / 1.2;
   height: auto;
-  max-height: 28rem;
+  max-height: 30rem;
   object-fit: contain;
   object-position: center;
   background: #ffffff;
   border-radius: 1.5rem;
   display: block;
-  box-shadow: 0 1.25rem 2.5rem rgba(16, 32, 61, 0.12);
 }
 
 .seller-idea-tile span {
