@@ -100,7 +100,7 @@ const TRANSLATIONS = {
         },
         {
           title: 'Company Seller',
-          text: 'Company sellers can register by uploading company address details, with halal certificate as an optional document.'
+          text: 'Company sellers can register by providing SSM information, with halal certificate as an optional document.'
         },
         {
           title: 'Safer local interactions',
