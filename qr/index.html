@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weplace | Join Location</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/logo_full.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/logo_full.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/icons/logo_full.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/icons/logo_full.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600;700&family=Figtree:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="../assets/css/user.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <style>
+      .qr-section {
+        padding: 5.5rem 0 4rem;
+      }
+
+      .qr-card {
+        background: #fff;
+        border-radius: 28px;
+        box-shadow: 0 18px 50px rgba(17, 24, 39, 0.12);
+        padding: 2rem 1.5rem;
+      }
+
+      .qr-shell {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 1rem;
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: inset 0 0 0 1px rgba(17, 24, 39, 0.06);
+      }
+
+      #qr-code {
+        min-height: 248px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #qr-code img,
+      #qr-code canvas {
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+      }
+
+      .store-buttons img {
+        height: 52px;
+        width: auto;
+      }
+
+      .join-location-name {
+        color: #18a45a;
+        font-weight: 700;
+      }
+
+      .qr-error {
+        border: 1px dashed rgba(220, 38, 38, 0.25);
+        background: rgba(220, 38, 38, 0.04);
+        color: #991b1b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main" id="top">
+      <div class="content">
+        <nav class="navbar navbar-expand-md fixed-top" id="navbar" data-navbar-soft-on-scroll="data-navbar-soft-on-scroll">
+          <div class="container-fluid px-0"><a href="../index.html" class="navbar-brand d-flex align-items-center"><img src="../assets/img/logos/logo.svg" alt="logo" class="d-inline-block" style="height: 56px; width: auto; filter: brightness(0) invert(1);" /><span class="brand-name d-none d-md-block">Weplace</span></a><button class="navbar-toggler border-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="#navbar-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbar-content">
+              <ul class="navbar-nav gap-md-2 gap-lg-3 pt-x1 pb-1 pt-md-0 pb-md-0">
+                <li class="nav-item"><a class="nav-link lh-xl" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link lh-xl" href="../privacy/">Privacy</a></li>
+                <li class="nav-item"><a class="nav-link lh-xl" href="../security/">Security</a></li>
+                <li class="nav-item"><a class="nav-link lh-xl" href="../tnc/">Terms</a></li>
+                <li class="nav-item"><a class="nav-link lh-xl" href="../index.html#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <section class="legal-hero bg-1100">
+          <div class="container">
+            <div class="row justify-content-center text-center">
+              <div class="col-lg-8">
+                <p class="text-primary fw-semibold text-uppercase ls-2 mb-2">Join Location</p>
+                <h1 class="text-white fw-bold mb-3">Scan this QR with the Weplace app.</h1>
+                <p class="legal-hero-copy mb-0">Download Weplace, open the in-app scanner, and scan this QR code to join the location below.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="legal-content-section qr-section">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-9">
+                <div class="legal-card qr-card">
+                  <div class="legal-block text-center">
+                    <div class="d-flex flex-column align-items-center">
+                      <p class="text-1100 fs-8 mb-2">Download the app and scan with the in-app scanner.</p>
+                      <div class="d-flex flex-wrap justify-content-center gap-2 mb-3 store-buttons">
+                        <a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!" id="app-store-link">
+                          <img class="img-fluid" src="../assets/img/logos/App_Store.webp" alt="App Store" />
+                        </a>
+                        <a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!" id="play-store-link">
+                          <img class="img-fluid" src="../assets/img/logos/Play_Store.webp" alt="Google Play" />
+                        </a>
+                      </div>
+                      <p class="mb-4 lh-xl fw-semibold">Use In-App scanner to scan and join this location.</p>
+                      <div class="qr-shell">
+                        <div id="qr-code"></div>
+                      </div>
+                      <p class="mt-4 mb-0 fs-8">Join group <span class="join-location-name" id="location-name">this location</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="pt-7 pt-lg-8">
+          <div class="container">
+            <div class="row gy-4 g-md-3 border-bottom pb-8 pb-lg-9 justify-content-center">
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg ls-1">Weplace</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="../index.html#about">About us</a></li>
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="../index.html#contact">Contact us</a></li>
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="../index.html#service">Value</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg">Legal</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="../privacy/">Privacy</a></li>
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="../tnc/">Terms &amp; Conditions</a></li>
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="../security/">Security</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3">
+                <p class="mb-2 lh-lg">Contact</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"><a class="ls-1 lh-xl" href="mailto:weplace.my@gmail.com">weplace.my@gmail.com</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 d-md-flex flex-column align-items-md-end pe-md-0">
+                <div>
+                  <p class="mb-2 lh-lg">Download Our App</p>
+                  <div class="mb-1 mb-lg-2"><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!" id="footer-app-store-link"><img class="img-fluid" src="../assets/img/logos/App_Store.webp" alt="App Store" /></a></div><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!" id="footer-play-store-link"><img class="img-fluid" src="../assets/img/logos/Play_Store.webp" alt="Play Store" /></a>
+                </div>
+              </div>
+            </div>
+            <div class="row gy-2 py-3 justify-content-center justify-content-md-between">
+              <div class="col-auto ps-0">
+                <p class="text-center text-md-start lh-xl text-1100">&copy; 2026 Weplace Technologies. Built for Malaysian communities.</p>
+              </div>
+              <div class="col-auto pe-0"><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-twitter"> </span></a><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-instagram"></span></a><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="#!"><span class="uil uil-linkedin"> </span></a></div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const locationId = (params.get('locationId') || '').trim();
+        const rawLocationName = (params.get('locationName') || '').trim();
+        const locationName = rawLocationName || 'this location';
+        const qrRoot = document.getElementById('qr-code');
+        const locationNameEl = document.getElementById('location-name');
+
+        const APP_STORE_URL = '#!';
+        const PLAY_STORE_URL = '#!';
+
+        const storeLinks = [
+          document.getElementById('app-store-link'),
+          document.getElementById('footer-app-store-link'),
+        ];
+        const playLinks = [
+          document.getElementById('play-store-link'),
+          document.getElementById('footer-play-store-link'),
+        ];
+
+        storeLinks.forEach((link) => {
+          if (link) link.href = APP_STORE_URL;
+        });
+        playLinks.forEach((link) => {
+          if (link) link.href = PLAY_STORE_URL;
+        });
+
+        locationNameEl.textContent = locationName;
+
+        if (!locationId) {
+          qrRoot.innerHTML = '<div class="legal-block qr-error text-center rounded-4 py-4 px-3"><h2 class="fs-7 mb-2">Missing locationId</h2><p class="mb-0">Please open this page with a valid <code>?locationId=...</code> query parameter.</p></div>';
+          return;
+        }
+
+        const qrValue = new URL('https://weplace.my/qr');
+        qrValue.searchParams.set('action', 'join');
+        qrValue.searchParams.set('locationId', locationId);
+        if (rawLocationName) {
+          qrValue.searchParams.set('locationName', rawLocationName);
+        }
+
+        new QRCode(qrRoot, {
+          text: qrValue.toString(),
+          width: 248,
+          height: 248,
+          colorDark: '#0f172a',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.M,
+        });
+      })();
+    </script>
+    <script src="../vendors/popper/popper.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../vendors/is/is.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
+  </body>
+
+</html>
