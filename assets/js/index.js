@@ -92,7 +92,7 @@ const TRANSLATIONS = {
     priority: {
       eyebrow: 'Priority Support',
       title: 'Helping community sellers get seen.',
-      subtitle: 'Priority Support gives selected sellers extra visibility so residents can discover and support businesses from people who may need a stronger starting point.',
+      subtitle: 'Priority Support gives needed sellers extra visibility so residents can discover and support businesses from people who may need a stronger starting point.',
       note: 'Priority Support is reviewed by Weplace and may apply to approved community cases such as persons with disabilities, single parents, and other local support needs.',
       cards: [
         {
@@ -235,7 +235,7 @@ const TRANSLATIONS = {
     priority: {
       eyebrow: 'Sokongan Keutamaan',
       title: 'Membantu penjual komuniti lebih mudah ditemui.',
-      subtitle: 'Sokongan Keutamaan memberi keterlihatan tambahan kepada penjual terpilih supaya penduduk boleh menemui dan menyokong perniagaan daripada mereka yang mungkin memerlukan permulaan yang lebih kuat.',
+      subtitle: 'Sokongan Keutamaan memberi keterlihatan tambahan kepada penjual yang memerlukan sokongan supaya penduduk boleh menemui dan menyokong perniagaan daripada mereka yang mungkin memerlukan permulaan yang lebih kuat.',
       note: 'Sokongan Keutamaan disemak oleh Weplace dan boleh diberikan kepada kes komuniti yang diluluskan seperti OKU, ibu bapa tunggal, dan keperluan sokongan tempatan yang lain.',
       cards: [
         {
