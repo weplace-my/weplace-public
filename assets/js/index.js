@@ -89,6 +89,26 @@ const TRANSLATIONS = {
         }
       ]
     },
+    priority: {
+      eyebrow: 'Priority Support',
+      title: 'Helping community sellers get seen.',
+      subtitle: 'Priority Support gives selected sellers extra visibility so residents can discover and support businesses from people who may need a stronger starting point.',
+      note: 'Priority Support is reviewed by Weplace and may apply to approved community cases such as persons with disabilities, single parents, and other local support needs.',
+      cards: [
+        {
+          title: 'More visibility',
+          text: 'Supported sellers can be highlighted more clearly so nearby residents know who they are helping.'
+        },
+        {
+          title: 'Start from home',
+          text: 'Great for small home-based foods, goods, services, vouchers, and everyday ideas that begin inside the neighbourhood.'
+        },
+        {
+          title: 'Community-first support',
+          text: 'Residents can choose to support local sellers with clearer context and a stronger sense of trust.'
+        }
+      ]
+    },
     trust: {
       eyebrow: 'Built on Trust',
       title: 'Built for trusted local participation in Malaysia.',
@@ -209,6 +229,26 @@ const TRANSLATIONS = {
         {
           title: 'Pengguna Langganan',
           text: 'Senaraikan lebih banyak produk dan jualan, serta tingkatkan penemuan di kejiranan berdekatan.'
+        }
+      ]
+    },
+    priority: {
+      eyebrow: 'Sokongan Keutamaan',
+      title: 'Membantu penjual komuniti lebih mudah ditemui.',
+      subtitle: 'Sokongan Keutamaan memberi keterlihatan tambahan kepada penjual terpilih supaya penduduk boleh menemui dan menyokong perniagaan daripada mereka yang mungkin memerlukan permulaan yang lebih kuat.',
+      note: 'Sokongan Keutamaan disemak oleh Weplace dan boleh diberikan kepada kes komuniti yang diluluskan seperti OKU, ibu bapa tunggal, dan keperluan sokongan tempatan yang lain.',
+      cards: [
+        {
+          title: 'Lebih keterlihatan',
+          text: 'Penjual yang disokong boleh ditonjolkan dengan lebih jelas supaya penduduk berdekatan tahu siapa yang mereka bantu.'
+        },
+        {
+          title: 'Bermula dari rumah',
+          text: 'Sesuai untuk makanan, barangan, perkhidmatan, baucar, dan idea harian kecil yang bermula dalam kejiranan.'
+        },
+        {
+          title: 'Sokongan mengutamakan komuniti',
+          text: 'Penduduk boleh memilih untuk menyokong penjual tempatan dengan konteks yang lebih jelas dan rasa percaya yang lebih kuat.'
         }
       ]
     },
