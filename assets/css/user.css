@@ -551,6 +551,8 @@ p {
 .priority-support-copy {
   max-width: 47rem;
   margin-inline: auto;
+  text-align: center;
+  text-justify: auto;
   color: rgba(16, 32, 61, 0.74);
 }
 
@@ -571,6 +573,8 @@ p {
   display: grid;
   gap: 2rem;
   align-items: center;
+  max-width: 72rem;
+  margin: 0 auto;
 }
 
 .priority-support-content,
@@ -599,6 +603,8 @@ p {
 .priority-support-note p {
   color: rgba(16, 32, 61, 0.76);
   line-height: 1.75;
+  text-align: left;
+  text-justify: auto;
 }
 
 .priority-support-steps {
@@ -608,6 +614,11 @@ p {
 
 .priority-support-step {
   background: rgba(255, 255, 255, 0.92);
+}
+
+.priority-support-step p {
+  text-align: left;
+  text-justify: auto;
 }
 
 .priority-phone-stage .app-showcase-wrap {
@@ -1181,8 +1192,22 @@ p {
   }
 
   .priority-support-layout {
-    grid-template-columns: minmax(0, 1.08fr) minmax(19rem, 1fr);
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem) !important;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .priority-support-content {
+    max-width: 44rem;
+  }
+
+  .priority-support-visual {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .priority-phone-stage .app-showcase-wrap {
+    margin-bottom: 0;
   }
 }
 
