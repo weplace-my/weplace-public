@@ -622,15 +622,15 @@ p {
 }
 
 .priority-phone-stage .app-showcase-wrap {
-  max-width: 22rem;
+  max-width: 25rem;
 }
 
 .priority-phone-shell {
-  max-width: 20rem;
+  max-width: 19rem;
 }
 
 .priority-phone-screen {
-  height: 34rem;
+  height: 38rem;
 }
 
 .priority-phone-image {
@@ -1192,7 +1192,7 @@ p {
   }
 
   .priority-support-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(19rem, 25rem) !important;
     gap: 3rem;
     align-items: center;
   }
