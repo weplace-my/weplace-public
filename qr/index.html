@@ -64,6 +64,60 @@
         font-weight: 700;
       }
 
+      .group-preview {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto 1.25rem;
+        padding: 0.85rem 1rem;
+        border-radius: 20px;
+        background: linear-gradient(135deg, rgba(24, 164, 90, 0.08), rgba(88, 208, 138, 0.14));
+        border: 1px solid rgba(24, 164, 90, 0.16);
+        text-align: left;
+      }
+
+      .group-preview-inner {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .group-preview-image {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        object-fit: cover;
+        background: rgba(15, 23, 42, 0.08);
+        flex-shrink: 0;
+      }
+
+      .group-preview-copy {
+        min-width: 0;
+      }
+
+      .group-preview-name {
+        margin: 0;
+        color: #0f172a;
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+
+      .group-preview-meta {
+        margin: 0.3rem 0 0;
+        color: #475569;
+        font-size: 0.92rem;
+      }
+
+      .group-preview-address {
+        margin: 0.2rem 0 0;
+        color: #64748b;
+        font-size: 0.86rem;
+      }
+
+      .qr-loading {
+        color: #475569;
+        font-weight: 600;
+      }
+
       .qr-error {
         border: 1px dashed rgba(220, 38, 38, 0.25);
         background: rgba(220, 38, 38, 0.04);
@@ -116,8 +170,18 @@
                         </a>
                       </div>
                       <p class="mb-4 lh-xl fw-semibold">Use In-App scanner to scan and join this location.</p>
+                      <div class="group-preview" id="group-preview" hidden>
+                        <div class="group-preview-inner">
+                          <img class="group-preview-image" id="group-image" alt="Group image" hidden />
+                          <div class="group-preview-copy">
+                            <p class="group-preview-name" id="group-name">Weplace Community</p>
+                            <p class="group-preview-meta" id="group-meta">Community group</p>
+                            <p class="group-preview-address" id="group-address"></p>
+                          </div>
+                        </div>
+                      </div>
                       <div class="qr-shell">
-                        <div id="qr-code"></div>
+                        <div id="qr-code"><p class="qr-loading mb-0">Preparing QR…</p></div>
                       </div>
                       <p class="mt-4 mb-0 fs-8">Join group <span class="join-location-name" id="location-name">this location</span></p>
                     </div>
@@ -171,16 +235,20 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script>
-      (function () {
+      (async function () {
         const params = new URLSearchParams(window.location.search);
-        const locationId = (params.get('locationId') || '').trim();
-        const rawLocationName = (params.get('locationName') || '').trim();
-        const locationName = rawLocationName || 'this location';
+        const groupToken = (params.get('g') || '').trim();
         const qrRoot = document.getElementById('qr-code');
         const locationNameEl = document.getElementById('location-name');
+        const groupPreviewEl = document.getElementById('group-preview');
+        const groupImageEl = document.getElementById('group-image');
+        const groupNameEl = document.getElementById('group-name');
+        const groupMetaEl = document.getElementById('group-meta');
+        const groupAddressEl = document.getElementById('group-address');
 
-        const APP_STORE_URL = '#!';
-        const PLAY_STORE_URL = '#!';
+        const APP_STORE_URL = 'https://apps.apple.com/';
+        const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=my.weplace.app';
+        const API_BASE_URL = 'https://api.weplace.my';
 
         const storeLinks = [
           document.getElementById('app-store-link'),
@@ -198,28 +266,70 @@
           if (link) link.href = PLAY_STORE_URL;
         });
 
-        locationNameEl.textContent = locationName;
-
-        if (!locationId) {
-          qrRoot.innerHTML = '<div class="legal-block qr-error text-center rounded-4 py-4 px-3"><h2 class="fs-7 mb-2">Missing locationId</h2><p class="mb-0">Please open this page with a valid <code>?locationId=...</code> query parameter.</p></div>';
+        if (!groupToken) {
+          qrRoot.innerHTML = '<div class="legal-block qr-error text-center rounded-4 py-4 px-3"><h2 class="fs-7 mb-2">Missing group token</h2><p class="mb-0">Please open this page with a valid <code>?g=...</code> query parameter.</p></div>';
           return;
         }
 
-        const qrValue = new URL('https://weplace.my/qr');
-        qrValue.searchParams.set('action', 'join');
-        qrValue.searchParams.set('locationId', locationId);
-        if (rawLocationName) {
-          qrValue.searchParams.set('locationName', rawLocationName);
-        }
+        try {
+          const response = await fetch(`${API_BASE_URL}/api/v1/public/group-token/${encodeURIComponent(groupToken)}`, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+            },
+          });
 
-        new QRCode(qrRoot, {
-          text: qrValue.toString(),
-          width: 248,
-          height: 248,
-          colorDark: '#0f172a',
-          colorLight: '#ffffff',
-          correctLevel: QRCode.CorrectLevel.M,
-        });
+          const payload = await response.json().catch(() => ({}));
+          const data = payload && typeof payload === 'object' ? payload.data : null;
+
+          if (!response.ok || !data || typeof data !== 'object') {
+            throw new Error(payload && payload.message ? payload.message : 'Failed to load group details');
+          }
+
+          const locationName = (data.locationName || 'this location').toString().trim();
+          const qrValue = (data.qrValue || '').toString().trim();
+          const locationType = (data.locationType || 'community').toString().trim();
+          const formattedAddress = (data.formattedAddress || '').toString().trim();
+          const totalUser = Number(data.totalUser || 0);
+          const imageUrl = (data.imageUrl || '').toString().trim();
+
+          if (!qrValue) {
+            throw new Error('QR payload is missing');
+          }
+
+          locationNameEl.textContent = locationName;
+          groupNameEl.textContent = locationName;
+          groupMetaEl.textContent = totalUser > 0
+            ? `${locationType} community • ${totalUser} members`
+            : `${locationType} community`;
+          groupAddressEl.textContent = formattedAddress;
+          groupPreviewEl.hidden = false;
+
+          if (formattedAddress) {
+            groupAddressEl.hidden = false;
+          } else {
+            groupAddressEl.hidden = true;
+          }
+
+          if (imageUrl) {
+            groupImageEl.src = imageUrl;
+            groupImageEl.hidden = false;
+          } else {
+            groupImageEl.hidden = true;
+          }
+
+          qrRoot.innerHTML = '';
+          new QRCode(qrRoot, {
+            text: qrValue,
+            width: 248,
+            height: 248,
+            colorDark: '#0f172a',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.M,
+          });
+        } catch (error) {
+          qrRoot.innerHTML = `<div class="legal-block qr-error text-center rounded-4 py-4 px-3"><h2 class="fs-7 mb-2">Unable to load group</h2><p class="mb-0">${error && error.message ? error.message : 'Please try again later.'}</p></div>`;
+        }
       })();
     </script>
     <script src="../vendors/popper/popper.min.js"></script>
