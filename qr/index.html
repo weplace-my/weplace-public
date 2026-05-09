@@ -119,7 +119,7 @@
 
       .qr-section-block {
         width: 100%;
-        text-align: left;
+        text-align: center;
       }
 
       .qr-section-block + .qr-section-block {
@@ -145,6 +145,7 @@
         flex-wrap: wrap;
         gap: 0.4rem;
         align-items: center;
+        justify-content: center;
         color: #64748b;
         font-size: 0.78rem;
       }
@@ -154,12 +155,15 @@
         border: 1px solid rgba(24, 164, 90, 0.12);
         border-radius: 18px;
         padding: 0.5rem;
+        min-height: 18.6rem;
       }
 
       .qr-step-image {
         width: 100%;
+        height: 100%;
         display: block;
         border-radius: 16px;
+        object-fit: cover;
       }
 
       .qr-section-note {
@@ -181,8 +185,18 @@
         gap: 0.7rem;
       }
 
+      .group-preview {
+        text-align: center;
+      }
+
+      .group-preview-inner {
+        justify-content: center;
+        text-align: left;
+      }
+
       .qr-shell {
         width: 100%;
+        min-height: 18.6rem;
         padding: 0.8rem;
         background: transparent;
         border-radius: 18px;
@@ -208,7 +222,7 @@
       .qr-frame {
         position: relative;
         padding: 0.8rem;
-        min-height: 17rem;
+        min-height: 16.9rem;
         border-radius: 16px;
         background: transparent;
       }
