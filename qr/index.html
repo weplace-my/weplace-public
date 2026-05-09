@@ -24,10 +24,10 @@
       }
 
       .qr-card {
-        background: #fff;
-        border-radius: 28px;
-        box-shadow: 0 18px 50px rgba(17, 24, 39, 0.12);
-        padding: 2rem 1.5rem;
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
       }
 
       #qr-code {
@@ -61,10 +61,10 @@
       .group-preview {
         width: 100%;
         margin: 0;
-        padding: 0.85rem 1rem;
-        border-radius: 20px;
-        background: linear-gradient(135deg, rgba(24, 164, 90, 0.08), rgba(88, 208, 138, 0.14));
-        border: 1px solid rgba(24, 164, 90, 0.16);
+        padding: 0.75rem 0.9rem;
+        border-radius: 16px;
+        background: transparent;
+        border: 1px solid rgba(24, 164, 90, 0.12);
         text-align: left;
       }
 
@@ -91,19 +91,19 @@
         margin: 0;
         color: #0f172a;
         font-weight: 700;
-        font-size: 1.05rem;
+        font-size: 0.95rem;
       }
 
       .group-preview-meta {
         margin: 0.3rem 0 0;
         color: #475569;
-        font-size: 0.92rem;
+        font-size: 0.82rem;
       }
 
       .group-preview-address {
         margin: 0.2rem 0 0;
         color: #64748b;
-        font-size: 0.86rem;
+        font-size: 0.8rem;
       }
 
       .qr-loading {
@@ -117,97 +117,43 @@
         color: #991b1b;
       }
 
-      .qr-flow {
+      .qr-section-block {
         width: 100%;
-        max-width: 62rem;
-        margin: 0 auto;
-        display: grid;
-        gap: 1rem;
-      }
-
-      .qr-step-card {
-        position: relative;
-        display: grid;
-        gap: 0.9rem;
         text-align: left;
-        padding: 1.2rem 1.2rem 1.25rem;
-        border-radius: 24px;
-        background: linear-gradient(180deg, rgba(240, 255, 247, 0.98), rgba(226, 250, 236, 0.98));
-        border: 1px solid rgba(24, 164, 90, 0.16);
-        box-shadow: 0 16px 34px rgba(24, 164, 90, 0.08);
       }
 
-      .qr-step-card::after {
-        content: "";
-        position: absolute;
-        left: 1.6rem;
-        bottom: -1rem;
-        width: 2px;
-        height: 1rem;
-        background: linear-gradient(180deg, rgba(24, 164, 90, 0.28), rgba(24, 164, 90, 0));
+      .qr-section-block + .qr-section-block {
+        margin-top: 1rem;
       }
 
-      .qr-step-card:last-child::after {
-        display: none;
-      }
-
-      .qr-step-card--start {
-        max-width: 34rem;
-      }
-
-      .qr-step-card--middle {
-        max-width: 34rem;
-        justify-self: end;
-      }
-
-      .qr-step-card--final {
-        background: linear-gradient(180deg, #ffffff 0%, #f2fbf5 100%);
-        border-color: rgba(24, 164, 90, 0.2);
-        box-shadow: 0 18px 40px rgba(24, 164, 90, 0.1);
-      }
-
-      .qr-step-label {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        padding: 0.34rem 0.68rem;
-        border-radius: 999px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: #ffffff;
-        background: linear-gradient(135deg, #18a45a, #58d08a);
-      }
-
-      .qr-step-title {
+      .qr-section-title {
         margin: 0;
         color: #0f172a;
-        font-size: 1.08rem;
+        font-size: 0.95rem;
         font-weight: 700;
       }
 
-      .qr-step-copy {
+      .qr-section-copy {
         margin: 0;
         color: #35566b;
-        font-size: 0.92rem;
-        line-height: 1.65;
+        font-size: 0.82rem;
+        line-height: 1.55;
       }
 
-      .qr-step-inline {
+      .qr-section-inline {
         display: flex;
         flex-wrap: wrap;
         gap: 0.4rem;
         align-items: center;
         color: #64748b;
-        font-size: 0.86rem;
+        font-size: 0.78rem;
       }
 
       .qr-step-image-shell {
-        background: rgba(255, 255, 255, 0.72);
+        background: transparent;
         border: 1px solid rgba(24, 164, 90, 0.12);
-        border-radius: 22px;
-        padding: 0.72rem;
+        border-radius: 18px;
+        padding: 0.5rem;
       }
 
       .qr-step-image {
@@ -216,54 +162,55 @@
         border-radius: 16px;
       }
 
-      .qr-step-note {
+      .qr-section-note {
         margin: 0;
         color: #64748b;
-        font-size: 0.86rem;
-        line-height: 1.5;
+        font-size: 0.76rem;
+        line-height: 1.45;
       }
 
-      .qr-live-panel {
+      .qr-join-layout {
         display: grid;
-        gap: 0.9rem;
+        grid-template-columns: minmax(0, 1.08fr) minmax(16rem, 20rem);
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .qr-left-panel {
+        display: grid;
+        gap: 0.7rem;
       }
 
       .qr-shell {
         width: 100%;
-        padding: 1rem;
-        background: #fff;
-        border-radius: 24px;
+        padding: 0.8rem;
+        background: transparent;
+        border-radius: 18px;
         border: 1px solid rgba(24, 164, 90, 0.14);
-        box-shadow: inset 0 0 0 1px rgba(17, 24, 39, 0.06);
-      }
-
-      .qr-final-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(17rem, 21rem);
-        gap: 1rem;
-        align-items: start;
+        box-shadow: none;
       }
 
       .qr-shell-header {
         display: flex;
         align-items: center;
         gap: 0.6rem;
-        margin-bottom: 0.85rem;
+        margin-bottom: 0.6rem;
         color: #18a45a;
         font-weight: 700;
+        font-size: 0.9rem;
       }
 
       .qr-shell-header img {
-        width: 1.75rem;
-        height: 1.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
 
       .qr-frame {
         position: relative;
-        padding: 1rem;
-        min-height: 19rem;
-        border-radius: 20px;
-        background: linear-gradient(180deg, #ffffff 0%, #f6fcf8 100%);
+        padding: 0.8rem;
+        min-height: 17rem;
+        border-radius: 16px;
+        background: transparent;
       }
 
       .qr-frame-corner {
@@ -307,50 +254,27 @@
         border-bottom-right-radius: 0.5rem;
       }
 
-      .qr-flow-tip {
+      .qr-page-tip {
         width: 100%;
-        max-width: 62rem;
-        margin: 0.9rem auto 0;
+        max-width: none;
+        margin: 0.4rem auto 0;
         color: #64748b;
-        font-size: 0.92rem;
+        font-size: 0.8rem;
         text-align: center;
       }
 
-      .qr-flow-tip strong {
+      .qr-page-tip strong {
         color: #18a45a;
       }
 
-      @media (min-width: 768px) {
-        .qr-step-card--middle::before,
-        .qr-step-card--final::before {
-          content: "";
-          position: absolute;
-          top: -1rem;
-          left: 1.6rem;
-          width: 2px;
-          height: 1rem;
-          background: linear-gradient(180deg, rgba(24, 164, 90, 0), rgba(24, 164, 90, 0.28));
-        }
-      }
-
       @media (max-width: 767.98px) {
-        .qr-final-layout {
-          grid-template-columns: 1fr;
-        }
-
         .store-buttons {
           justify-content: center !important;
-        }
-
-        .qr-step-card--start,
-        .qr-step-card--middle {
-          max-width: none;
-          justify-self: stretch;
         }
       }
 
       @media (max-width: 991.98px) {
-        .qr-final-layout {
+        .qr-join-layout {
           grid-template-columns: 1fr;
         }
       }
@@ -387,77 +311,66 @@
         <section class="legal-content-section qr-section">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-lg-9">
+              <div class="col-12">
                 <div class="legal-card qr-card">
                   <div class="legal-block text-center">
                     <div class="d-flex flex-column align-items-center">
-                      <div class="qr-flow">
-                        <div class="qr-step-card qr-step-card--start">
-                          <div class="qr-step-label">Step 1</div>
-                          <h2 class="qr-step-title">Download Weplace, Register &amp; Sign-In</h2>
-                          <p class="qr-step-copy">Create your account first, then you are ready to join your condo or neighbourhood group.</p>
-                          <div class="qr-step-inline">
+                      <div class="qr-section-block">
+                        <h2 class="qr-section-title">Download Weplace, Register &amp; Sign-In</h2>
+                        <p class="qr-section-copy">Create your account first, then you are ready to join your condo or neighbourhood group.</p>
+                        <div class="qr-section-inline">
                             <span>New here?</span>
                             <span>Install the app first.</span>
-                          </div>
-                          <div class="d-flex flex-wrap justify-content-center gap-2 mt-3 store-buttons">
-                            <span class="download-badge download-badge-disabled rounded-1" aria-disabled="true">
-                              <img class="img-fluid" src="../assets/img/logos/App_Store.webp" alt="App Store coming soon" />
-                              <span class="download-badge-overlay">Coming Soon</span>
-                            </span>
-                            <a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!" id="play-store-link">
-                              <img class="img-fluid" src="../assets/img/logos/Play_Store.webp" alt="Download on Google Play" />
-                            </a>
-                          </div>
-                          <p class="qr-step-note">Skip this step if you already have Weplace installed.</p>
                         </div>
-
-                        <div class="qr-step-card qr-step-card--middle">
-                          <div class="qr-step-label">Step 2</div>
-                          <h2 class="qr-step-title">Join Your Community Group</h2>
-                          <p class="qr-step-copy">Use the community join flow in Weplace and scan the location QR to enter the right group.</p>
-                          <div class="qr-step-image-shell">
-                            <img class="qr-step-image" src="../assets/img/gallery/scan-1.jpg" alt="Weplace join community scanner flow" />
-                          </div>
-                          <p class="qr-step-note">This works best when the QR stand is clearly visible on another screen or printed sign.</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3 store-buttons">
+                          <span class="download-badge download-badge-disabled rounded-1" aria-disabled="true">
+                            <img class="img-fluid" src="../assets/img/logos/App_Store.webp" alt="App Store coming soon" />
+                            <span class="download-badge-overlay">Coming Soon</span>
+                          </span>
+                          <a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="#!" id="play-store-link">
+                            <img class="img-fluid" src="../assets/img/logos/Play_Store.webp" alt="Download on Google Play" />
+                          </a>
                         </div>
+                        <p class="qr-section-note mt-2">Skip this step if you already have Weplace installed.</p>
+                      </div>
 
-                        <div class="qr-step-card qr-step-card--final">
-                          <div class="qr-step-label">Step 3</div>
-                          <h2 class="qr-step-title">Or, use our in-app scan here</h2>
-                          <p class="qr-step-copy">Open the Weplace scan button and point it at this live QR with the location name below.</p>
-                          <div class="qr-final-layout">
-                            <div class="qr-live-panel">
-                              <div class="group-preview" id="group-preview" hidden>
-                                <div class="group-preview-inner">
-                                  <img class="group-preview-image" id="group-image" alt="Group image" hidden />
-                                  <div class="group-preview-copy">
-                                    <p class="group-preview-name" id="group-name">Weplace Community</p>
-                                    <p class="group-preview-meta" id="group-meta">Community group</p>
-                                    <p class="group-preview-address" id="group-address"></p>
-                                  </div>
+                      <div class="qr-section-block">
+                        <h2 class="qr-section-title">Join Your Community Group</h2>
+                        <p class="qr-section-copy">Use the community join flow in Weplace and scan the location QR to enter the right group.</p>
+                        <div class="qr-join-layout mt-2">
+                          <div class="qr-left-panel">
+                            <div class="qr-step-image-shell">
+                              <img class="qr-step-image" src="../assets/img/gallery/scan-1.jpg" alt="Weplace join community scanner flow" />
+                            </div>
+                            <div class="group-preview" id="group-preview" hidden>
+                              <div class="group-preview-inner">
+                                <img class="group-preview-image" id="group-image" alt="Group image" hidden />
+                                <div class="group-preview-copy">
+                                  <p class="group-preview-name" id="group-name">Weplace Community</p>
+                                  <p class="group-preview-meta" id="group-meta">Community group</p>
+                                  <p class="group-preview-address" id="group-address"></p>
                                 </div>
                               </div>
-                              <p class="qr-step-note">Make sure the full QR stays visible while you scan.</p>
                             </div>
-                            <div class="qr-shell">
-                              <div class="qr-shell-header">
-                                <img src="../assets/img/logos/logo.svg" alt="" />
-                                <span>Weplace</span>
-                              </div>
-                              <p class="mb-3 fw-semibold text-dark">Location: <span class="join-location-name" id="location-name">this location</span></p>
-                              <div class="qr-frame">
-                                <span class="qr-frame-corner tl"></span>
-                                <span class="qr-frame-corner tr"></span>
-                                <span class="qr-frame-corner bl"></span>
-                                <span class="qr-frame-corner br"></span>
-                                <div id="qr-code"><p class="qr-loading mb-0">Preparing QR...</p></div>
-                              </div>
+                            <p class="qr-section-note">Keep the QR fully visible while scanning from the app.</p>
+                          </div>
+                          <div class="qr-shell">
+                            <div class="qr-shell-header">
+                              <img src="../assets/img/logos/logo.svg" alt="" />
+                              <span>Weplace</span>
+                            </div>
+                            <p class="mb-2 fw-semibold text-dark" style="font-size:0.82rem;">Location: <span class="join-location-name" id="location-name">this location</span></p>
+                            <div class="qr-frame">
+                              <span class="qr-frame-corner tl"></span>
+                              <span class="qr-frame-corner tr"></span>
+                              <span class="qr-frame-corner bl"></span>
+                              <span class="qr-frame-corner br"></span>
+                              <div id="qr-code"><p class="qr-loading mb-0">Preparing QR...</p></div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <p class="qr-flow-tip mb-0"><strong>Tip:</strong> another phone, tablet, or desktop screen makes scanning much easier.</p>
+                      <p class="qr-page-tip mb-0"><strong>Tip:</strong> another phone, tablet, or desktop screen makes scanning much easier.</p>
                     </div>
                   </div>
                 </div>
