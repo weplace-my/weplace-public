@@ -15,7 +15,7 @@ const TRANSLATIONS = {
     },
     hero: {
       title: 'Connecting Community. Improving Everyday Life.',
-      body: '<b>Weplace connects neighbors with social and market platform to bring more value to our daily life.<br>By supporting each other, we can discover great peoples and unlock great deals.</b>',
+      body: '<b>Weplace helps neighbours buy, sell, support, and connect within their own communities — making daily life more convenient, affordable, and meaningful.</b>',
       download: 'Unlock the potential of your community to improve everyday life.'
     },
     logo: {
