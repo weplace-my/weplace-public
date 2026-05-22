@@ -92,12 +92,14 @@
 }
 
 p {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
+  text-justify: auto;
 }
 
 .hero-copy {
   max-width: 39rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-eyebrow {
@@ -120,7 +122,10 @@ p {
 }
 
 .hero-body-copy {
-  max-width: 35rem;
+  max-width: 33rem;
+  color: rgba(16, 32, 61, 0.92) !important;
+  text-align: left;
+  text-justify: auto;
 }
 
 .logo-explain-media {
@@ -175,10 +180,10 @@ p {
 .hero-download-copy {
   margin-bottom: 0.9rem;
   font-family: "Figtree", sans-serif;
-  font-size: 1rem;
+  font-size: 0.94rem;
   font-weight: 600;
   line-height: 1.6;
-  color: #374151;
+  color: rgba(16, 32, 61, 0.82);
   text-align: left;
   text-justify: auto;
 }
@@ -190,6 +195,14 @@ p {
 .store-badge-link {
   display: inline-flex;
   max-width: 13rem;
+  filter: saturate(0.92);
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.store-badge-link:hover,
+.store-badge-link:focus {
+  transform: translateY(-1px);
+  filter: saturate(1.05);
 }
 
 .store-badge-link img {
@@ -210,6 +223,26 @@ p {
 
 .hero-phone-stage {
   z-index: 0;
+}
+
+.hero-section .hero-background {
+  position: relative;
+}
+
+.hero-section .hero-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 42%, rgba(0, 0, 0, 0.06) 100%),
+    radial-gradient(circle at 20% 42%, rgba(255, 255, 255, 0.26), transparent 34%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section .hero-background > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .app-showcase-glow {
@@ -467,7 +500,7 @@ p {
 
 .journey-layout {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.75rem;
   align-items: center;
 }
 
@@ -664,10 +697,10 @@ p {
 .journey-card {
   height: 100%;
   padding: 0;
-  border: 1px solid rgba(16, 32, 61, 0.08);
-  border-radius: 1.5rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 250, 255, 0.94) 100%);
-  box-shadow: 0 1rem 2.5rem rgba(16, 32, 61, 0.08);
+  border: 0;
+  border-radius: 1.1rem;
+  background: transparent;
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -681,28 +714,29 @@ p {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
-  border-radius: 0;
+  margin-bottom: 1.15rem;
+  border-radius: 1.1rem;
+  box-shadow: 0 1rem 2.6rem rgba(16, 32, 61, 0.08);
 }
 
 .journey-card.buyer {
-  background: linear-gradient(180deg, rgba(239, 251, 244, 0.96) 0%, rgba(255, 255, 255, 0.98) 100%);
+  background: transparent;
 }
 
 .journey-card.seller {
-  background: linear-gradient(180deg, rgba(242, 248, 255, 0.96) 0%, rgba(255, 255, 255, 0.98) 100%);
+  background: transparent;
 }
 
 .journey-card-top {
-  padding: 0 1.4rem;
+  padding: 0 0.35rem;
   margin-bottom: 1.1rem;
   text-align: center;
 }
 
 .journey-card-top h5 {
   margin-bottom: 0.75rem !important;
-  font-size: 1.65rem;
-  line-height: 1.45;
+  font-size: 1.42rem;
+  line-height: 1.28;
   letter-spacing: -0.02em;
   color: #10203d;
 }
@@ -710,8 +744,8 @@ p {
 .journey-card-top p {
   margin-bottom: 0;
   font-family: "Figtree", sans-serif;
-  font-size: 1rem;
-  line-height: 1.85;
+  font-size: 0.98rem;
+  line-height: 1.72;
   color: rgba(16, 32, 61, 0.72);
 }
 
@@ -1039,6 +1073,54 @@ p {
   line-height: 1.75;
 }
 
+footer {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfdfc 100%);
+}
+
+.footer-brand-block {
+  max-width: 18rem;
+}
+
+.footer-brand-logo {
+  width: 2.35rem;
+  height: auto;
+  margin-bottom: 0.85rem;
+}
+
+.footer-brand-name {
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #10203d;
+}
+
+.footer-brand-copy {
+  margin-bottom: 1rem;
+  color: rgba(16, 32, 61, 0.66);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  text-align: left;
+  text-justify: auto;
+}
+
+footer .icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(16, 32, 61, 0.04);
+}
+
+footer .icons:hover,
+footer .icons:focus {
+  background: rgba(20, 197, 108, 0.12);
+  color: #14c56c;
+  text-decoration: none;
+}
+
 .legal-hero {
   position: relative;
   overflow: hidden;
@@ -1206,7 +1288,7 @@ p {
   }
 
   .store-badge-group {
-    width: min(100%, 17.65rem);
+    width: min(100%, 16.75rem);
     margin-left: auto;
     margin-right: auto;
     justify-content: center !important;
@@ -1217,7 +1299,27 @@ p {
   .store-badge-link {
     flex: 1 1 0;
     min-width: 0;
-    max-width: 8.55rem;
+    max-width: 8.1rem;
+  }
+
+  .journey-card-top {
+    padding: 0 0.5rem;
+  }
+
+  .journey-card-top h5 {
+    font-size: 1.25rem;
+  }
+
+  .footer-brand-block {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-brand-copy {
+    max-width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .app-showcase-wrap-hero {

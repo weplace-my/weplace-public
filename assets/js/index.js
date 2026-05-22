@@ -17,7 +17,7 @@ const TRANSLATIONS = {
       eyebrow: 'Weplace Malaysia',
       title: 'Weplace connects neighbors.',
       body: '<b>Buy, sell, support, and connect with people nearby, all inside one community-first app.</b>',
-      download: 'Download Weplace today.'
+      download: 'Available on iOS and Android.'
     },
     logo: {
       home: {
@@ -160,6 +160,7 @@ const TRANSLATIONS = {
     },
     footer: {
       brand: 'Weplace',
+      tagline: 'A neighborhood app for buying, selling, helping, and discovering more around you.',
       brandLinks: ['About us', 'Contact us', 'FAQ'],
       modules: {
         title: 'Modules',
@@ -184,7 +185,7 @@ const TRANSLATIONS = {
       eyebrow: 'Weplace Malaysia',
       title: 'Weplace menghubungkan jiran.',
       body: '<b>Beli, jual, menyokong, dan berhubung dengan orang berdekatan dalam satu aplikasi komuniti.</b>',
-      download: 'Muat turun Weplace hari ini.'
+      download: 'Tersedia di iOS dan Android.'
     },
     logo: {
       home: {
@@ -327,6 +328,7 @@ const TRANSLATIONS = {
     },
     footer: {
       brand: 'Weplace',
+      tagline: 'Aplikasi kejiranan untuk membeli, menjual, membantu, dan menemui lebih banyak perkara berdekatan.',
       brandLinks: ['Tentang kami', 'Hubungi kami', 'FAQ'],
       modules: {
         title: 'Modul',
