@@ -14,9 +14,10 @@ const TRANSLATIONS = {
       contact: 'Contact'
     },
     hero: {
-      title: 'Connecting Community. Improving Everyday Life.',
-      body: '<b>Weplace helps neighbours buy, sell, support, and connect within their own communities — making daily life more convenient, affordable, and meaningful.</b>',
-      download: 'Unlock the potential of your community to improve everyday life.'
+      eyebrow: 'Weplace Malaysia',
+      title: 'Weplace connects neighbors.',
+      body: '<b>Buy, sell, support, and connect with people nearby, all inside one community-first app.</b>',
+      download: 'Download Weplace today.'
     },
     logo: {
       home: {
@@ -134,6 +135,29 @@ const TRANSLATIONS = {
       subtitle: 'If you want to learn more about Weplace, early access, partnerships, or seller onboarding, reach us directly by email.',
       footer: 'We would love to hear from residents, local businesses, and potential partners.'
     },
+    faq: {
+      eyebrow: 'Questions',
+      title: 'Simple answers before you join.',
+      subtitle: 'A quick guide for residents, local sellers, and community partners.',
+      items: [
+        {
+          question: 'Who is Weplace for?',
+          answer: 'Weplace is for Malaysian residents, home-based sellers, small local businesses, and people who want to discover useful goods, foods, services, vouchers, events, and help nearby.'
+        },
+        {
+          question: 'Can I start selling from home?',
+          answer: 'Yes. Approved sellers can start small from home, test ideas with nearby buyers, and grow steadily with feedback from their own neighborhood.'
+        },
+        {
+          question: 'How does Weplace build trust?',
+          answer: 'Weplace supports clearer local participation with seller verification options for personal and company sellers, helping everyday interactions feel more familiar and secure.'
+        },
+        {
+          question: 'Where can I download the app?',
+          answer: 'You can download Weplace from the App Store or Google Play using the buttons on this page.'
+        }
+      ]
+    },
     footer: {
       brand: 'Weplace',
       brandLinks: ['About us', 'Contact us', 'FAQ'],
@@ -157,9 +181,10 @@ const TRANSLATIONS = {
       contact: 'Hubungi'
     },
     hero: {
-      title: 'Menghubungkan Komuniti. Memperbaiki Kehidupan Harian.',
-      body: '<b>Weplace menghubungkan jiran melalui platform sosial dan pasaran untuk membawa lebih nilai dalam kehidupan harian kita.<br>Dengan saling menyokong, kita boleh menemui lebih ramai orang hebat dan membuka peluang tawaran yang menarik.</b>',
-      download: 'Temui potensi tersembunyi dalam komuniti anda.'
+      eyebrow: 'Weplace Malaysia',
+      title: 'Weplace menghubungkan jiran.',
+      body: '<b>Beli, jual, menyokong, dan berhubung dengan orang berdekatan dalam satu aplikasi komuniti.</b>',
+      download: 'Muat turun Weplace hari ini.'
     },
     logo: {
       home: {
@@ -276,6 +301,29 @@ const TRANSLATIONS = {
       title: 'Mari berhubung dengan Weplace.',
       subtitle: 'Jika anda ingin mengetahui lebih lanjut tentang Weplace, akses awal, kerjasama, atau penyertaan penjual, hubungi kami terus melalui e-mel.',
       footer: 'Kami ingin mendengar daripada penduduk, perniagaan tempatan, dan bakal rakan kerjasama.'
+    },
+    faq: {
+      eyebrow: 'Soalan',
+      title: 'Jawapan ringkas sebelum anda sertai.',
+      subtitle: 'Panduan pantas untuk penduduk, penjual tempatan, dan rakan komuniti.',
+      items: [
+        {
+          question: 'Untuk siapa Weplace?',
+          answer: 'Weplace adalah untuk penduduk Malaysia, penjual dari rumah, perniagaan kecil tempatan, dan orang yang ingin menemui barangan, makanan, perkhidmatan, baucar, acara, dan bantuan berdekatan.'
+        },
+        {
+          question: 'Bolehkah saya mula menjual dari rumah?',
+          answer: 'Ya. Penjual yang diluluskan boleh bermula kecil dari rumah, menguji idea dengan pembeli berdekatan, dan berkembang secara berperingkat melalui maklum balas kejiranan.'
+        },
+        {
+          question: 'Bagaimana Weplace membina kepercayaan?',
+          answer: 'Weplace menyokong penyertaan tempatan yang lebih jelas melalui pilihan pengesahan untuk penjual peribadi dan syarikat, supaya interaksi harian terasa lebih dikenali dan selamat.'
+        },
+        {
+          question: 'Di mana saya boleh muat turun aplikasi?',
+          answer: 'Anda boleh memuat turun Weplace dari App Store atau Google Play menggunakan butang di halaman ini.'
+        }
+      ]
     },
     footer: {
       brand: 'Weplace',
