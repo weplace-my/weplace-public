@@ -14,45 +14,44 @@ const TRANSLATIONS = {
       contact: 'Contact'
     },
     hero: {
-      eyebrow: 'Weplace Malaysia',
-      title: 'Weplace connects neighbors.',
-      body: '<b>Buy, sell, support, and connect with people nearby, all inside one community-first app.</b>',
+      title: 'Connecting Community. Improving Everyday Life.',
+      body: 'Weplace helps neighbours buy, sell, support, and connect within their own communities — making daily life more convenient, affordable, and meaningful.',
       download: 'Available on iOS and Android.'
     },
     logo: {
       home: {
         title: 'Home',
-        text: 'The location marker represents our home, the place we live.'
+        text: 'The marker stands for home - the place where daily life begins.'
       },
       connection: {
         title: 'Connection',
-        text: 'The flower represents connection, growth, and community.'
+        text: 'The flower stands for connection, care, and growth in every community.'
       },
       weplace: {
         title: 'Weplace',
-        text: 'Our goal is to unlock more values to place where everybody live.'
+        text: 'Weplace is built to bring more value back to the places we call home.'
       }
     },
     about: {
-      title: 'Built for Malaysian neighborhoods.',
-      subtitle: 'Inspired by the "Kita Jaga Kita" spirit, Weplace helps neighbours discover more surprising goods, foods, services, and vouchers that make everyday life better and easier.',
+      title: 'Made for Malaysian neighbourhoods.',
+      subtitle: 'Inspired by the Kita Jaga Kita spirit, Weplace helps neighbours discover local food, goods, services, vouchers, events, and support close to home.',
       market: {
-        title: 'Market for local ideas',
-        text: 'Got a food idea that could be the next big hit? Nasi Goreng Durian? Matcha Toast Jam? Selling a great reseller product or running a small pasar setup? Start on Weplace with zero setup cost and let your neighbours be the first to discover it.'
+        title: 'A place for local ideas',
+        text: 'From home-cooked favourites to small reseller finds and weekend pasar ideas, Weplace gives local sellers a simple way to start and be discovered by nearby neighbours.'
       },
       events: {
-        title: 'Events and help nearby',
-        text: 'Need a badminton kaki? Create an event and invite someone nearby to join. Car battery suddenly died? Send a help request and a neighbour might step in to saves your day, you can always tip them as a appreciation.'
+        title: 'Help and moments nearby',
+        text: 'Looking for a badminton kaki, a quick favour, or help when something goes wrong? Weplace makes it easier to reach people around you and keep community support moving.'
       }
     },
     journey: {
-      eyebrow: 'One platform for buyers and sellers',
-      title: 'Designed for buyers and sellers.',
-      subtitle: 'Weplace is built for both sides in one platform. Sellers can manage sales and deliver orders more easily, while buyers enjoy a more convenient way to discover nearby products and potential great deals.',
+      eyebrow: 'For buyers, sellers, and neighbours',
+      title: 'Built around everyday Malaysian life.',
+      subtitle: 'Weplace connects local discovery with simple selling tools, so residents can find what they need nearby while small sellers grow from the communities that know them best.',
       buyer: {
-        chip: 'User as Buyer',
-        title: 'Discover local finds that make our life easier and better',
-        text: 'From good food and useful services to surprise vouchers and local deals, Weplace helps buyers discover more value close to home in one convenient place.',
+        chip: 'For Buyers',
+        title: 'Find useful things closer to home.',
+        text: 'From lauk and kuih to services, vouchers, and local deals, Weplace helps buyers discover everyday value from people nearby.',
         points: [
           'Spot nearby goods, foods, services, and timely local offers',
           'Enjoy a more convenient way to find potential great deals',
@@ -60,9 +59,9 @@ const TRANSLATIONS = {
         ]
       },
       seller: {
-        chip: 'User as Seller',
-        title: 'Start small, grow locally, and build with your neighborhood.',
-        text: 'Weplace makes it easy to set up, test new ideas, and receive real feedback from neighbor buyers, so small innovations can improve steadily and grow with confidence.',
+        chip: 'For Sellers',
+        title: 'Start from home, grow with your neighbourhood.',
+        text: 'Test new ideas, manage orders, and learn from real neighbour feedback before growing your small business further.',
         points: [
           'Start from home with an easy setup and low-friction workflow',
           'Manage sales, orders, and buyer conversations in one place',
@@ -92,28 +91,51 @@ const TRANSLATIONS = {
     },
     priority: {
       eyebrow: 'Priority Support',
-      title: 'Helping community sellers get seen.',
-      subtitle: 'Priority Support gives needed sellers extra visibility so residents can discover and support businesses from people who may need a stronger starting point.',
+      title: 'Helping local sellers be seen.',
+      subtitle: 'Priority Support gives extra visibility to community sellers who may need a stronger starting point, so residents can choose to support with clearer context.',
       note: 'Priority Support is reviewed by Weplace and may apply to approved community cases such as persons with disabilities, single parents, and other local support needs.',
       cards: [
         {
-          title: 'More visibility',
-          text: 'Supported sellers can be highlighted more clearly so nearby residents know who they are helping.'
+          title: 'Clearer visibility',
+          text: 'Supported sellers can be highlighted so nearby residents understand who they are helping.'
         },
         {
           title: 'Start from home',
-          text: 'Great for small home-based foods, goods, services, vouchers, and everyday ideas that begin inside the neighbourhood.'
+          text: 'Good for small home-based foods, goods, services, vouchers, and everyday ideas that begin in the neighbourhood.'
         },
         {
           title: 'Community-first support',
-          text: 'Residents can choose to support local sellers with clearer context and a stronger sense of trust.'
+          text: 'Residents can support local sellers with more context, trust, and a stronger sense of shared community.'
+        }
+      ]
+    },
+    sellerIdeas: {
+      eyebrow: 'Local seller ideas',
+      title: 'Food, Goods, Services, and Vouchers',
+      subtitle: 'Simple examples of what neighbours can offer from home, online, or around the community.'
+    },
+    proof: {
+      eyebrow: 'Made for everyday Malaysian life',
+      title: 'More value from the people and places nearby.',
+      items: [
+        {
+          title: 'For nearby buyers',
+          text: 'Discover foods, goods, services, vouchers, events, and help requests around your own area.'
+        },
+        {
+          title: 'For home sellers',
+          text: 'Start small, test ideas, manage orders, and grow with feedback from local buyers.'
+        },
+        {
+          title: 'For community support',
+          text: 'Help residents notice local sellers and support needs that might otherwise stay unseen.'
         }
       ]
     },
     trust: {
       eyebrow: 'Built on Trust',
-      title: 'Built for trusted local participation in Malaysia.',
-      subtitle: 'Trust matters in neighborhood communities. That is why Weplace is designed to support real local participation and clearer seller verification.',
+      title: 'Trust for local participation in Malaysia.',
+      subtitle: 'Neighbourhood commerce works better when people know who they are dealing with. Weplace supports clearer seller verification and more familiar local interactions.',
       cards: [
         {
           title: 'Personal Seller',
@@ -121,11 +143,11 @@ const TRANSLATIONS = {
         },
         {
           title: 'Company Seller',
-          text: 'Company sellers can register by providing SSM information, with halal certificate as an optional document.'
+          text: 'Company sellers can register with SSM information, with halal certification as an optional supporting document.'
         },
         {
-          title: 'Safer local interactions',
-          text: 'With local residents and verified Malaysian sellers, everyday buying, selling, and helping feel more trusted and secure.'
+          title: 'More familiar interactions',
+          text: 'With local residents and verified Malaysian sellers, everyday buying, selling, and helping can feel closer and more secure.'
         }
       ]
     },
@@ -137,30 +159,35 @@ const TRANSLATIONS = {
     },
     faq: {
       eyebrow: 'Questions',
-      title: 'Simple answers before you join.',
-      subtitle: 'A quick guide for residents, local sellers, and community partners.',
+      title: 'Good to know before you join.',
+      subtitle: 'Quick answers for residents, home sellers, and local partners.',
       items: [
         {
-          question: 'Who is Weplace for?',
-          answer: 'Weplace is for Malaysian residents, home-based sellers, small local businesses, and people who want to discover useful goods, foods, services, vouchers, events, and help nearby.'
+          question: 'Is Weplace free to download?',
+          answer: 'Yes. You can download Weplace from the App Store or Google Play using the buttons on this page.'
         },
         {
           question: 'Can I start selling from home?',
-          answer: 'Yes. Approved sellers can start small from home, test ideas with nearby buyers, and grow steadily with feedback from their own neighborhood.'
+          answer: 'Yes. Approved sellers can start small from home, test ideas with nearby buyers, and grow steadily with feedback from their own neighbourhood.'
         },
         {
-          question: 'How does Weplace build trust?',
-          answer: 'Weplace supports clearer local participation with seller verification options for personal and company sellers, helping everyday interactions feel more familiar and secure.'
+          question: 'How are sellers verified?',
+          answer: 'Personal sellers can register with IC verification, while company sellers can provide SSM information and optional supporting documents such as halal certification.'
         },
         {
-          question: 'Where can I download the app?',
-          answer: 'You can download Weplace from the App Store or Google Play using the buttons on this page.'
+          question: 'Is it available in my area?',
+          answer: 'Weplace is built for Malaysian communities and focuses on nearby discovery. Download the app to explore what is available around you.'
         }
       ]
     },
+    finalCta: {
+      eyebrow: 'Start close to home',
+      title: 'Bring your neighbourhood closer.',
+      subtitle: 'Download Weplace on iOS or Android and start discovering what is around you.'
+    },
     footer: {
       brand: 'Weplace',
-      tagline: 'A neighborhood app for buying, selling, helping, and discovering more around you.',
+      tagline: 'A neighbourhood app for buying, selling, helping, and discovering more close to home.',
       brandLinks: ['About us', 'Contact us', 'FAQ'],
       modules: {
         title: 'Modules',
@@ -182,45 +209,44 @@ const TRANSLATIONS = {
       contact: 'Hubungi'
     },
     hero: {
-      eyebrow: 'Weplace Malaysia',
-      title: 'Weplace menghubungkan jiran.',
-      body: '<b>Beli, jual, menyokong, dan berhubung dengan orang berdekatan dalam satu aplikasi komuniti.</b>',
+      title: 'Menghubungkan Komuniti. Memperbaiki Kehidupan Harian.',
+      body: 'Weplace membantu jiran membeli, menjual, menyokong, dan berhubung dalam komuniti sendiri - menjadikan kehidupan harian lebih mudah, berbaloi, dan bermakna.',
       download: 'Tersedia di iOS dan Android.'
     },
     logo: {
       home: {
         title: 'Rumah',
-        text: 'Penanda lokasi melambangkan rumah kita, tempat kita tinggal.'
+        text: 'Penanda lokasi melambangkan rumah - tempat bermulanya kehidupan harian kita.'
       },
       connection: {
         title: 'Hubungan',
-        text: 'Bunga melambangkan hubungan, pertumbuhan, dan komuniti.'
+        text: 'Bunga melambangkan hubungan, keprihatinan, dan pertumbuhan dalam komuniti.'
       },
       weplace: {
         title: 'Weplace',
-        text: 'Matlamat kami adalah membuka lebih banyak nilai kepada tempat di mana semua orang tinggal.'
+        text: 'Weplace dibina untuk membawa lebih banyak nilai kembali kepada tempat yang kita panggil rumah.'
       }
     },
     about: {
       title: 'Dibina untuk kejiranan Malaysia.',
-      subtitle: 'Diilhamkan oleh semangat "Kita Jaga Kita", Weplace membantu jiran menemui barangan, makanan, perkhidmatan, dan baucar yang lebih menarik untuk menjadikan kehidupan harian lebih baik dan mudah.',
+      subtitle: 'Diilhamkan oleh semangat Kita Jaga Kita, Weplace membantu jiran menemui makanan, barangan, perkhidmatan, baucar, acara, dan sokongan berdekatan.',
       market: {
-        title: 'Pasaran untuk idea tempatan',
-        text: 'Ada idea makanan yang boleh jadi hit seterusnya? Nasi Goreng Durian? Jem Roti Bakar Matcha? Menjual produk reseller yang bagus atau menjalankan perniagaan kecil? Mulakan di Weplace tanpa kos persediaan dan biarkan jiran anda menjadi orang pertama yang menemuinya.'
+        title: 'Tempat untuk idea tempatan',
+        text: 'Daripada makanan dari rumah hingga produk reseller kecil dan idea pasar hujung minggu, Weplace memberi penjual tempatan cara mudah untuk bermula dan ditemui jiran berdekatan.'
       },
       events: {
-        title: 'Acara dan bantuan berdekatan',
-        text: 'Perlukan kawan badminton? Cipta acara dan jemput seseorang berdekatan untuk sertai. Bateri kereta tiba-tiba kong? Hantar permintaan bantuan dan jiran mungkin tampil membantu hari anda, dan anda sentiasa boleh beri tip sebagai tanda penghargaan.'
+        title: 'Bantuan dan aktiviti berdekatan',
+        text: 'Perlukan kaki badminton, bantuan kecil, atau sokongan bila sesuatu berlaku? Weplace memudahkan anda menghubungi orang sekeliling dan menggerakkan semangat komuniti.'
       }
     },
     journey: {
-      eyebrow: 'Satu platform untuk pembeli dan penjual',
-      title: 'Direka untuk pembeli dan penjual.',
-      subtitle: 'Weplace dibina untuk kedua-dua pihak dalam satu platform. Penjual boleh mengurus jualan dan penghantaran dengan lebih mudah, manakala pembeli menikmati cara yang lebih mudah untuk menemui produk berdekatan dan tawaran menarik.',
+      eyebrow: 'Untuk pembeli, penjual, dan jiran',
+      title: 'Dibina mengikut kehidupan harian Malaysia.',
+      subtitle: 'Weplace menghubungkan penemuan tempatan dengan alat jualan yang mudah, supaya penduduk boleh mencari apa yang diperlukan berdekatan dan penjual kecil boleh berkembang bersama komuniti yang mengenali mereka.',
       buyer: {
-        chip: 'Pengguna sebagai pembeli',
-        title: 'Temui pilihan berdekatan yang menjadikan hidup harian lebih mudah dan lebih berbaloi.',
-        text: 'Daripada makanan sedap dan perkhidmatan berguna hingga baucar kejutan dan tawaran tempatan, Weplace membantu pembeli menemui lebih banyak nilai dekat dengan rumah di satu tempat yang mudah.',
+        chip: 'Untuk Pembeli',
+        title: 'Cari perkara berguna dekat dengan rumah.',
+        text: 'Daripada lauk dan kuih hingga perkhidmatan, baucar, dan tawaran tempatan, Weplace membantu pembeli menemui nilai harian daripada orang berdekatan.',
         points: [
           'Temui barangan, makanan, perkhidmatan, dan tawaran tempatan yang berdekatan',
           'Nikmati cara yang lebih mudah untuk mencari tawaran yang berpotensi menarik',
@@ -228,9 +254,9 @@ const TRANSLATIONS = {
         ]
       },
       seller: {
-        chip: 'Pengguna sebagai penjual',
-        title: 'Mulakan kecil, berkembang dari rumah, dan membina bersama kejiranan anda.',
-        text: 'Weplace memudahkan anda untuk bermula, menguji idea baharu, dan menerima maklum balas sebenar daripada jiran berdekatan supaya inovasi kecil boleh bertambah baik secara konsisten dan berkembang dengan yakin.',
+        chip: 'Untuk Penjual',
+        title: 'Bermula dari rumah, berkembang bersama kejiranan.',
+        text: 'Uji idea baharu, urus pesanan, dan belajar melalui maklum balas jiran sebelum mengembangkan perniagaan kecil anda.',
         points: [
           'Mulakan dari rumah dengan persediaan mudah dan aliran kerja yang ringan',
           'Urus jualan, pesanan, dan perbualan dengan pembeli di satu tempat',
@@ -260,28 +286,51 @@ const TRANSLATIONS = {
     },
     priority: {
       eyebrow: 'Sokongan Keutamaan',
-      title: 'Membantu penjual komuniti lebih mudah ditemui.',
-      subtitle: 'Sokongan Keutamaan memberi keterlihatan tambahan kepada penjual yang memerlukan sokongan supaya penduduk boleh menemui dan menyokong perniagaan daripada mereka yang mungkin memerlukan permulaan yang lebih kuat.',
+      title: 'Membantu penjual tempatan lebih mudah dilihat.',
+      subtitle: 'Sokongan Keutamaan memberi keterlihatan tambahan kepada penjual komuniti yang memerlukan permulaan lebih kuat, supaya penduduk boleh menyokong dengan konteks yang lebih jelas.',
       note: 'Sokongan Keutamaan disemak oleh Weplace dan boleh diberikan kepada kes komuniti yang diluluskan seperti OKU, ibu bapa tunggal, dan keperluan sokongan tempatan yang lain.',
       cards: [
         {
-          title: 'Lebih keterlihatan',
-          text: 'Penjual yang disokong boleh ditonjolkan dengan lebih jelas supaya penduduk berdekatan tahu siapa yang mereka bantu.'
+          title: 'Lebih mudah dilihat',
+          text: 'Penjual yang disokong boleh ditonjolkan supaya penduduk berdekatan lebih faham siapa yang mereka bantu.'
         },
         {
           title: 'Bermula dari rumah',
-          text: 'Sesuai untuk makanan, barangan, perkhidmatan, baucar, dan idea harian kecil yang bermula dalam kejiranan.'
+          text: 'Sesuai untuk makanan, barangan, perkhidmatan, baucar, dan idea harian kecil yang bermula di kejiranan.'
         },
         {
-          title: 'Sokongan mengutamakan komuniti',
-          text: 'Penduduk boleh memilih untuk menyokong penjual tempatan dengan konteks yang lebih jelas dan rasa percaya yang lebih kuat.'
+          title: 'Sokongan komuniti',
+          text: 'Penduduk boleh menyokong penjual tempatan dengan lebih konteks, kepercayaan, dan rasa kebersamaan.'
+        }
+      ]
+    },
+    sellerIdeas: {
+      eyebrow: 'Idea penjual tempatan',
+      title: 'Makanan, Barangan, Perkhidmatan, dan Baucar',
+      subtitle: 'Contoh mudah tentang apa yang jiran boleh tawarkan dari rumah, secara online, atau di sekitar komuniti.'
+    },
+    proof: {
+      eyebrow: 'Dibina untuk kehidupan harian Malaysia',
+      title: 'Lebih nilai daripada orang dan tempat berdekatan.',
+      items: [
+        {
+          title: 'Untuk pembeli berdekatan',
+          text: 'Temui makanan, barangan, perkhidmatan, baucar, acara, dan permintaan bantuan di kawasan anda.'
+        },
+        {
+          title: 'Untuk penjual dari rumah',
+          text: 'Mulakan kecil, uji idea, urus pesanan, dan berkembang melalui maklum balas pembeli tempatan.'
+        },
+        {
+          title: 'Untuk sokongan komuniti',
+          text: 'Bantu penduduk melihat penjual tempatan dan keperluan sokongan yang mungkin kurang kelihatan.'
         }
       ]
     },
     trust: {
       eyebrow: 'Dibina atas Kepercayaan',
-      title: 'Dibina untuk penyertaan tempatan yang dipercayai di Malaysia.',
-      subtitle: 'Kepercayaan sangat penting dalam komuniti kejiranan. Itulah sebabnya Weplace direka untuk menyokong penyertaan tempatan yang sebenar dan pengesahan penjual yang lebih jelas.',
+      title: 'Kepercayaan untuk penyertaan tempatan di Malaysia.',
+      subtitle: 'Urusan kejiranan lebih baik apabila orang tahu dengan siapa mereka berurusan. Weplace menyokong pengesahan penjual yang lebih jelas dan interaksi tempatan yang lebih dekat.',
       cards: [
         {
           title: 'Penjual Peribadi',
@@ -289,11 +338,11 @@ const TRANSLATIONS = {
         },
         {
           title: 'Penjual Syarikat',
-          text: 'Penjual syarikat boleh mendaftar dengan memuat naik butiran alamat syarikat, dengan sijil halal sebagai dokumen pilihan.'
+          text: 'Penjual syarikat boleh mendaftar dengan maklumat SSM, dengan sijil halal sebagai dokumen sokongan pilihan.'
         },
         {
-          title: 'Interaksi tempatan yang lebih selamat',
-          text: 'Dengan penduduk tempatan dan penjual Malaysia yang disahkan, urusan membeli, menjual, dan membantu setiap hari terasa lebih dipercayai dan selamat.'
+          title: 'Interaksi yang lebih dekat',
+          text: 'Dengan penduduk tempatan dan penjual Malaysia yang disahkan, urusan membeli, menjual, dan membantu harian boleh terasa lebih dekat dan selamat.'
         }
       ]
     },
@@ -305,30 +354,35 @@ const TRANSLATIONS = {
     },
     faq: {
       eyebrow: 'Soalan',
-      title: 'Jawapan ringkas sebelum anda sertai.',
-      subtitle: 'Panduan pantas untuk penduduk, penjual tempatan, dan rakan komuniti.',
+      title: 'Perkara yang baik untuk diketahui.',
+      subtitle: 'Jawapan ringkas untuk penduduk, penjual dari rumah, dan rakan tempatan.',
       items: [
         {
-          question: 'Untuk siapa Weplace?',
-          answer: 'Weplace adalah untuk penduduk Malaysia, penjual dari rumah, perniagaan kecil tempatan, dan orang yang ingin menemui barangan, makanan, perkhidmatan, baucar, acara, dan bantuan berdekatan.'
+          question: 'Adakah Weplace percuma untuk dimuat turun?',
+          answer: 'Ya. Anda boleh memuat turun Weplace dari App Store atau Google Play menggunakan butang di halaman ini.'
         },
         {
           question: 'Bolehkah saya mula menjual dari rumah?',
           answer: 'Ya. Penjual yang diluluskan boleh bermula kecil dari rumah, menguji idea dengan pembeli berdekatan, dan berkembang secara berperingkat melalui maklum balas kejiranan.'
         },
         {
-          question: 'Bagaimana Weplace membina kepercayaan?',
-          answer: 'Weplace menyokong penyertaan tempatan yang lebih jelas melalui pilihan pengesahan untuk penjual peribadi dan syarikat, supaya interaksi harian terasa lebih dikenali dan selamat.'
+          question: 'Bagaimana penjual disahkan?',
+          answer: 'Penjual peribadi boleh mendaftar dengan pengesahan IC, manakala penjual syarikat boleh memberikan maklumat SSM dan dokumen sokongan pilihan seperti sijil halal.'
         },
         {
-          question: 'Di mana saya boleh muat turun aplikasi?',
-          answer: 'Anda boleh memuat turun Weplace dari App Store atau Google Play menggunakan butang di halaman ini.'
+          question: 'Adakah ia tersedia di kawasan saya?',
+          answer: 'Weplace dibina untuk komuniti Malaysia dan memfokuskan penemuan berdekatan. Muat turun aplikasi untuk meneroka apa yang tersedia di sekitar anda.'
         }
       ]
     },
+    finalCta: {
+      eyebrow: 'Mula dekat dengan rumah',
+      title: 'Dekatkan kejiranan anda.',
+      subtitle: 'Muat turun Weplace di iOS atau Android dan mula temui apa yang ada di sekitar anda.'
+    },
     footer: {
       brand: 'Weplace',
-      tagline: 'Aplikasi kejiranan untuk membeli, menjual, membantu, dan menemui lebih banyak perkara berdekatan.',
+      tagline: 'Aplikasi kejiranan untuk membeli, menjual, membantu, dan menemui lebih banyak perkara dekat dengan rumah.',
       brandLinks: ['Tentang kami', 'Hubungi kami', 'FAQ'],
       modules: {
         title: 'Modul',
