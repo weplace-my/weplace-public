@@ -463,4 +463,29 @@ const initTranslations = () => {
   });
 };
 
+const initHeroDownloadLinks = () => {
+  const heroActions = document.querySelector('.hero-download-actions');
+  if (!heroActions) return;
+
+  document.addEventListener('click', (event) => {
+    if (event.target.closest?.('.hero-download-actions .store-badge-link')) {
+      return;
+    }
+
+    const x = event.clientX;
+    const y = event.clientY;
+    const link = Array.from(
+      heroActions.querySelectorAll('.store-badge-link'),
+    ).find((item) => {
+      const rect = item.getBoundingClientRect();
+      return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+    });
+
+    if (!link) return;
+    event.preventDefault();
+    window.open(link.href, link.target || '_self', 'noopener,noreferrer');
+  }, true);
+};
+
 document.addEventListener('DOMContentLoaded', initTranslations);
+document.addEventListener('DOMContentLoaded', initHeroDownloadLinks);

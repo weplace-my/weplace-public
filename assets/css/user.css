@@ -6,11 +6,16 @@
 .brand-name {
   margin-left: 0.35rem;
   font-family: "Baloo Bhaijaan 2", sans-serif;
-  font-size: 2.05rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  font-size: 2.12rem;
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: 0;
   color: #ffffff;
+}
+
+body {
+  font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
 }
 
 #navbar {
@@ -20,6 +25,14 @@
 
 .navbar-brand img {
   height: 56px !important;
+}
+
+.nav-link,
+footer a,
+.btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 #navbar.navbar-primary-scrolled {
@@ -38,9 +51,9 @@
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 0.75rem;
   background-color: rgba(255, 255, 255, 0.08);
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 800;
   color: #ffffff;
   box-shadow: none;
   cursor: pointer;
@@ -65,9 +78,9 @@
 
 .language-switcher__menu .dropdown-item {
   border-radius: 0.55rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .language-switcher__menu .dropdown-item.active,
@@ -97,14 +110,14 @@ h3,
 #contact h2,
 .legal-hero h1,
 .legal-block h2 {
-  font-family: "Fraunces", "Figtree", serif;
-  font-weight: 650;
+  font-family: "Baloo Bhaijaan 2", "Nunito", sans-serif;
+  font-weight: 800;
   letter-spacing: 0;
 }
 
 .hero-copy h1 {
   max-width: 35rem;
-  font-size: clamp(4rem, 5.6vw, 5.65rem) !important;
+  font-size: clamp(3.2rem, 4.6vw, 4.65rem) !important;
   line-height: 0.98 !important;
   text-wrap: balance;
   text-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.28);
@@ -113,6 +126,13 @@ h3,
 section h2,
 section h3 {
   text-wrap: balance;
+}
+
+.text-primary.fw-semibold,
+.text-primary.fw-bold {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em;
 }
 
 .logo-explain {
@@ -128,7 +148,7 @@ p {
 .hero-copy {
   max-width: 39rem;
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .hero-eyebrow {
@@ -141,10 +161,10 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.38);
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.12);
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   line-height: 1.2;
   text-transform: uppercase;
   color: #ffffff;
@@ -156,9 +176,9 @@ p {
 .hero-body-copy {
   max-width: 33rem;
   color: rgba(255, 255, 255, 0.92) !important;
-  font-family: "Figtree", sans-serif;
-  font-weight: 620;
-  line-height: 1.62 !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  line-height: 1.66 !important;
   text-align: left;
   text-justify: auto;
   text-shadow: 0 0.12rem 0.8rem rgba(0, 0, 0, 0.24);
@@ -195,9 +215,9 @@ p {
 
 .logo-explain-title {
   margin-bottom: 0.5rem;
-  font-family: "Fraunces", "Figtree", serif;
-  font-size: 1.25rem;
-  font-weight: 650;
+  font-family: "Baloo Bhaijaan 2", "Nunito", sans-serif;
+  font-size: 1.32rem;
+  font-weight: 800;
   letter-spacing: 0;
   color: #10203d;
 }
@@ -206,18 +226,18 @@ p {
   max-width: 15rem;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Figtree", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.98rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.75;
   color: rgba(16, 32, 61, 0.72);
 }
 
 .hero-download-copy {
   margin-bottom: 0.9rem;
-  font-family: "Figtree", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.94rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.84);
   text-align: left;
@@ -227,12 +247,32 @@ p {
 
 .store-badge-group {
   max-width: 30rem;
+  position: relative;
+  z-index: 30 !important;
+  pointer-events: auto !important;
+}
+
+.hero-download-actions {
+  isolation: isolate;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .store-badge-link {
   display: inline-flex;
   max-width: 13rem;
+  position: relative;
+  z-index: 31;
+  border: 0;
+  padding: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  cursor: pointer;
   filter: saturate(0.92);
+  pointer-events: auto !important;
+  touch-action: manipulation;
   transition: transform 0.18s ease, filter 0.18s ease;
 }
 
@@ -258,8 +298,13 @@ p {
   max-width: 22rem;
 }
 
+.hero-visual {
+  pointer-events: none;
+}
+
 .hero-phone-stage {
   z-index: 0;
+  pointer-events: none;
 }
 
 .hero-section .hero-background {
@@ -437,16 +482,16 @@ p {
   margin-bottom: 0.35rem;
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--bs-primary);
 }
 
 .app-hero-card h4 {
   margin-bottom: 0.5rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Baloo Bhaijaan 2", "Nunito", sans-serif;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #10203d;
 }
 
@@ -525,10 +570,10 @@ p {
 .journey-eyebrow {
   display: inline-block;
   margin-bottom: 0.8rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #14c56c;
 }
@@ -610,9 +655,9 @@ p {
 
 .seller-idea-tile span {
   display: block;
-  font-family: "Poppins", sans-serif;
+  font-family: "Baloo Bhaijaan 2", "Nunito", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #10203d;
   text-align: center;
 }
@@ -837,7 +882,7 @@ p {
 
 .journey-card-top p {
   margin-bottom: 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.98rem;
   line-height: 1.72;
   color: rgba(16, 32, 61, 0.72);
@@ -850,8 +895,8 @@ p {
   padding: 0.38rem 0.82rem;
   border-radius: 999px;
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -870,7 +915,7 @@ p {
   padding-bottom: 1.4rem;
   padding-left: 1.2rem;
   color: rgba(16, 32, 61, 0.8);
-  font-family: "Figtree", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.98rem;
   line-height: 1.6;
 }
@@ -1148,9 +1193,9 @@ p {
 
 .faq-accordion .accordion-button {
   padding: 1.15rem 1.25rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #10203d;
   background: #ffffff;
   box-shadow: none;
@@ -1230,7 +1275,7 @@ footer {
 .footer-brand-name {
   font-family: "Baloo Bhaijaan 2", sans-serif;
   font-size: 1.55rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #10203d;
 }
 
@@ -1325,15 +1370,15 @@ footer .icons:focus {
 
 .legal-block h2 {
   margin-bottom: 0.85rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-family: "Baloo Bhaijaan 2", "Nunito", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
   color: #10203d;
 }
 
 .legal-block p,
 .legal-list li {
-  font-family: "Figtree", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1rem;
   line-height: 1.8;
   color: rgba(16, 32, 61, 0.76);
@@ -1410,8 +1455,8 @@ footer .icons:focus {
     max-width: 17.4rem;
     margin-left: auto;
     margin-right: auto;
-    font-size: clamp(2.35rem, 11vw, 3rem) !important;
-    line-height: 1 !important;
+    font-size: clamp(2rem, 9.4vw, 2.55rem) !important;
+    line-height: 1.04 !important;
   }
 
   .hero-body-copy,
