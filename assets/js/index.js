@@ -464,25 +464,26 @@ const initTranslations = () => {
 };
 
 const initHeroDownloadLinks = () => {
-  const heroActions = document.querySelector('.hero-download-actions');
-  if (!heroActions) return;
+  const heroLinks = Array.from(
+    document.querySelectorAll('.hero-download-actions .store-badge-link, .hero-social-links .hero-social-link'),
+  );
+  if (!heroLinks.length) return;
 
   document.addEventListener('click', (event) => {
-    if (event.target.closest?.('.hero-download-actions .store-badge-link')) {
+    if (event.target.closest?.('.hero-download-actions .store-badge-link, .hero-social-links .hero-social-link')) {
       return;
     }
 
     const x = event.clientX;
     const y = event.clientY;
-    const link = Array.from(
-      heroActions.querySelectorAll('.store-badge-link'),
-    ).find((item) => {
+    const link = heroLinks.find((item) => {
       const rect = item.getBoundingClientRect();
       return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
     });
 
     if (!link) return;
     event.preventDefault();
+    event.stopImmediatePropagation();
     window.open(link.href, link.target || '_self', 'noopener,noreferrer');
   }, true);
 };
