@@ -283,6 +283,47 @@ p {
   filter: saturate(1.05);
 }
 
+.hero-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  max-width: 30rem;
+  margin-top: 0.85rem;
+  position: relative;
+  z-index: 32;
+  pointer-events: auto !important;
+}
+
+.hero-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #10203d;
+  box-shadow: 0 0.55rem 1.15rem rgba(16, 32, 61, 0.12);
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.hero-social-link:hover,
+.hero-social-link:focus {
+  transform: translateY(-1px);
+  background: #14c56c;
+  color: #ffffff;
+  box-shadow: 0 0.65rem 1.3rem rgba(20, 197, 108, 0.22);
+  text-decoration: none;
+}
+
+.hero-social-link .uil {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 .store-badge-link img {
   width: 100%;
   height: auto;
