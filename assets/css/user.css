@@ -338,7 +338,7 @@ p {
 }
 
 .app-showcase-wrap-hero {
-  max-width: 22rem;
+  max-width: 23.1rem;
 }
 
 .hero-visual {
@@ -439,11 +439,11 @@ p {
 }
 
 .phone-shell-hero {
-  max-width: 17.5rem;
+  max-width: 18.38rem;
 }
 
 .phone-screen-hero {
-  height: 32rem;
+  height: 33.6rem;
   padding: 1.7rem 0 0;
   background: #ffffff;
 }
@@ -452,6 +452,21 @@ p {
 .app-phone-carousel .carousel-inner {
   height: 100%;
   border-radius: 0;
+}
+
+#heroStoryCarousel .carousel-item,
+#heroStoryCarousel .carousel-item-next,
+#heroStoryCarousel .carousel-item-prev,
+#heroStoryCarousel .carousel-item-start,
+#heroStoryCarousel .carousel-item-end,
+#heroStoryCarousel .carousel-item.active {
+  transform: none !important;
+  transition: none !important;
+}
+
+#heroStoryCarousel .carousel-item-next,
+#heroStoryCarousel .carousel-item-prev {
+  display: none !important;
 }
 
 .app-phone-carousel .carousel-item {
@@ -485,6 +500,11 @@ p {
   display: block;
   border-radius: 0;
   background: #ffffff;
+}
+
+#heroStoryCarousel .app-story-image {
+  transform: none !important;
+  transition: none !important;
 }
 
 .app-placeholder-screen {
@@ -1943,18 +1963,18 @@ footer .icons:focus {
   }
 
   .app-showcase-wrap-hero {
-    max-width: 17.25rem;
+    max-width: 18.1rem;
     margin-top: 0.7rem;
     margin-bottom: 0 !important;
     padding-bottom: 0;
   }
 
   .phone-shell-hero {
-    max-width: 16.75rem;
+    max-width: 17.6rem;
   }
 
   .phone-screen-hero {
-    height: 29.25rem !important;
+    height: 30.7rem !important;
   }
 
   .hero-phone-stage {
@@ -2046,15 +2066,15 @@ footer .icons:focus {
   }
 
   .app-showcase-wrap-hero {
-    max-width: 22.8rem;
+    max-width: 23.94rem;
   }
 
   .phone-shell-hero {
-    max-width: 20.1rem;
+    max-width: 21.1rem;
   }
 
   .phone-screen-hero {
-    height: 36.6rem;
+    height: 38.4rem;
   }
 
   .journey-layout {
