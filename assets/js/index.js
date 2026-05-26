@@ -176,7 +176,7 @@ const TRANSLATIONS = {
         },
         {
           question: 'Is it available in my area?',
-          answer: 'Weplace is built for Malaysian communities and focuses on nearby discovery. Download the app to explore what is available around you.'
+          answer: 'Yes. Weplace is open to communities across Malaysia. If your group does not exist yet, register and create your community to be the first in your area.'
         }
       ]
     },
@@ -371,7 +371,7 @@ const TRANSLATIONS = {
         },
         {
           question: 'Adakah ia tersedia di kawasan saya?',
-          answer: 'Weplace dibina untuk komuniti Malaysia dan memfokuskan penemuan berdekatan. Muat turun aplikasi untuk meneroka apa yang tersedia di sekitar anda.'
+          answer: 'Ya. Weplace terbuka untuk komuniti di seluruh Malaysia. Jika kumpulan anda belum wujud, daftar dan cipta komuniti anda untuk menjadi yang pertama di kawasan anda.'
         }
       ]
     },
