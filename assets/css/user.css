@@ -175,7 +175,7 @@ p {
 
 .hero-body-copy {
   max-width: 33rem;
-  color: rgba(255, 255, 255, 0.92) !important;
+  color: rgba(16, 32, 61, 0.88) !important;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   line-height: 1.66 !important;
@@ -240,7 +240,7 @@ p {
   font-size: 0.94rem;
   font-weight: 800;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(16, 32, 61, 0.84);
   text-align: center;
   text-justify: auto;
   text-shadow: 0 0.1rem 0.7rem rgba(0, 0, 0, 0.22);
