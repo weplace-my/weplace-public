@@ -172,11 +172,11 @@ const TRANSLATIONS = {
         },
         {
           question: 'How are sellers verified?',
-          answer: 'Personal sellers can register with IC verification, while company sellers can provide SSM information and optional supporting documents such as halal certification.'
+          answer: 'Through seller registration in the app, personal sellers can register with IC verification, while company sellers can provide SSM information and optional supporting documents such as halal certification.'
         },
         {
           question: 'Is it available in my area?',
-          answer: 'Yes. Weplace is open to communities across Malaysia. If your group does not exist yet, register and create your community to be the first in your area.'
+          answer: 'Weplace is open to communities across Malaysia. If your group does not exist yet, register and create your community in the app to be the first in your area.'
         }
       ]
     },
