@@ -325,6 +325,27 @@ p {
   line-height: 1;
 }
 
+.xhs-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.35rem;
+  background: #ee2f54;
+  color: #ffffff;
+  font-family: 'Noto Sans SC', 'PingFang SC', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero-social-link:hover .xhs-mark,
+.hero-social-link:focus .xhs-mark {
+  background: #ffffff;
+  color: #ee2f54;
+}
+
 .store-badge-link img {
   width: 100%;
   height: auto;
@@ -1368,6 +1389,18 @@ footer .icons:focus {
   background: rgba(20, 197, 108, 0.12);
   color: #14c56c;
   text-decoration: none;
+}
+
+footer .icons .xhs-mark {
+  width: 1.15rem;
+  height: 1.15rem;
+  font-size: 0.75rem;
+}
+
+footer .icons:hover .xhs-mark,
+footer .icons:focus .xhs-mark {
+  background: #ee2f54;
+  color: #ffffff;
 }
 
 .guide-page {
