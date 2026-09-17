@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy public site
 
 on:
   push:
@@ -6,23 +6,32 @@ on:
       - master
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: public-site-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Setup SSH
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEV_KEY }}" > ~/.ssh/id_rsa
+          set -eu
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "${{ secrets.DEV_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.DEV_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H "${{ secrets.DEV_HOST }}" >> ~/.ssh/known_hosts
 
-      - name: Deploy
+      - name: Deploy latest master revision
         run: |
-          ssh -i ~/.ssh/id_rsa ${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }} "
+          set -eu
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -i ~/.ssh/id_rsa "${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }}" "
             cd ${{ vars.DEV_PATH }} &&
-            git pull &&
+            git pull --ff-only origin master &&
             sudo systemctl reload nginx
           "
-
