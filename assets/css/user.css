@@ -325,6 +325,20 @@ p {
   line-height: 1;
 }
 
+.hero-social-link.social-facebook,
+.hero-social-link.social-instagram,
+.icons.social-facebook,
+.icons.social-instagram {
+  color: #ee2f54;
+}
+
+.hero-social-link.social-facebook:hover,
+.hero-social-link.social-facebook:focus,
+.hero-social-link.social-instagram:hover,
+.hero-social-link.social-instagram:focus {
+  color: #ffffff;
+}
+
 .xhs-mark {
   display: inline-flex;
   align-items: center;

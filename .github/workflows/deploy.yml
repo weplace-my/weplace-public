@@ -3,7 +3,7 @@ name: Deploy public site
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 permissions:
@@ -27,11 +27,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "${{ secrets.DEV_HOST }}" >> ~/.ssh/known_hosts
 
-      - name: Deploy latest master revision
+      - name: Deploy latest main revision
         run: |
           set -eu
           ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -i ~/.ssh/id_rsa "${{ secrets.DEV_USER }}@${{ secrets.DEV_HOST }}" "
             cd ${{ vars.DEV_PATH }} &&
-            git pull --ff-only origin master &&
+            git pull --ff-only origin main &&
             sudo systemctl reload nginx
           "
