@@ -326,10 +326,13 @@ p {
 }
 
 .hero-social-link.social-facebook,
+.icons.social-facebook {
+  color: #1877f2;
+}
+
 .hero-social-link.social-instagram,
-.icons.social-facebook,
 .icons.social-instagram {
-  color: #ee2f54;
+  color: #e4405f;
 }
 
 .hero-social-link.social-facebook:hover,
