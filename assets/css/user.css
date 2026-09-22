@@ -2222,3 +2222,77 @@ footer .icons:focus .xhs-mark {
     animation: none;
   }
 }
+/* Neighbourhood redesign: playful local-market direction */
+:root {
+  --wp-green: #0c9b61;
+  --wp-deep: #123b35;
+  --wp-cream: #fff8e9;
+  --wp-yellow: #ffd85a;
+  --wp-coral: #ff8068;
+}
+
+html, body, main, .content { background: #fff !important; color: var(--wp-deep); }
+.navbar { background: rgba(12, 155, 97, .96); border-bottom: 2px solid rgba(255,255,255,.18); }
+.navbar .nav-link, .navbar .brand-name { color: #fff !important; }
+.navbar .nav-link:hover { color: var(--wp-yellow) !important; }
+.neighbourhood-hero { background: var(--wp-green); min-height: 760px; }
+.neighbourhood-hero .hero-background { background-color: #087653; background-image: url('../img/illustrations/BG.webp'); background-position: center top; background-size: cover; background-repeat: no-repeat; }
+.neighbourhood-hero .hero-background::before { content: ""; position: absolute; inset: 0; z-index: 0; background: rgba(0, 0, 0, .1); pointer-events: none; }
+.neighbourhood-hero .container { position: relative; z-index: 2; }
+.hero-copy { padding-top: 5rem; }
+.hero-kicker, .section-kicker { color: var(--wp-yellow); font-size: .75rem; font-weight: 800; letter-spacing: .15em; margin-bottom: 1rem; }
+.neighbourhood-hero h1 { max-width: 620px; font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: clamp(3.5rem, 7vw, 6.5rem); line-height: .92 !important; letter-spacing: -.04em; }
+.neighbourhood-hero .hero-body-copy { max-width: 430px; color: #ffffff !important; font-size: 1.18rem; }
+.neighbourhood-hero .hero-download-copy { color: #d6f1dc; }
+.neighbourhood-hero-art { min-height: 590px; display: flex; align-items: center; justify-content: center; }
+.neighbourhood-map-art { width: 115%; max-width: 760px; filter: drop-shadow(0 24px 0 rgba(4,68,48,.2)); animation: map-float 7s ease-in-out infinite; }
+.hero-sticker { position: absolute; background: var(--wp-yellow); color: var(--wp-deep); padding: .6rem 1rem; border: 3px solid var(--wp-deep); border-radius: 999px; font-weight: 800; box-shadow: 4px 5px 0 var(--wp-deep); transform: rotate(-8deg); }
+.hero-sticker-one { top: 16%; right: 2%; }
+.hero-sticker-two { bottom: 15%; left: 7%; background: var(--wp-coral); color: #fff; transform: rotate(8deg); }
+.neighbourhood-intro { padding-top: 2rem; }
+.neighbourhood-building-art { width: 100%; max-height: 520px; object-fit: contain; }
+.neighbourhood-intro .section-kicker { color: var(--wp-green); }
+.neighbourhood-intro h2 { font-family: 'Baloo Bhaijaan 2', sans-serif; color: var(--wp-deep); font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: .95 !important; }
+.neighbourhood-intro h5 { color: var(--wp-green); }
+.proof-strip, .journey-layout, .seller-ideas-grid-section { background: transparent; }
+.marketplace-journey-section { padding: 4rem 0 1rem; }
+.marketplace-journey-heading { max-width: 720px; margin: 0 auto 2rem; }
+.marketplace-journey-heading .section-kicker { color: var(--wp-green); }
+.marketplace-journey-heading h2 { font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: clamp(2.8rem, 5vw, 5rem); line-height: .95; color: var(--wp-deep); margin-bottom: 1rem; }
+.marketplace-journey-heading p:last-child { font-size: 1.08rem; line-height: 1.7; }
+.marketplace-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1180px; margin: 0 auto; }
+.marketplace-step { position: relative; padding: 1rem 1rem 1.5rem; text-align: center; background: #fff; border: 2px solid #d8f1e4; border-radius: 24px; box-shadow: 0 12px 0 rgba(12,155,97,.08); }
+.marketplace-step-number { position: absolute; top: -1rem; left: 1rem; z-index: 1; display: grid; place-items: center; width: 3rem; height: 3rem; background: var(--wp-green); color: #fff; border: 3px solid #fff; border-radius: 50%; font-weight: 900; box-shadow: 0 3px 0 var(--wp-deep); }
+.marketplace-step img { display: block; width: 100%; height: auto; border-radius: 16px; }
+.marketplace-step h3 { margin: 1.2rem 0 .35rem; color: var(--wp-deep); font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 1.8rem; }
+.marketplace-step p { max-width: 270px; margin: 0 auto; line-height: 1.6; }
+.legacy-journey-section { display: none; }
+.community-map-section { padding: 1rem 0 0; }
+.community-map-heading { max-width: 46rem; margin: 0 auto 1.75rem; }
+.community-map-heading h2 { color: var(--wp-deep); margin-bottom: .65rem; }
+.community-map-heading p:last-child { color: rgba(16,32,61,.7); margin-bottom: 0; }
+.community-map-shell { position: relative; overflow: hidden; min-height: 430px; border: 1px solid rgba(16,32,61,.1); border-radius: 28px; background: #dcefe5; box-shadow: 0 1rem 2.5rem rgba(16,32,61,.1); }
+.community-map-canvas { width: 100%; min-height: 430px; }
+.community-map-status { position: absolute; inset: 0; display: grid; place-items: center; padding: 1rem; color: var(--wp-deep); font-weight: 700; pointer-events: none; text-align: center; }
+.community-map-status:empty { display: none; }
+.community-map-stats { display: flex; justify-content: center; gap: clamp(2rem, 10vw, 8rem); padding: 1.5rem 1rem 0; text-align: center; }
+.community-map-stat { display: grid; gap: .15rem; }
+.community-map-stat strong { color: var(--wp-green); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; }
+.community-map-stat span { color: rgba(16,32,61,.66); font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+@media (max-width: 575.98px) { .community-map-shell, .community-map-canvas { min-height: 330px; } .community-map-stats { gap: 2.5rem; } }
+@keyframes map-float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
+@media (max-width: 991px) {
+  .neighbourhood-hero { min-height: auto; }
+  .hero-copy { padding-top: 3rem; }
+  .neighbourhood-hero-art { min-height: 420px; }
+  .neighbourhood-map-art { width: 100%; }
+  .hero-sticker-one { right: 5%; top: 8%; }
+}
+@media (max-width: 575px) {
+  .neighbourhood-hero h1 { font-size: 3.5rem; }
+  .neighbourhood-hero-art { min-height: 330px; }
+  .hero-sticker { font-size: .78rem; padding: .45rem .75rem; }
+  .marketplace-journey-section { padding-top: 2rem; }
+  .marketplace-steps { grid-template-columns: 1fr; gap: 2rem; }
+  .marketplace-step { padding: .65rem .65rem 1.4rem; }
+}

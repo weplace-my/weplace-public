@@ -488,5 +488,81 @@ const initHeroDownloadLinks = () => {
   }, true);
 };
 
+const initCommunityMap = async () => {
+  const mapCanvas = document.querySelector('#community-map-canvas');
+  if (!mapCanvas) return;
+
+  const status = document.querySelector('#community-map-status');
+  const apiKey = document.querySelector('meta[name="google-maps-api-key"]')?.content?.trim();
+  const apiUrl = 'https://api.weplace.my/api/v1/public/community-map/';
+  const setStatus = (message) => { if (status) status.textContent = message; };
+  const animateCounter = (element, target) => {
+    if (!element) return;
+    const duration = 900;
+    const start = performance.now();
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      element.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3))).toLocaleString();
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) throw new Error('Community map request failed');
+    const data = await response.json();
+    animateCounter(document.querySelector('#community-count'), Number(data.communities) || 0);
+    animateCounter(document.querySelector('#user-count'), Number(data.users) || 0);
+    if (!apiKey) {
+      setStatus('Add a Google Maps API key to display the live map.');
+      return;
+    }
+
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}`;
+      script.async = true;
+      script.defer = true;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+
+    const map = new google.maps.Map(mapCanvas, {
+      center: { lat: 4.2, lng: 102.2 },
+      zoom: 6,
+      minZoom: 5,
+      gestureHandling: 'cooperative',
+      streetViewControl: false,
+      mapTypeControl: false,
+      fullscreenControl: false,
+      styles: [{ featureType: 'poi', stylers: [{ visibility: 'off' }] }],
+    });
+    const markerIcon = {
+      url: 'assets/img/logos/logo.svg',
+      scaledSize: new google.maps.Size(38, 38),
+      anchor: new google.maps.Point(19, 19),
+    };
+    (data.locations || []).forEach((location, index) => {
+      const marker = new google.maps.Marker({
+        map,
+        position: { lat: location.latitude, lng: location.longitude },
+        title: location.name,
+        icon: markerIcon,
+        animation: google.maps.Animation.DROP,
+      });
+      const infoWindow = new google.maps.InfoWindow({ content: `<strong>${location.name}</strong>` });
+      marker.addListener('click', () => infoWindow.open({ map, anchor: marker }));
+      window.setTimeout(() => marker.setAnimation(null), 700 + index * 45);
+    });
+    setStatus('');
+  } catch (error) {
+    console.error(error);
+    setStatus('Community map is temporarily unavailable.');
+  }
+};
+
 document.addEventListener('DOMContentLoaded', initTranslations);
 document.addEventListener('DOMContentLoaded', initHeroDownloadLinks);
+document.addEventListener('DOMContentLoaded', initCommunityMap);

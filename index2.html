@@ -1,113 +1,547 @@
-<!doctype html>
-<html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#173f35">
-  <meta name="description" content="Discover local food, small businesses, and community support with Weplace. Made for Malaysian neighbourhoods.">
-  <title>Weplace | Closer to home</title>
-  <link rel="icon" href="assets/img/favicons/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--forest:#173f35;--green:#13c56d;--lime:#dff7e8;--cream:#f6f5ef;--ink:#233c33;--muted:#61716a;--line:#d9dfd4;--white:#fff;--body:'DM Sans',sans-serif;--heading:'Manrope',sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}img{display:block;max-width:100%}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:var(--heading);line-height:1.15;font-weight:600;letter-spacing:-.045em}h2{font-size:clamp(32px,4vw,54px)}h3{font-size:25px}p{color:var(--muted)}:focus-visible{outline:3px solid #bd7438;outline-offset:5px}a,button{touch-action:manipulation}.wrap{width:min(1240px,calc(100% - 96px));margin:auto}.section{padding:105px 0}.eyebrow{text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:.19em;margin-bottom:20px;color:var(--green)}.lead{font-size:18px;max-width:570px;margin-top:24px}.skip{position:fixed;top:-100px;left:12px;background:white;padding:12px;z-index:10}.skip:focus{top:12px}
-    .header{position:sticky;top:0;z-index:5;background:var(--cream);border-bottom:1px solid var(--line)}.nav{min-height:82px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:10px;font-family:var(--heading);font-size:26px;font-weight:800;letter-spacing:-1px}.brand img{width:34px;height:44px;object-fit:contain}.navlinks{display:flex;gap:28px;align-items:center;margin-left:auto;font-size:14px}.navlinks a:hover,.footer a:hover{text-decoration:underline;text-underline-offset:5px}.languages{display:flex;gap:2px;margin-left:8px}.languages button{background:none;border:0;padding:8px;font-size:12px;border-radius:4px}.languages .active{background:#e1e8dc;font-weight:700}.button{display:inline-flex;align-items:center;justify-content:center;gap:24px;border-radius:7px;background:var(--forest);color:white;padding:13px 21px;font-size:14px;font-weight:600;border:1px solid transparent;transition:background .2s,transform .2s}.button:hover{background:#2b5e49;transform:translateY(-2px)}.menu{display:none;border:1px solid var(--line);background:transparent;border-radius:5px;padding:8px 12px}
-    .hero{background:var(--forest);color:var(--cream);overflow:hidden;position:relative}.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:650px;gap:65px;padding-top:54px;padding-bottom:54px}.hero-copy{position:relative;z-index:1;animation:enter .7s ease both}.hero .eyebrow{color:var(--lime)}.hero h1{font-size:clamp(72px,8.4vw,124px);font-weight:600;letter-spacing:-.07em;margin-left:-6px}.hero h2{font-size:clamp(28px,3vw,42px);line-height:1.22;font-weight:400;margin-top:18px;max-width:510px;color:var(--lime)}.hero .lead{color:#dce7df;font-size:16px;max-width:425px;margin-top:23px}.stores{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.stores a{display:block;border-radius:8px;transition:transform .2s}.stores a:hover{transform:translateY(-3px)}.stores img{height:46px;width:auto;max-width:180px}.availability{margin-top:12px;color:#dce7df;font-size:12px}.hero-art{position:relative;animation:enter .9s .1s ease both}.hero-art img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:48% 48% 8px 8px}.art-caption{display:flex;justify-content:space-between;border-top:1px solid #678276;margin-top:22px;padding-top:14px;font-size:11px;letter-spacing:.12em;color:#dce7df;text-transform:uppercase;gap:20px}.intro{display:grid;grid-template-columns:1fr 1.4fr;gap:100px;padding:54px 0;border-bottom:1px solid var(--line)}.intro h2{font-size:26px;max-width:330px}.intro p{font-size:17px}
-    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:60px;margin-bottom:54px}.section-head h2{max-width:670px}.section-head .eyebrow{margin:0 0 10px;min-width:180px}.journey{display:grid;grid-template-columns:1fr 1fr;gap:50px}.feature-image{aspect-ratio:1.4;background:#ecefe5;overflow:hidden;margin-bottom:28px}.feature-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.journey article:hover .feature-image img{transform:scale(1.035)}.feature-image.food img{object-fit:contain;mix-blend-mode:multiply}.feature-image.community img{object-position:80% 30%}.feature-index{font-size:12px;letter-spacing:.1em;color:var(--green);margin-bottom:14px}.journey h3{max-width:450px}.journey p{max-width:490px;margin:17px 0 22px}.text-link{display:inline-flex;align-items:center;gap:20px;border-bottom:1px solid;padding-bottom:5px;font-size:14px;font-weight:600}.text-link span:last-child{transition:transform .2s}.text-link:hover span:last-child{transform:translateX(5px)}
-    .support{background:#e6ecdf}.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}.support-copy{position:sticky;top:125px}.support h2{max-width:480px}.support-list{border-top:1px solid #bccbb5}.support-item{padding:28px 0;border-bottom:1px solid #bccbb5;display:grid;grid-template-columns:36px 1fr;gap:16px}.support-item b{font-size:12px;color:var(--green)}.support-item h3{font-size:23px}.support-item p{margin-top:13px}.support .text-link{margin-top:30px}.trust{padding:65px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr 1fr;gap:45px}.trust h3{font-size:21px}.trust p{margin-top:15px;font-size:15px}.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.faq h2{max-width:330px}details{border-top:1px solid var(--line);padding:22px 0}details:last-child{border-bottom:1px solid var(--line)}summary{list-style:none;cursor:pointer;font-size:18px;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:'+';font-size:25px;font-weight:400}details[open] summary:after{content:'−'}details p{margin-top:15px;font-size:15px;max-width:550px}details[open] p{animation:enter .25s ease both}
-    .download{background:var(--forest);color:var(--cream);padding:80px 0}.download-grid{display:flex;align-items:center;justify-content:space-between;gap:70px}.download h2{max-width:610px}.download .eyebrow{color:var(--lime)}.download p{color:#dce7df;max-width:530px;margin-top:22px}.download .stores{flex-direction:column;flex-shrink:0;margin:0}.footer{padding:65px 0 25px}.footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:80px}.footer .brand{margin-bottom:15px}.footer p{font-size:14px;max-width:315px}.footer h3{font-family:var(--body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}.footer ul{list-style:none;padding:0;margin:0}.footer li{margin:9px 0;font-size:14px}.footer-bottom{border-top:1px solid var(--line);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}.footer-bottom p{font-size:12px;max-width:none}.socials{display:flex;gap:20px}.reveal{animation:enter .7s ease both}@keyframes enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-    @media(min-width:1600px){.hero-grid{min-height:730px}}@media(max-width:1000px){.wrap{width:calc(100% - 48px)}.navlinks{gap:16px}.nav>.button{display:none}.hero-grid{gap:30px;min-height:600px}.intro,.support-grid,.faq{gap:45px}.footer-main{gap:35px}.hero h1{font-size:90px}}@media(max-width:700px){html{scroll-padding-top:84px}.wrap{width:calc(100% - 40px)}.section{padding:65px 0}.nav{min-height:72px;gap:10px}.brand{font-size:23px}.brand img{height:36px;width:28px}.languages{margin-left:auto}.menu{display:block}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);padding:20px;border-bottom:1px solid var(--line)}.navlinks.open{display:flex;flex-direction:column;align-items:stretch;gap:4px}.navlinks a{padding:10px}.hero-grid{grid-template-columns:1fr;gap:34px;padding-top:40px;padding-bottom:30px;min-height:0}.hero h1{font-size:86px}.hero h2{font-size:29px;max-width:450px}.hero .lead{font-size:15px}.hero-art{max-width:420px;width:100%;margin:auto}.hero-art img{aspect-ratio:1.3;border-radius:160px 160px 6px 6px}.hero .eyebrow{margin-bottom:12px}.art-caption{margin-top:15px}.intro{grid-template-columns:1fr;gap:20px;padding:35px 0}.section-head{display:block;margin-bottom:35px}.section-head .eyebrow{margin-bottom:18px}.journey{grid-template-columns:1fr;gap:45px}.support-grid,.faq{grid-template-columns:1fr;gap:35px}.support-copy{position:static}.trust{grid-template-columns:1fr;gap:30px;padding:45px 0}.trust article+article{border-top:1px solid var(--line);padding-top:30px}.download{padding:60px 0}.download-grid{display:block}.download .stores{flex-direction:row;margin-top:30px}.footer-main{grid-template-columns:1fr 1fr;gap:35px}.footer-main>div:first-child{grid-column:1/-1}.footer-bottom{flex-direction:column}.footer{padding-top:40px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
-  </style>
-</head>
-<body>
-  <a href="#main" class="skip">Skip to content</a>
-  <header class="header">
-    <nav class="wrap nav" aria-label="Main navigation">
-      <a class="brand" href="#main"><img src="assets/img/logos/logo.svg" alt="">Weplace</a>
-      <div class="navlinks" id="navigation">
-        <a href="#about" data-i18n="nav.about">About us</a><a href="#priority-support" data-i18n="nav.support">Support</a><a href="guide/" data-copy="guide">Guide</a><a href="#contact" data-i18n="nav.contact">Contact</a>
-      </div>
-      <div class="languages" role="group" aria-label="Language"><button type="button" data-language-option="en" class="active" aria-label="English" aria-pressed="true">EN</button><button type="button" data-language-option="ms" aria-label="Bahasa Melayu" aria-pressed="false">BM</button></div>
-      <a class="button" href="#download-app"><span data-copy="download">Get the app</span><span aria-hidden="true">↗</span></a>
-      <button class="menu" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">☰</button>
-    </nav>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow" data-copy="eyebrow">Your neighbourhood. A little closer.</p>
-          <h1 id="hero-title">Weplace</h1>
-          <h2 data-copy="headline">Good things happen<br>close to home.</h2>
-          <p class="lead" data-copy="intro">Discover local favourites, support small sellers, and connect with the people around you. One app for your Malaysian neighbourhood.</p>
-          <div class="stores">
-            <a href="https://apps.apple.com/my/app/weplace-my/id6768859795" target="_blank" rel="noopener noreferrer"><img src="assets/img/logos/App_Store.webp" alt="Download on the App Store"></a>
-            <a href="https://play.google.com/store/apps/details?id=my.weplace.app" target="_blank" rel="noopener noreferrer"><img src="assets/img/logos/Play_Store.webp" alt="Get it on Google Play"></a>
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================--><!--    Document Title--><!-- ===============================================-->
+    <title>Weplace | Neighborhood Social Commerce for Malaysia</title>
+
+    <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Weplace helps neighbours buy, sell, support, and connect within their own communities - making daily life more convenient, affordable, and meaningful.">
+
+    <!-- ===============================================--><!--    Open Graph / Social Preview--><!-- ===============================================-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weplace.my/">
+    <meta property="og:title" content="Weplace | Neighborhood Social Commerce for Malaysia">
+    <meta property="og:description" content="Weplace helps neighbours buy, sell, support, and connect within their own communities - making daily life more convenient, affordable, and meaningful.">
+    <meta property="og:image" content="https://weplace.my/assets/img/gallery/banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Weplace">
+
+    <!-- ===============================================--><!--    Twitter Card--><!-- ===============================================-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weplace | Neighborhood Social Commerce for Malaysia">
+    <meta name="twitter:description" content="Weplace helps neighbours buy, sell, support, and connect within their own communities - making daily life more convenient, affordable, and meaningful.">
+    <meta name="twitter:image" content="https://weplace.my/assets/img/Hero/Community.jpg">
+
+    <!-- ===============================================--><!--    Stylesheets--><!-- ===============================================-->
+    <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="assets/css/user.css?v=20260527-4" rel="stylesheet" id="user-style-default">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  </head>
+
+  <body>
+    <!-- ===============================================--><!--    Main Content--><!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="content">
+        <nav class="navbar navbar-expand-md fixed-top" id="navbar" data-navbar-soft-on-scroll="data-navbar-soft-on-scroll">
+          <div class="container-fluid px-0"><a href="/" class="navbar-brand d-flex align-items-center"><img src="assets/img/logos/logo.svg" alt="logo" class="d-inline-block" style="height: 70px; width: auto; filter: brightness(0) invert(1);" /><span class="brand-name d-none d-md-block">Weplace</span></a><button class="navbar-toggler border-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="#navbar-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbar-content" data-navbar-collapse="data-navbar-collapse">
+              <ul class="navbar-nav gap-md-2 gap-lg-3 pt-x1 pb-1 pt-md-0 pb-md-0" data-navbar-nav="data-navbar-nav">
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#home" data-i18n="nav.home">Home</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#about" data-i18n="nav.about">About us</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#priority-support" data-i18n="nav.support">Support</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="guide/">Guide</a></li>
+                <li class="nav-item"> <a class="nav-link lh-xl" href="#contact" data-i18n="nav.contact">Contact</a></li>
+              </ul>
+              <div class="dropdown language-switcher ms-md-3">
+                <button class="btn btn-sm dropdown-toggle language-switcher__toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-language-current>EN</button>
+                <ul class="dropdown-menu dropdown-menu-end language-switcher__menu">
+                  <li><button class="dropdown-item active" type="button" data-language-option="en">EN</button></li>
+                  <li><button class="dropdown-item" type="button" data-language-option="ms">BM</button></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <p class="availability" data-i18n="hero.download">Available on iOS and Android.</p>
-        </div>
-        <figure class="hero-art" style="margin:0">
-          <img src="assets/img/Hero/Community.jpg" alt="Illustration of neighbours sharing food, helping each other, and connecting through Weplace" fetchpriority="high" width="1402" height="1122">
-          <figcaption class="art-caption"><span>Kita Jaga Kita</span><span data-copy="made">Made for Malaysia</span></figcaption>
-        </figure>
+        </nav>
+        <div data-bs-target="#navbar" data-bs-spy="scroll" tabindex="0">
+          <section class="hero-section overflow-hidden position-relative z-0 mb-4 mb-lg-0" id="home">
+            <div class="hero-background">
+              <div class="container">
+                <div class="row gy-4 gy-md-8 pt-9 pt-lg-0">
+                  <div class="col-12 col-lg-6 text-center text-lg-start hero-copy">
+                    <h1 class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-3 mt-lg-0" style="text-shadow: 0 6px 18px rgba(15, 23, 42, 0.28);" data-i18n="hero.title">Connecting Community. Improving Everyday Life.</h1>
+                    <p class="fs-8 text-dark mb-3 mb-lg-4 lh-lg hero-body-copy" data-i18n="hero.body">Weplace helps neighbours buy, sell, support, and connect within their own communities — making daily life more convenient, affordable, and meaningful.</p>
+                    <p class="hero-download-copy" data-i18n="hero.download">Available on iOS and Android.</p>
+                    <div class="store-badge-group hero-download-actions"><a class="store-badge-link" href="https://apps.apple.com/my/app/weplace-my/id6768859795" target="_blank" rel="noopener noreferrer" aria-label="Download Weplace on the App Store"> <img class="img-fluid" src="assets/img/logos/App_Store.webp" alt="Download on the App Store" /></a><a class="store-badge-link" href="https://play.google.com/store/apps/details?id=my.weplace.app" target="_blank" rel="noopener noreferrer" aria-label="Get Weplace on Google Play"> <img class="img-fluid" src="assets/img/logos/Play_Store.webp" alt="Download on Google Play" /></a></div>
+                    <div class="hero-social-links" aria-label="Weplace social media"><a class="hero-social-link social-facebook" href="https://www.facebook.com/weplace.my" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Facebook"><span class="uil uil-facebook-f"></span></a><a class="hero-social-link social-instagram" href="https://www.instagram.com/weplacemy/" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Instagram"><span class="uil uil-instagram"></span></a><a class="hero-social-link" href="http://xhslink.com/m/1DI3xcjVUHd" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Xiaohongshu"><span class="xhs-mark" aria-hidden="true">小</span></a></div>
+                  </div>
+                  <div class="col-12 col-lg-6 position-lg-relative hero-visual">
+                    <div class="position-lg-absolute text-center hero-phone-stage">
+                      <div class="app-showcase-wrap app-showcase-wrap-hero mx-auto">
+                        <div class="app-showcase-glow"></div>
+                        <div class="phone-shell phone-shell-hero">
+                          <div class="phone-notch"></div>
+                          <div class="phone-screen phone-screen-hero">
+                            <div class="carousel app-phone-carousel" id="heroStoryCarousel" data-bs-ride="carousel" data-bs-interval="5000">
+                              <div class="carousel-indicators app-carousel-indicators">
+                                <button class="active" type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Hero story 1"></button>
+                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="1" aria-label="Hero story 2"></button>
+                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="2" aria-label="Hero story 3"></button>
+                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="3" aria-label="Hero story 4"></button>
+                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="4" aria-label="Hero story 5"></button>
+                              </div>
+                              <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100">
+                                  <img class="app-story-image" src="assets/img/gallery/hero-1.jpg" alt="Weplace hero story 1" />
+                                </div>
+                                <div class="carousel-item h-100">
+                                  <img class="app-story-image" src="assets/img/gallery/hero-2.jpg" alt="Weplace hero story 2" />
+                                </div>
+                                <div class="carousel-item h-100">
+                                  <img class="app-story-image" src="assets/img/gallery/hero-3.jpg" alt="Weplace hero story 3" />
+                                </div>
+                                <div class="carousel-item h-100">
+                                  <img class="app-story-image" src="assets/img/gallery/hero-4.jpg" alt="Weplace hero story 4" />
+                                </div>
+                                <div class="carousel-item h-100">
+                                  <img class="app-story-image" src="assets/img/gallery/hero-5.jpg" alt="Weplace hero story 5" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="position-absolute bottom-0 start-0 end-0 z-1"><img class="wave mb-md-n2" src="assets/img/illustrations/Wave.svg" alt="" />
+              <div class="bg-white py-2 py-md-5"></div>
+            </div>
+          </section>
+          <section class="container proof-strip border-bottom mb-8 mb-lg-10">
+            <div class="row pb-6 pb-lg-8 g-3 g-lg-8 px-3">
+              <div class="col-12 col-md-4">
+                <div class="logo-explain text-center">
+                  <div class="logo-explain-media">
+                    <img class="logo-explain-image logo-explain-image-home" src="assets/img/icons/logo_geo.png" alt="Weplace home icon" />
+                  </div>
+                    <h3 class="logo-explain-title" data-i18n="logo.home.title">Home</h3>
+                    <p class="logo-explain-text mb-0" data-i18n="logo.home.text">The marker stands for home - the place where daily life begins.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="logo-explain text-center">
+                  <div class="logo-explain-media">
+                    <img class="logo-explain-image logo-explain-image-flower" src="assets/img/icons/logo_flower.png" alt="Weplace connection icon" />
+                  </div>
+                    <h3 class="logo-explain-title" data-i18n="logo.connection.title">Connection</h3>
+                    <p class="logo-explain-text mb-0" data-i18n="logo.connection.text">The flower stands for connection, care, and growth in every community.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="logo-explain text-center">
+                  <div class="logo-explain-media">
+                    <img class="logo-explain-image logo-explain-image-full" src="assets/img/icons/logo_full.png" alt="Full Weplace logo" />
+                  </div>
+                    <h3 class="logo-explain-title" data-i18n="logo.weplace.title">Weplace</h3>
+                    <p class="logo-explain-text mb-0" data-i18n="logo.weplace.text">Weplace is built to bring more value back to the places we call home.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container mb-8 mb-lg-13" id="about">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-6 col-xl-7"><img class="img-fluid" src="assets/img/Hero/Community.jpg" alt="" /></div>
+              <div class="col-12 col-lg-6 col-xl-5">
+                <div class="row justify-content-center justify-content-lg-start">
+                  <div class="col-sm-10 col-md-8 col-lg-12">
+                    <h2 class="fs-5 fs-lg-4 fw-bold mb-2 text-center text-lg-start lh-sm" data-i18n="about.title">Made for Malaysian neighbourhoods.</h2>
+                    <p class="fs-8 mb-2 mb-lg-3 lh-lg text-center text-lg-start fw-normal" style="font-size: 0.96rem;" data-i18n="about.subtitle">Inspired by the Kita Jaga Kita spirit, Weplace helps neighbours discover local food, goods, services, vouchers, events, and support close to home.</p>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-2 mb-lg-2">
+                      <h5 class="fs-8 fw-bold lh-base mb-1" style="font-size: 1.05rem;" data-i18n="about.market.title">A place for local ideas</h5>
+                      <p class="mb-0 lh-lg" style="font-size: 0.96rem;" data-i18n="about.market.text">From home-cooked favourites to small reseller finds and weekend pasar ideas, Weplace gives local sellers a simple way to start and be discovered by nearby neighbours.</p>
+                    </div>
+                    <div>
+                      <h5 class="fs-8 fw-bold lh-base mb-1" style="font-size: 1.05rem;" data-i18n="about.events.title">Help and moments nearby</h5>
+                      <p class="lh-lg mb-0" style="font-size: 0.96rem;" data-i18n="about.events.text">Looking for a badminton kaki, a quick favour, or help when something goes wrong? Weplace makes it easier to reach people around you and keep community support moving.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container mb-8 mb-lg-13">
+            <div class="journey-layout">
+              <div class="journey-intro text-center">
+                <span class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="journey.eyebrow">For buyers, sellers, and neighbours</span>
+                <h2 class="fs-4 fs-lg-3 fw-bold mb-2" data-i18n="journey.title">Built around everyday Malaysian life.</h2>
+                <p class="fs-8 mb-0 lh-lg fw-normal" data-i18n="journey.subtitle">Weplace connects local discovery with simple selling tools, so residents can find what they need nearby while small sellers grow from the communities that know them best.</p>
+              </div>
+              <article class="journey-card buyer journey-card-buyer">
+                <img class="journey-card-image" src="assets/img/gallery/market-1.png" alt="Buyer marketplace preview" />
+                <div class="journey-card-top">
+                  <span class="journey-chip" data-i18n="journey.buyer.chip">For Buyers</span>
+                  <h5 class="fs-8 fw-bold lh-lg mb-1" data-i18n="journey.buyer.title">Find useful things closer to home.</h5>
+                  <p class="lh-xl mb-0" data-i18n="journey.buyer.text">From lauk and kuih to services, vouchers, and local deals, Weplace helps buyers discover everyday value from people nearby.</p>
+                </div>
+              </article>
+              <div class="journey-phone-stage">
+                <div class="app-showcase-wrap mx-auto">
+                  <div class="app-showcase-glow"></div>
+                  <div class="phone-shell">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                      <div class="carousel slide app-phone-carousel" id="appShowcaseCarousel" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-indicators app-carousel-indicators">
+                          <button class="active" type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Seller story 1"></button>
+                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="1" aria-label="Seller story 2"></button>
+                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="2" aria-label="Seller story 3"></button>
+                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="3" aria-label="Seller story 4"></button>
+                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="4" aria-label="Seller story 5"></button>
+                        </div>
+                        <div class="carousel-inner h-100">
+                          <div class="carousel-item active h-100">
+                            <img class="app-story-image" src="assets/img/gallery/seller-1.jpg" alt="Weplace seller story 1" />
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img class="app-story-image" src="assets/img/gallery/seller-2.jpg" alt="Weplace seller story 2" />
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img class="app-story-image" src="assets/img/gallery/seller-3.jpg" alt="Weplace seller story 3" />
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img class="app-story-image" src="assets/img/gallery/seller-4.jpg" alt="Weplace seller story 4" />
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img class="app-story-image" src="assets/img/gallery/seller-5.jpg" alt="Weplace seller story 5" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <article class="journey-card seller journey-card-seller">
+                <img class="journey-card-image" src="assets/img/gallery/market-2.png" alt="Seller marketplace preview" />
+                <div class="journey-card-top">
+                  <span class="journey-chip" data-i18n="journey.seller.chip">For Sellers</span>
+                  <h5 class="fs-8 fw-bold lh-lg mb-1" data-i18n="journey.seller.title">Start from home, grow with your neighbourhood.</h5>
+                  <p class="lh-xl mb-0" data-i18n="journey.seller.text">Test new ideas, manage orders, and learn from real neighbour feedback before growing your small business further.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="container mb-8 mb-lg-10">
+            <div class="row justify-content-center">
+              <div class="col-md-9 col-lg-8 text-center">
+                <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="sellerIdeas.eyebrow">Local seller ideas</p>
+                <h3 class="fs-4 fs-lg-3 fw-bold mb-2 mb-lg-x1 lh-sm" data-i18n="sellerIdeas.title">Food, Goods, Services, and Vouchers</h3>
+                <p class="fs-8 mb-7 mb-lg-8 text-center lh-lg" data-i18n="sellerIdeas.subtitle">Simple examples of what neighbours can offer from home, online, or around the community.</p>
+              </div>
+              <div class="col-12">
+                <div class="seller-ideas-grid seller-ideas-grid-section">
+                  <article class="seller-idea-tile seller-idea-tile-section">
+                    <img src="assets/img/gallery/foods-1.jpeg" alt="Food selling idea" />
+                    <span>Foods</span>
+                  </article>
+                  <article class="seller-idea-tile seller-idea-tile-section">
+                    <img src="assets/img/gallery/goods-1.jpeg" alt="Goods selling idea" />
+                    <span>Goods</span>
+                  </article>
+                  <article class="seller-idea-tile seller-idea-tile-section">
+                    <img src="assets/img/gallery/services-1.jpeg" alt="Service selling idea" />
+                    <span>Services</span>
+                  </article>
+                  <article class="seller-idea-tile seller-idea-tile-section">
+                    <img src="assets/img/gallery/vouchers-1.jpeg" alt="Voucher selling idea" />
+                    <span>Vouchers</span>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="proof-section">
+            <div class="container">
+              <div class="proof-panel">
+                <div class="proof-panel-header">
+                  <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="proof.eyebrow">Made for everyday Malaysian life</p>
+                  <h2 class="fs-4 fs-lg-3 fw-bold mb-0 lh-sm" data-i18n="proof.title">More value from the people and places nearby.</h2>
+                </div>
+                <div class="proof-grid">
+                  <article class="proof-item">
+                    <span class="proof-icon"><i class="uil uil-shopping-bag" aria-hidden="true"></i></span>
+                    <h3 data-i18n="proof.items.0.title">For nearby buyers</h3>
+                    <p data-i18n="proof.items.0.text">Discover foods, goods, services, vouchers, events, and help requests around your own area.</p>
+                  </article>
+                  <article class="proof-item">
+                    <span class="proof-icon"><i class="uil uil-store" aria-hidden="true"></i></span>
+                    <h3 data-i18n="proof.items.1.title">For home sellers</h3>
+                    <p data-i18n="proof.items.1.text">Start small, test ideas, manage orders, and grow with feedback from local buyers.</p>
+                  </article>
+                  <article class="proof-item">
+                    <span class="proof-icon"><i class="uil uil-heart" aria-hidden="true"></i></span>
+                    <h3 data-i18n="proof.items.2.title">For community support</h3>
+                    <p data-i18n="proof.items.2.text">Help residents notice local sellers and support needs that might otherwise stay unseen.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="priority-support-section mb-8 mb-lg-13" id="priority-support">
+            <div class="container">
+              <div class="priority-support-header text-center">
+                <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="priority.eyebrow">Priority Support</p>
+                <h3 class="fs-4 fs-lg-3 fw-bold mb-2 mb-lg-x1 lh-sm" data-i18n="priority.title">Helping local sellers be seen.</h3>
+                <p class="fs-8 mb-0 lh-lg fw-normal priority-support-copy" data-i18n="priority.subtitle">Priority Support gives extra visibility to community sellers who may need a stronger starting point, so residents can choose to support with clearer context.</p>
+              </div>
+              <div class="priority-support-layout">
+                <div class="priority-support-content">
+                  <img
+                    class="img-fluid w-100 mb-3"
+                    src="assets/img/gallery/priority-1.jpg"
+                    alt="Priority Support preview"
+                  />
+                  <div class="priority-support-steps">
+                    <article class="seller-plan-step priority-support-step">
+                      <span class="seller-plan-step-number"><i class="uil uil-wheelchair" aria-hidden="true"></i></span>
+                      <div>
+                        <h5 data-i18n="priority.cards.0.title">Clearer visibility</h5>
+                        <p data-i18n="priority.cards.0.text">Supported sellers can be highlighted so nearby residents understand who they are helping.</p>
+                      </div>
+                    </article>
+                    <article class="seller-plan-step priority-support-step">
+                      <span class="seller-plan-step-number"><i class="uil uil-home" aria-hidden="true"></i></span>
+                      <div>
+                        <h5 data-i18n="priority.cards.1.title">Start from home</h5>
+                        <p data-i18n="priority.cards.1.text">Good for small home-based foods, goods, services, vouchers, and everyday ideas that begin in the neighbourhood.</p>
+                      </div>
+                    </article>
+                    <article class="seller-plan-step priority-support-step">
+                      <span class="seller-plan-step-number"><i class="uil uil-users-alt" aria-hidden="true"></i></span>
+                      <div>
+                        <h5 data-i18n="priority.cards.2.title">Community-first support</h5>
+                        <p data-i18n="priority.cards.2.text">Residents can support local sellers with more context, trust, and a stronger sense of shared community.</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="priority-support-visual">
+                  <div class="priority-phone-stage">
+                    <div class="app-showcase-wrap mx-auto">
+                      <div class="app-showcase-glow"></div>
+                      <div class="phone-shell priority-phone-shell">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen priority-phone-screen">
+                          <img class="priority-phone-image" src="assets/img/gallery/priority-2.jpg" alt="Priority Support preview" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="trust-section bg-1100" id="pricing">
+            <div class="container py-8 py-md-10 py-lg-11">
+              <div class="row justify-content-center">
+                <div class="col-md-9 col-lg-8 text-center">
+                  <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="trust.eyebrow">Built on Trust</p>
+                  <h3 class="fs-4 fs-lg-3 fw-bold mb-2 mb-lg-x1 lh-sm text-white" data-i18n="trust.title">Trust for local participation in Malaysia.</h3>
+                  <p class="fs-8 mb-7 mb-lg-8 text-center lh-lg text-white text-opacity-75" data-i18n="trust.subtitle">Neighbourhood commerce works better when people know who they are dealing with. Weplace supports clearer seller verification and more familiar local interactions.</p>
+                </div>
+                <div class="col-12">
+                  <div class="trust-stack">
+                    <div class="trust-stack-item">
+                      <article class="value-card trust-card w-100">
+                        <div class="value-icon trust-icon">
+                          <span class="uil uil-users-alt"></span>
+                        </div>
+                        <div class="value-card-content">
+                          <h5 class="fs-7 fw-bold mb-2 text-white" data-i18n="trust.cards.0.title">Personal Seller</h5>
+                          <p class="lh-xl mb-0 text-white text-opacity-85" data-i18n="trust.cards.0.text">Malaysian personal sellers can register by uploading IC front and back for verification.</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="trust-stack-item">
+                      <article class="value-card trust-card w-100">
+                        <div class="value-icon trust-icon">
+                          <span class="uil uil-shield-check"></span>
+                        </div>
+                        <div class="value-card-content">
+                          <h5 class="fs-7 fw-bold mb-2 text-white" data-i18n="trust.cards.1.title">Company Seller</h5>
+                          <p class="lh-xl mb-0 text-white text-opacity-85" data-i18n="trust.cards.1.text">Company sellers can register with SSM information, with halal certification as an optional supporting document.</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="trust-stack-item">
+                      <article class="value-card trust-card w-100">
+                        <div class="value-icon trust-icon">
+                          <span class="uil uil-lock-alt"></span>
+                        </div>
+                        <div class="value-card-content">
+                          <h5 class="fs-7 fw-bold mb-2 text-white" data-i18n="trust.cards.2.title">More familiar interactions</h5>
+                          <p class="lh-xl mb-0 text-white text-opacity-85" data-i18n="trust.cards.2.text">With local residents and verified Malaysian sellers, everyday buying, selling, and helping can feel closer and more secure.</p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="faq-section" id="faq">
+            <div class="container py-8 py-lg-9">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                  <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="faq.eyebrow">Questions</p>
+                  <h2 class="fs-4 fs-lg-3 fw-bold mb-2 lh-sm" data-i18n="faq.title">Good to know before you join.</h2>
+                  <p class="fs-8 mb-5 lh-lg faq-intro" data-i18n="faq.subtitle">Quick answers for residents, home sellers, and local partners.</p>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-9">
+                  <div class="accordion faq-accordion" id="weplaceFaq">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne" data-i18n="faq.items.0.question">Is Weplace free to download?</button>
+                      </h3>
+                      <div class="accordion-collapse collapse show" id="faqCollapseOne" aria-labelledby="faqHeadingOne" data-bs-parent="#weplaceFaq">
+                        <div class="accordion-body" data-i18n="faq.items.0.answer">Yes. You can download Weplace from the App Store or Google Play using the buttons on this page.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo" data-i18n="faq.items.1.question">Can I start selling from home?</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="faqCollapseTwo" aria-labelledby="faqHeadingTwo" data-bs-parent="#weplaceFaq">
+                        <div class="accordion-body" data-i18n="faq.items.1.answer">Yes. Approved sellers can start small from home, test ideas with nearby buyers, and grow steadily with feedback from their own neighbourhood.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree" data-i18n="faq.items.2.question">How are sellers verified?</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="faqCollapseThree" aria-labelledby="faqHeadingThree" data-bs-parent="#weplaceFaq">
+                        <div class="accordion-body" data-i18n="faq.items.2.answer">Through seller registration in the app, personal sellers can register with IC verification, while company sellers can provide SSM information and optional supporting documents such as halal certification.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour" data-i18n="faq.items.3.question">Is it available in my area?</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="faqCollapseFour" aria-labelledby="faqHeadingFour" data-bs-parent="#weplaceFaq">
+                        <div class="accordion-body" data-i18n="faq.items.3.answer">Weplace is open to communities across Malaysia. If your group does not exist yet, register and create your community in the app to be the first in your area.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="final-download-section" id="download-app">
+            <div class="container">
+              <div class="final-download-panel">
+                <div>
+                  <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="finalCta.eyebrow">Start close to home</p>
+                  <h2 class="fs-4 fs-lg-3 fw-bold mb-2 lh-sm" data-i18n="finalCta.title">Bring your neighbourhood closer.</h2>
+                  <p class="final-download-copy mb-0" data-i18n="finalCta.subtitle">Download Weplace on iOS or Android and start discovering what is around you.</p>
+                </div>
+                <div class="final-download-actions">
+                  <a class="store-badge-link border-0 p-0 bg-transparent cursor-pointer rounded-1" href="https://apps.apple.com/my/app/weplace-my/id6768859795" target="_blank" rel="noopener noreferrer"><img class="img-fluid" src="assets/img/logos/App_Store.webp" alt="Download on the App Store" /></a>
+                  <a class="store-badge-link border-0 p-0 bg-transparent cursor-pointer rounded-1" href="https://play.google.com/store/apps/details?id=my.weplace.app" target="_blank" rel="noopener noreferrer"><img class="img-fluid" src="assets/img/logos/Play_Store.webp" alt="Download on Google Play" /></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="bg-300 position-relative z-0" id="contact">
+            <div class="container py-8 py-lg-9">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-8">
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                      <p class="text-primary fw-semibold text-uppercase ls-2 mb-2 text-center" data-i18n="contact.eyebrow">Contact Us</p>
+                      <h2 class="fs-4 fs-lg-3 fw-bold text-center mb-2 lh-sm" data-i18n="contact.title">Let's connect with Weplace.</h2>
+                      <p class="fs-8 mb-4 text-center lh-lg fw-normal" data-i18n="contact.subtitle">If you want to learn more about Weplace, early access, partnerships, or seller onboarding, reach us directly by email.</p>
+                    </div>
+                    <div class="col-10 col-lg-7 text-center">
+                      <a class="btn btn-lg btn-primary lh-xl mb-3" href="mailto:weplace.my@gmail.com">weplace.my@gmail.com</a>
+                      <p class="text-center lh-lg mb-0" data-i18n="contact.footer">We would love to hear from residents, local businesses, and potential partners.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="position-absolute bottom-0 end-0 z-n1 d-none d-lg-block"><img src="assets/img/illustrations/Green_dots.svg" alt="" /></div>
+            <div class="position-relative bottom-0 start-0 z-1"><img class="img-fluid w-100" src="assets/img/illustrations/Wave_3.svg" alt="" /></div>
+          </section>
+        </div><button class="btn scroll-to-top text-white rounded-circle d-flex justify-content-center align-items-center bg-primary" data-scroll-top="data-scroll-top"><span class="uil uil-angle-up"></span></button>
+        <footer class="pt-7 pt-lg-8">
+          <div class="container">
+            <div class="row gy-4 g-md-3 border-bottom pb-8 pb-lg-9 justify-content-center">
+              <div class="col-12 col-md-4">
+                <div class="footer-brand-block">
+                  <img src="assets/img/logos/logo.svg" alt="Weplace logo" class="footer-brand-logo" />
+                  <p class="footer-brand-name mb-2 lh-lg ls-1" data-i18n="footer.brand">Weplace</p>
+                  <p class="footer-brand-copy" data-i18n="footer.tagline">A neighbourhood app for buying, selling, helping, and discovering more close to home.</p>
+                </div>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#about" data-i18n="footer.brandLinks.0">About us</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#contact" data-i18n="footer.brandLinks.1">Contact us</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#faq" data-i18n="footer.brandLinks.2">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2">
+                <p class="mb-2 lh-lg" data-i18n="footer.modules.title">Modules</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#about" data-i18n="footer.modules.links.0">Home</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#about" data-i18n="footer.modules.links.1">Market</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="#priority-support" data-i18n="footer.modules.links.2">Chat</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-2">
+                <p class="mb-2 lh-lg" data-i18n="footer.legal.title">Legal</p>
+                <ul class="list-unstyled text-1100">
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="privacy/" data-i18n="footer.legal.links.0">Privacy</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="tnc/" data-i18n="footer.legal.links.1">Terms & Conditions</a></li>
+                  <li class="mb-1"> <a class="ls-1 lh-xl" href="security/" data-i18n="footer.legal.links.2">Security</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 d-md-flex flex-column align-items-md-end pe-md-0">
+                <div>
+                  <p class="mb-2 lh-lg" data-i18n="footer.download">Download Our App</p>
+                  <div class="mb-1 mb-lg-2"><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="https://apps.apple.com/my/app/weplace-my/id6768859795" target="_blank" rel="noopener noreferrer"> <img class="img-fluid" src="assets/img/logos/App_Store.webp" alt="Download on the App Store" /></a></div><a class="border-0 p-0 bg-transparent cursor-pointer rounded-1" href="https://play.google.com/store/apps/details?id=my.weplace.app" target="_blank" rel="noopener noreferrer"> <img class="img-fluid" src="assets/img/logos/Play_Store.webp" alt="Download on Google Play" /></a>
+                </div>
+              </div>
+            </div>
+            <div class="row gy-2 py-3 justify-content-center justify-content-md-between">
+              <div class="col-auto ps-0">
+                <p class="text-center text-md-start lh-xl text-1100" data-i18n="footer.copyright">&copy; 2026 Weplace Technologies. Built for Malaysian communities.</p>
+              </div>
+              <div class="col-auto pe-0"><a class="icons social-facebook fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="https://www.facebook.com/weplace.my" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Facebook"><span class="uil uil-facebook-f"> </span></a><a class="icons social-instagram fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="https://www.instagram.com/weplacemy/" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Instagram"><span class="uil uil-instagram"></span></a><a class="icons fs-8 me-3 me-md-0 ms-md-3 cursor-pointer" href="http://xhslink.com/m/1DI3xcjVUHd" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Xiaohongshu"><span class="xhs-mark" aria-hidden="true">小</span></a></div>
+            </div>
+          </div>
+        </footer>
       </div>
-    </section>
-    <div class="wrap intro" id="about"><h2 data-i18n="about.title">Made for Malaysian neighbourhoods.</h2><p data-i18n="about.subtitle">Inspired by the Kita Jaga Kita spirit, Weplace helps neighbours discover local food, goods, services, vouchers, events, and support close to home.</p></div>
-    <section class="wrap section" aria-labelledby="everyday">
-      <div class="section-head"><p class="eyebrow" data-copy="everydayLabel">A little more local</p><h2 id="everyday" data-copy="everyday">Your everyday, with your neighbourhood in it.</h2></div>
-      <div class="journey">
-        <article><div class="feature-image food"><img src="assets/img/gallery/foods-1.jpeg" width="1024" height="1024" loading="lazy" alt="Illustrated local favourites, including nasi lemak, curry puffs, and sambal"></div><div class="feature-index">01 / <span data-i18n="journey.buyer.chip">For Buyers</span></div><h3 data-i18n="journey.buyer.title">Find useful things closer to home.</h3><p data-i18n="journey.buyer.text">From lauk and kuih to services, vouchers, and local deals, Weplace helps buyers discover everyday value from people nearby.</p><a class="text-link" href="#download-app"><span data-copy="explore">Explore your neighbourhood</span><span aria-hidden="true">↗</span></a></article>
-        <article><div class="feature-image community"><img src="assets/img/Hero/Community.jpg" loading="lazy" width="1402" height="1122" alt="Illustrated scenes of home sellers and neighbours supporting one another"></div><div class="feature-index">02 / <span data-i18n="journey.seller.chip">For Sellers</span></div><h3 data-i18n="journey.seller.title">Start from home, grow with your neighbourhood.</h3><p data-i18n="journey.seller.text">Test new ideas, manage orders, and learn from real neighbour feedback before growing your small business further.</p><a class="text-link" href="guide/"><span data-copy="sellerGuide">Explore the seller guide</span><span aria-hidden="true">↗</span></a></article>
-      </div>
-    </section>
-    <section class="support section" id="priority-support"><div class="wrap support-grid">
-      <div class="support-copy"><p class="eyebrow" data-i18n="priority.eyebrow">Priority Support</p><h2 data-i18n="priority.title">Helping local sellers be seen.</h2><p class="lead" data-i18n="priority.subtitle">Priority Support gives extra visibility to community sellers who may need a stronger starting point, so residents can choose to support with clearer context.</p><a class="text-link" href="mailto:weplace.my@gmail.com"><span data-copy="talk">Talk to us about support</span><span aria-hidden="true">↗</span></a></div>
-      <div class="support-list">
-        <article class="support-item"><b aria-hidden="true">01</b><div><h3 data-i18n="priority.cards.0.title">Clearer visibility</h3><p data-i18n="priority.cards.0.text">Supported sellers can be highlighted so nearby residents understand who they are helping.</p></div></article>
-        <article class="support-item"><b aria-hidden="true">02</b><div><h3 data-i18n="priority.cards.1.title">Start from home</h3><p data-i18n="priority.cards.1.text">Good for small home-based foods, goods, services, vouchers, and everyday ideas that begin in the neighbourhood.</p></div></article>
-        <article class="support-item"><b aria-hidden="true">03</b><div><h3 data-i18n="priority.cards.2.title">Community-first support</h3><p data-i18n="priority.cards.2.text">Residents can support local sellers with more context, trust, and a stronger sense of shared community.</p></div></article>
-      </div>
-    </div></section>
-    <section class="wrap trust" aria-label="Selling and community participation">
-      <article><p class="eyebrow" data-copy="plans">Seller plans</p><h3 data-copy="planTitle">Room to grow.</h3><p data-i18n="value.subtitle">Start selling for free, then subscribe only when you need more products and wider reach.</p></article>
-      <article><p class="eyebrow" data-copy="verification">Verification</p><h3 data-copy="trustTitle">Know who you support.</h3><p data-copy="trustBody">Personal and company sellers can submit verification documents in the app. Look for each seller's verification status.</p></article>
-      <article><p class="eyebrow" data-copy="community">Community</p><h3 data-copy="communityTitle">More than a marketplace.</h3><p data-copy="communityBody">Find a badminton kaki, share a local event, or reach out when you need a helping hand.</p></article>
-    </section>
-    <section class="wrap section faq" id="faq"><div><p class="eyebrow" data-i18n="faq.eyebrow">Questions</p><h2 data-i18n="faq.title">Good to know before you join.</h2></div><div>
-      <details><summary data-i18n="faq.items.0.question">Is Weplace free to download?</summary><p data-i18n="faq.items.0.answer">Yes. You can download Weplace from the App Store or Google Play using the buttons on this page.</p></details>
-      <details><summary data-i18n="faq.items.1.question">Can I start selling from home?</summary><p data-copy="sellingAnswer">Yes. Register as a seller in the app, add your products, and start reaching nearby buyers. You can submit your verification documents from the Seller Hub.</p></details>
-      <details><summary data-i18n="faq.items.2.question">How are sellers verified?</summary><p data-i18n="faq.items.2.answer">Through seller registration in the app, personal sellers can register with IC verification, while company sellers can provide SSM information and optional supporting documents such as halal certification.</p></details>
-      <details><summary data-i18n="faq.items.3.question">Is it available in my area?</summary><p data-i18n="faq.items.3.answer">Weplace is open to communities across Malaysia. If your group does not exist yet, register and create your community in the app to be the first in your area.</p></details>
-    </div></section>
-    <section class="download" id="download-app"><div class="wrap download-grid"><div><p class="eyebrow" data-i18n="finalCta.eyebrow">Start close to home</p><h2 data-i18n="finalCta.title">Bring your neighbourhood closer.</h2><p data-i18n="finalCta.subtitle">Download Weplace on iOS or Android and start discovering what is around you.</p></div><div class="stores"><a href="https://apps.apple.com/my/app/weplace-my/id6768859795" target="_blank" rel="noopener noreferrer"><img src="assets/img/logos/App_Store.webp" alt="Download on the App Store" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=my.weplace.app" target="_blank" rel="noopener noreferrer"><img src="assets/img/logos/Play_Store.webp" alt="Get it on Google Play" loading="lazy"></a></div></div></section>
-  </main>
-  <footer class="wrap footer" id="contact"><div class="footer-main"><div><a class="brand" href="#main"><img src="assets/img/logos/logo.svg" alt="">Weplace</a><p data-i18n="footer.tagline">A neighbourhood app for buying, selling, helping, and discovering more close to home.</p></div><div><h3 data-i18n="contact.eyebrow">Contact Us</h3><ul><li><a href="mailto:weplace.my@gmail.com">weplace.my@gmail.com</a></li><li><a href="guide/" data-copy="guide">Guide</a></li><li><a href="#faq">FAQ</a></li></ul></div><div><h3 data-i18n="footer.legal.title">Legal</h3><ul><li><a href="privacy/" data-i18n="footer.legal.links.0">Privacy</a></li><li><a href="tnc/" data-i18n="footer.legal.links.1">Terms &amp; Conditions</a></li><li><a href="security/" data-i18n="footer.legal.links.2">Security</a></li><li><a href="delete-account/" data-copy="delete">Delete account</a></li><li><a href="child-safety/" data-copy="safety">Child safety</a></li></ul></div></div><div class="footer-bottom"><p data-i18n="footer.copyright">Copyright 2026 Weplace Technologies. Built for Malaysian communities.</p><div class="socials"><a href="https://www.facebook.com/weplace.my" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/weplacemy/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></footer>
-  <script src="assets/js/index.js"></script>
-  <script>
-    const previewCopy = {
-      en: {guide:'Guide',download:'Get the app',eyebrow:'Your neighbourhood. A little closer.',headline:'Good things happen close to home.',intro:'Discover local favourites, support small sellers, and connect with the people around you. One app for your Malaysian neighbourhood.',made:'Made for Malaysia',everydayLabel:'A little more local',everyday:'Your everyday, with your neighbourhood in it.',explore:'Explore your neighbourhood',sellerGuide:'Explore the seller guide',talk:'Talk to us about support',plans:'Seller plans',planTitle:'Room to grow.',verification:'Verification',trustTitle:'Know who you support.',trustBody:"Personal and company sellers can submit verification documents in the app. Look for each seller's verification status.",community:'Community',communityTitle:'More than a marketplace.',communityBody:'Find a badminton kaki, share a local event, or reach out when you need a helping hand.',sellingAnswer:'Yes. Register as a seller in the app, add your products, and start reaching nearby buyers. You can submit your verification documents from the Seller Hub.',delete:'Delete account',safety:'Child safety'},
-      ms: {guide:'Panduan',download:'Muat turun',eyebrow:'Kejiranan anda. Kini lebih dekat.',headline:'Perkara baik bermula dekat dengan rumah.',intro:'Temui kegemaran tempatan, sokong penjual kecil, dan berhubung dengan orang di sekeliling anda. Satu aplikasi untuk kejiranan Malaysia anda.',made:'Untuk Malaysia',everydayLabel:'Lebih dekat, lebih setempat',everyday:'Kehidupan harian bersama kejiranan anda.',explore:'Terokai kejiranan anda',sellerGuide:'Terokai panduan penjual',talk:'Hubungi kami tentang sokongan',plans:'Pelan penjual',planTitle:'Ruang untuk berkembang.',verification:'Pengesahan',trustTitle:'Kenali siapa yang anda sokong.',trustBody:'Penjual peribadi dan syarikat boleh menghantar dokumen pengesahan dalam aplikasi. Semak status pengesahan setiap penjual.',community:'Komuniti',communityTitle:'Lebih daripada pasaran.',communityBody:'Cari kaki badminton, kongsi acara tempatan, atau hubungi jiran apabila anda memerlukan bantuan.',sellingAnswer:'Ya. Daftar sebagai penjual dalam aplikasi, tambah produk anda, dan mula menjangkau pembeli berdekatan. Anda boleh menghantar dokumen pengesahan melalui hab penjual.',delete:'Padam akaun',safety:'Keselamatan kanak-kanak'}
-    };
-    function updatePreviewCopy(){
-      const language=document.documentElement.lang.startsWith('ms')?'ms':'en';
-      document.querySelectorAll('[data-copy]').forEach(el=>{el.textContent=previewCopy[language][el.dataset.copy]});
-      document.querySelectorAll('[data-language-option]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.languageOption===language)));
-    }
-    document.addEventListener('DOMContentLoaded',updatePreviewCopy);
-    new MutationObserver(updatePreviewCopy).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
-    const menu=document.querySelector('.menu');
-    const navigation=document.querySelector('#navigation');
-    function closeMenu(){navigation.classList.remove('open');menu.setAttribute('aria-expanded','false')}
-    menu.addEventListener('click',()=>{const open=navigation.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
-    navigation.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu()});
-    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation.classList.contains('open')){closeMenu();menu.focus()}});
-    if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-      const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('reveal');observer.unobserve(entry.target)}})},{threshold:.12});
-      document.querySelectorAll('.journey article,.support-item,.trust article').forEach(el=>observer.observe(el));
-    }
-  </script>
-</body>
+    </main><!-- ===============================================--><!--    End of Main Content--><!-- ===============================================-->
+
+    <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/index.js?v=20260527-4"></script>
+  </body>
+
 </html>
