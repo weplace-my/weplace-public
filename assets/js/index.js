@@ -540,7 +540,7 @@ const initCommunityMap = async () => {
       styles: [{ featureType: 'poi', stylers: [{ visibility: 'off' }] }],
     });
     const markerIconForZoom = (zoom) => {
-      const size = zoom >= 9 ? 8 : zoom <= 7 ? 14 : 19;
+      const size = zoom <= 7 ? 8 : zoom <= 8 ? 14 : 26;
       return {
         url: 'assets/img/logos/logo.svg',
         scaledSize: new google.maps.Size(size, size),
