@@ -90,22 +90,22 @@ const TRANSLATIONS = {
       ]
     },
     priority: {
-      eyebrow: 'Priority Support',
-      title: 'Helping local sellers be seen.',
-      subtitle: 'Priority Support gives extra visibility to community sellers who may need a stronger starting point, so residents can choose to support with clearer context.',
+      eyebrow: 'LOCAL OPPORTUNITY',
+      title: 'More Ways to Earn, Closer to Home',
+      subtitle: 'Weplace makes it easier for local sellers to turn their skills and products into nearby orders — with less travel and more opportunity.',
       note: 'Priority Support is reviewed by Weplace and may apply to approved community cases such as persons with disabilities, single parents, and other local support needs.',
       cards: [
         {
-          title: 'Clearer visibility',
-          text: 'Supported sellers can be highlighted so nearby residents understand who they are helping.'
+          title: 'Start with what you can make',
+          text: 'Share homemade food, drinks, goods, services, or handmade ideas from home.'
         },
         {
-          title: 'Start from home',
-          text: 'Good for small home-based foods, goods, services, vouchers, and everyday ideas that begin in the neighbourhood.'
+          title: 'Receive nearby orders',
+          text: 'Digital ordering helps neighbours discover you without requiring long-distance travel.'
         },
         {
-          title: 'Community-first support',
-          text: 'Residents can support local sellers with more context, trust, and a stronger sense of shared community.'
+          title: 'Fulfil with confidence',
+          text: 'Arrange a nearby pickup or short-distance delivery and grow through local connections.'
         }
       ]
     },
@@ -540,7 +540,7 @@ const initCommunityMap = async () => {
       styles: [{ featureType: 'poi', stylers: [{ visibility: 'off' }] }],
     });
     const markerIconForZoom = (zoom) => {
-      const size = zoom <= 7 ? 8 : zoom <= 8 ? 14 : 26;
+      const size = zoom <= 7 ? 8 : zoom <= 8 ? 14 : Math.min(36, 26 + (zoom - 9) * 3);
       return {
         url: 'assets/img/logos/logo.svg',
         scaledSize: new google.maps.Size(size, size),

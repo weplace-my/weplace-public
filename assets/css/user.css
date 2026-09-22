@@ -2250,6 +2250,9 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .hero-sticker-one { top: 16%; right: 2%; }
 .hero-sticker-two { bottom: 15%; left: 7%; background: var(--wp-coral); color: #fff; transform: rotate(8deg); }
 .neighbourhood-intro { padding-top: 2rem; }
+.neighbourhood-intro-heading { max-width: 720px; margin: 0 auto; }
+.neighbourhood-intro-heading .section-kicker { color: var(--wp-green); }
+.neighbourhood-intro-heading h2 { font-family: 'Baloo Bhaijaan 2', sans-serif; color: var(--wp-deep); font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: .95 !important; }
 .neighbourhood-building-art { width: 100%; max-height: 520px; object-fit: contain; }
 .neighbourhood-intro .section-kicker { color: var(--wp-green); }
 .neighbourhood-intro h2 { font-family: 'Baloo Bhaijaan 2', sans-serif; color: var(--wp-deep); font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: .95 !important; }
@@ -2261,17 +2264,22 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .marketplace-journey-heading h2 { font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: clamp(2.8rem, 5vw, 5rem); line-height: .95; color: var(--wp-deep); margin-bottom: 1rem; }
 .marketplace-journey-heading p:last-child { font-size: 1.08rem; line-height: 1.7; }
 .marketplace-carousel { position: relative; display: flex; align-items: center; gap: 1rem; max-width: 1320px; margin: 0 auto; }
-.marketplace-steps { display: flex; gap: 1.5rem; width: 100%; max-width: 1180px; margin: 0 auto; padding: 1rem 0 1.5rem; overflow-x: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; counter-reset: marketplace-step; }
-.marketplace-steps::before, .marketplace-steps::after { flex: 0 0 calc((100% - min(30%, 360px)) / 2); content: ''; }
+.marketplace-steps { display: flex; gap: .2rem; width: 100%; max-width: 1180px; margin: 0 auto; padding: 1rem 0 1.5rem; overflow-x: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; counter-reset: marketplace-step; }
+.marketplace-steps::before, .marketplace-steps::after { flex: 0 0 calc((100% - min(52%, 620px)) / 2); content: ''; }
 .marketplace-steps::-webkit-scrollbar { display: none; }
-.marketplace-step { position: relative; padding: 1rem 1rem 1.5rem; text-align: center; background: #fff; border: 2px solid #13c56d; border-radius: 24px; box-shadow: 0 12px 0 rgba(19,197,109,.12); }
-.marketplace-step::before { position: absolute; top: 1.35rem; left: 1.35rem; z-index: 2; display: grid; place-items: center; width: 2.45rem; height: 2.45rem; border: 3px solid #fff; border-radius: 50%; background: #13c56d; color: #fff; content: counter(marketplace-step); counter-increment: marketplace-step; font-size: 1.15rem; font-weight: 900; line-height: 1; box-shadow: 0 3px 0 rgba(16,32,61,.22); }
-.marketplace-step { flex: 0 0 min(30%, 360px); scroll-snap-align: center; opacity: .58; transform: scale(.88); transition: opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
+.marketplace-step { position: relative; padding: .75rem 1rem 1rem; text-align: center; background: #fff; border: 2px solid #13c56d; border-radius: 24px; box-shadow: 0 12px 0 rgba(19,197,109,.12); }
+.marketplace-step::before { position: absolute; top: .75rem; left: 1rem; z-index: 2; display: grid; place-items: center; width: 2.45rem; height: 2.45rem; border: 3px solid #fff; border-radius: 50%; background: #13c56d; color: #fff; content: counter(marketplace-step); counter-increment: marketplace-step; font-size: 1.15rem; font-weight: 900; line-height: 1; box-shadow: 0 3px 0 rgba(16,32,61,.22); }
+.marketplace-step { flex: 0 0 min(52%, 620px); scroll-snap-align: center; opacity: .58; transform: scale(.88); transition: opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
 .marketplace-step.is-active { opacity: 1; transform: scale(1); border-color: #13c56d; box-shadow: 0 16px 0 rgba(19,197,109,.2); }
 .marketplace-carousel-control { flex: 0 0 44px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--wp-green); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; box-shadow: 0 4px 0 var(--wp-deep); }
 .marketplace-carousel-control:hover, .marketplace-carousel-control:focus-visible { background: var(--wp-deep); }
 .marketplace-step-number { position: absolute; top: -1rem; left: 1rem; z-index: 1; display: grid; place-items: center; width: 3rem; height: 3rem; background: var(--wp-green); color: #fff; border: 3px solid #fff; border-radius: 50%; font-weight: 900; box-shadow: 0 3px 0 var(--wp-deep); }
 .marketplace-step img { display: block; width: 100%; height: auto; border-radius: 16px; }
+.marketplace-step-layout { display: grid; grid-template-columns: 2fr 1fr; align-items: center; gap: .7rem; }
+.marketplace-step-copy { min-width: 0; }
+.marketplace-step-copy h3 { margin-top: 1rem; }
+.marketplace-step-copy p { max-width: none; }
+.marketplace-step-layout .marketplace-step-phone { justify-self: center; width: 140px; height: 303px; object-fit: cover; border: 4px solid #17233c; border-radius: 22px; box-shadow: 0 5px 0 rgba(16,32,61,.2); }
 .marketplace-step h3 { margin: 1.2rem 0 .35rem; color: var(--wp-deep); font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 1.8rem; }
 .marketplace-step p { max-width: 270px; margin: 0 auto; line-height: 1.6; }
 @media (min-width: 992px) {
@@ -2284,8 +2292,8 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .concept-local-visual { position: relative; }
 .proof-strip-local { margin-top: 0 !important; margin-bottom: .35rem; padding: .35rem .45rem; border: 0; border-radius: 18px; background: transparent; }
 .proof-strip-local .logo-explain-media { margin-bottom: .15rem; }
-.proof-strip-local .logo-explain-image { max-height: 3.2rem; }
-.proof-strip-local .logo-explain-title { margin-bottom: .15rem; font-size: .88rem; }
+.proof-strip-local .logo-explain-image { max-height: 5.2rem; }
+.proof-strip-local .logo-explain-title { margin-bottom: .2rem; font-size: 1.25rem; }
 .proof-strip-local .logo-explain-text { display: block; margin: 0 auto; max-width: 10rem; font-size: .7rem; line-height: 1.25; }
 @media (max-width: 991px) { .proof-strip-local { margin-top: 0 !important; } .proof-strip-local .logo-explain-text { display: block; } }
 .community-map-heading { max-width: 46rem; margin: 0 auto 1.75rem; }
@@ -2316,6 +2324,11 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
   .hero-sticker-one { right: 5%; top: 8%; }
 }
 @media (max-width: 575px) {
+  .marketplace-carousel { display: block; width: 100%; }
+  .marketplace-steps { width: 100%; max-width: none; }
+  .marketplace-carousel-control { position: absolute; top: 50%; z-index: 4; transform: translateY(-50%); }
+  .marketplace-carousel-prev { left: .35rem; }
+  .marketplace-carousel-next { right: .35rem; }
   .neighbourhood-hero h1 { font-size: 3.5rem; }
   .neighbourhood-hero-art { min-height: 330px; }
   .hero-sticker { font-size: .78rem; padding: .45rem .75rem; }
@@ -2323,4 +2336,11 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
   .marketplace-steps::before, .marketplace-steps::after { flex-basis: 11%; }
   .marketplace-step { flex-basis: 78%; }
   .marketplace-step { padding: .65rem .65rem 1.4rem; }
+  .marketplace-step::before { top: .95rem; left: .95rem; }
+  .marketplace-step-layout { grid-template-columns: minmax(0, 1fr) 86px; gap: .55rem; }
+  .marketplace-step-layout .marketplace-step-phone { width: 86px; height: 186px; border-radius: 17px; }
+}
+@media (max-width: 767px) {
+  .marketplace-step-layout { grid-template-columns: 1fr; }
+  .marketplace-step-layout .marketplace-step-phone { width: 100%; height: auto; aspect-ratio: 540 / 1170; margin-top: .75rem; object-fit: cover; }
 }
