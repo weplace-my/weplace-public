@@ -2258,7 +2258,10 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .neighbourhood-intro h2 { font-family: 'Baloo Bhaijaan 2', sans-serif; color: var(--wp-deep); font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: .95 !important; }
 .neighbourhood-intro h5 { color: var(--wp-green); }
 .proof-strip, .journey-layout, .seller-ideas-grid-section { background: transparent; }
+main .mb-8.mb-lg-13 { margin-bottom: 4rem !important; }
+@media (max-width: 767px) { main .mb-8.mb-lg-13 { margin-bottom: 3rem !important; } }
 .marketplace-journey-section { padding: 4rem 0 1rem; }
+.app-journey-section { margin-bottom: 3rem !important; }
 .marketplace-journey-heading { max-width: 720px; margin: 0 auto 2rem; }
 .marketplace-journey-heading .section-kicker { color: var(--wp-green); }
 .marketplace-journey-heading h2 { font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: clamp(2.8rem, 5vw, 5rem); line-height: .95; color: var(--wp-deep); margin-bottom: 1rem; }
@@ -2277,7 +2280,7 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .marketplace-step img { display: block; width: 100%; height: auto; border-radius: 16px; }
 .marketplace-step-layout { display: grid; grid-template-columns: 2fr 1fr; align-items: center; gap: .7rem; }
 .marketplace-step-copy { min-width: 0; }
-.marketplace-step-copy h3 { margin-top: 1rem; }
+.marketplace-step-copy h3 { margin-top: .45rem; }
 .marketplace-step-copy p { max-width: none; }
 .marketplace-step-layout .marketplace-step-phone { justify-self: center; width: 140px; height: 303px; object-fit: cover; border: 4px solid #17233c; border-radius: 22px; box-shadow: 0 5px 0 rgba(16,32,61,.2); }
 .marketplace-step h3 { margin: 1.2rem 0 .35rem; color: var(--wp-deep); font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 1.8rem; }

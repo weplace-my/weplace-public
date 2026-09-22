@@ -572,10 +572,10 @@ const initCommunityMap = async () => {
 };
 
 const initMarketplaceCarousel = () => {
-  const carousel = document.querySelector('[data-marketplace-carousel]');
-  const track = carousel?.querySelector('[data-marketplace-track]');
+  document.querySelectorAll('[data-marketplace-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('[data-marketplace-track]');
   const cards = track ? Array.from(track.querySelectorAll('.marketplace-step')) : [];
-  if (!carousel || !track || cards.length < 2) return;
+  if (!track || cards.length < 2) return;
 
     let activeIndex = 0;
     const updateActiveFromScroll = () => {
@@ -624,6 +624,7 @@ const initMarketplaceCarousel = () => {
     window.addEventListener('resize', () => centerCard(activeIndex));
     requestAnimationFrame(() => centerCard(0));
     startAutoplay();
+  });
 };
 
 document.addEventListener('DOMContentLoaded', initTranslations);
