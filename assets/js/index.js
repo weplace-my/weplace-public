@@ -607,8 +607,23 @@ const initMarketplaceCarousel = () => {
       if (event.key === 'ArrowRight') centerCard(activeIndex + 1);
     });
     track.addEventListener('scroll', updateActiveFromScroll, { passive: true });
-  window.addEventListener('resize', () => centerCard(activeIndex));
-  requestAnimationFrame(() => centerCard(0));
+    let autoplayTimer;
+    const startAutoplay = () => {
+      window.clearInterval(autoplayTimer);
+      autoplayTimer = window.setInterval(() => {
+        centerCard(activeIndex >= cards.length - 1 ? 0 : activeIndex + 1);
+      }, 4500);
+    };
+    const stopAutoplay = () => window.clearInterval(autoplayTimer);
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+    carousel.addEventListener('touchstart', stopAutoplay, { passive: true });
+    carousel.querySelectorAll('button').forEach((button) => button.addEventListener('click', startAutoplay));
+    window.addEventListener('resize', () => centerCard(activeIndex));
+    requestAnimationFrame(() => centerCard(0));
+    startAutoplay();
 };
 
 document.addEventListener('DOMContentLoaded', initTranslations);
