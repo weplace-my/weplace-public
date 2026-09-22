@@ -539,22 +539,30 @@ const initCommunityMap = async () => {
       fullscreenControl: false,
       styles: [{ featureType: 'poi', stylers: [{ visibility: 'off' }] }],
     });
-    const markerIcon = {
-      url: 'assets/img/logos/logo.svg',
-      scaledSize: new google.maps.Size(26, 26),
-      anchor: new google.maps.Point(13, 13),
+    const markerIconForZoom = (zoom) => {
+      const size = zoom >= 9 ? 8 : zoom <= 7 ? 14 : 19;
+      return {
+        url: 'assets/img/logos/logo.svg',
+        scaledSize: new google.maps.Size(size, size),
+        anchor: new google.maps.Point(size / 2, size / 2),
+      };
     };
-    (data.locations || []).forEach((location, index) => {
+    const markers = (data.locations || []).map((location, index) => {
       const marker = new google.maps.Marker({
         map,
         position: { lat: location.latitude, lng: location.longitude },
         title: location.name,
-        icon: markerIcon,
+        icon: markerIconForZoom(map.getZoom()),
         animation: google.maps.Animation.DROP,
       });
       const infoWindow = new google.maps.InfoWindow({ content: `<strong>${location.name}</strong>` });
       marker.addListener('click', () => infoWindow.open({ map, anchor: marker }));
       window.setTimeout(() => marker.setAnimation(null), 700 + index * 45);
+      return marker;
+    });
+    map.addListener('zoom_changed', () => {
+      const icon = markerIconForZoom(map.getZoom());
+      markers.forEach((marker) => marker.setIcon(icon));
     });
     setStatus('');
   } catch (error) {
