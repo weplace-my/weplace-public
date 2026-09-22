@@ -541,8 +541,8 @@ const initCommunityMap = async () => {
     });
     const markerIcon = {
       url: 'assets/img/logos/logo.svg',
-      scaledSize: new google.maps.Size(38, 38),
-      anchor: new google.maps.Point(19, 19),
+      scaledSize: new google.maps.Size(26, 26),
+      anchor: new google.maps.Point(13, 13),
     };
     (data.locations || []).forEach((location, index) => {
       const marker = new google.maps.Marker({

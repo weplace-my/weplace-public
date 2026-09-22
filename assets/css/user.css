@@ -2283,15 +2283,15 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .community-map-heading .section-kicker { color: var(--wp-green); }
 .community-map-heading h2 { color: var(--wp-deep); margin-bottom: .65rem; }
 .community-map-heading p:last-child { color: rgba(16,32,61,.7); margin-bottom: 0; }
-.community-map-shell { position: relative; overflow: hidden; min-height: 430px; border: 1px solid rgba(16,32,61,.1); border-radius: 28px; background: #dcefe5; box-shadow: 0 1rem 2.5rem rgba(16,32,61,.1); }
+.community-map-shell { position: relative; overflow: hidden; min-height: 430px; border: 4px solid #fff; border-radius: 28px; background: #dcefe5; box-shadow: 0 1rem 2.5rem rgba(16,32,61,.12); }
 .community-map-canvas { width: 100%; min-height: 430px; }
 .community-map-status { position: absolute; inset: 0; display: grid; place-items: center; padding: 1rem; color: var(--wp-deep); font-weight: 700; pointer-events: none; text-align: center; }
 .community-map-status:empty { display: none; }
-.community-map-stats { display: flex; justify-content: center; gap: clamp(2rem, 10vw, 8rem); padding: 1.5rem 1rem 0; text-align: center; }
-.community-map-stat { display: grid; gap: .15rem; }
-.community-map-stat strong { color: var(--wp-green); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; }
-.community-map-stat span { color: rgba(16,32,61,.66); font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-@media (max-width: 575.98px) { .community-map-shell, .community-map-canvas { min-height: 330px; } .community-map-stats { gap: 2.5rem; } }
+.community-map-stats { position: absolute; right: 1rem; bottom: 1rem; left: 1rem; display: flex; justify-content: center; gap: clamp(2rem, 10vw, 8rem); padding: .8rem 1rem; border: 1px solid rgba(255,255,255,.7); border-radius: 18px; background: rgba(255,255,255,.9); box-shadow: 0 8px 20px rgba(16,32,61,.14); text-align: center; backdrop-filter: blur(8px); }
+.community-map-stat { display: grid; gap: .15rem; min-width: 7rem; }
+.community-map-stat strong { color: var(--wp-green); font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1; }
+.community-map-stat span { color: rgba(16,32,61,.7); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+@media (max-width: 575.98px) { .community-map-shell, .community-map-canvas { min-height: 330px; } .community-map-stats { right: .75rem; bottom: .75rem; left: .75rem; gap: 1rem; } .community-map-stat { min-width: 6.5rem; } }
 @keyframes map-float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
 @media (max-width: 991px) {
   .marketplace-steps { padding-inline: 11%; }
