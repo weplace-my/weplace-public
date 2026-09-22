@@ -530,10 +530,10 @@ const initCommunityMap = async () => {
     });
 
     const map = new google.maps.Map(mapCanvas, {
-      center: { lat: 4.2, lng: 102.2 },
-      zoom: 6,
-      minZoom: 5,
-      gestureHandling: 'cooperative',
+      center: { lat: 3.0738, lng: 101.5183 },
+      zoom: 9,
+      minZoom: 6,
+      gestureHandling: 'greedy',
       streetViewControl: false,
       mapTypeControl: false,
       fullscreenControl: false,
@@ -563,6 +563,47 @@ const initCommunityMap = async () => {
   }
 };
 
+const initMarketplaceCarousel = () => {
+  const carousel = document.querySelector('[data-marketplace-carousel]');
+  const track = carousel?.querySelector('[data-marketplace-track]');
+  const cards = track ? Array.from(track.querySelectorAll('.marketplace-step')) : [];
+  if (!carousel || !track || cards.length < 2) return;
+
+    let activeIndex = 0;
+    const updateActiveFromScroll = () => {
+      const trackCenter = track.scrollLeft + track.clientWidth / 2;
+      let nearestIndex = 0;
+      let nearestDistance = Infinity;
+      cards.forEach((card, index) => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const distance = Math.abs(cardCenter - trackCenter);
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+      activeIndex = nearestIndex;
+      cards.forEach((card, cardIndex) => card.classList.toggle('is-active', cardIndex === activeIndex));
+    };
+    const centerCard = (index) => {
+      activeIndex = Math.max(0, Math.min(index, cards.length - 1));
+      cards.forEach((card, cardIndex) => card.classList.toggle('is-active', cardIndex === activeIndex));
+      const card = cards[activeIndex];
+      track.scrollTo({ left: card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2, behavior: 'smooth' });
+  };
+
+  carousel.querySelector('[data-marketplace-prev]')?.addEventListener('click', () => centerCard(activeIndex - 1));
+  carousel.querySelector('[data-marketplace-next]')?.addEventListener('click', () => centerCard(activeIndex + 1));
+    track.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') centerCard(activeIndex - 1);
+      if (event.key === 'ArrowRight') centerCard(activeIndex + 1);
+    });
+    track.addEventListener('scroll', updateActiveFromScroll, { passive: true });
+  window.addEventListener('resize', () => centerCard(activeIndex));
+  requestAnimationFrame(() => centerCard(0));
+};
+
 document.addEventListener('DOMContentLoaded', initTranslations);
 document.addEventListener('DOMContentLoaded', initHeroDownloadLinks);
 document.addEventListener('DOMContentLoaded', initCommunityMap);
+document.addEventListener('DOMContentLoaded', initMarketplaceCarousel);
