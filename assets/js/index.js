@@ -15,21 +15,21 @@ const TRANSLATIONS = {
     },
     hero: {
       title: 'Connecting Community. Improving Everyday Life.',
-      body: 'Weplace helps neighbours buy, sell, support, and connect within their own communities — making daily life more convenient, affordable, and meaningful.',
+      body: 'Weplace is a hyperlocal social marketplace inspired by <strong>Kita Jaga Kita</strong> — helping neighbours buy, sell, support, and connect.',
       download: 'Available on iOS and Android.'
     },
     logo: {
       home: {
         title: 'Home',
-        text: 'The marker stands for home - the place where daily life begins.'
+        text: 'Every community starts at home — where everyday life begins.'
       },
       connection: {
         title: 'Connection',
-        text: 'The flower stands for connection, care, and growth in every community.'
+        text: 'The flower represents the care and connection that help communities grow.'
       },
       weplace: {
         title: 'Weplace',
-        text: 'Weplace is built to bring more value back to the places we call home.'
+        text: 'Weplace helps neighbours build better places to live — together.'
       }
     },
     about: {
