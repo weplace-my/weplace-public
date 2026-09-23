@@ -2243,6 +2243,15 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .hero-kicker, .section-kicker { color: var(--wp-yellow); font-size: .75rem; font-weight: 800; letter-spacing: .15em; margin-bottom: 1rem; }
 .nav-link-seller { display: inline-flex; align-items: center; gap: .3rem; padding-inline: .85rem !important; border: 1px solid rgba(19,197,109,.65); border-radius: 999px; color: var(--wp-green) !important; }
 .nav-link-seller:hover, .nav-link-seller:focus-visible { background: var(--wp-green); color: #fff !important; }
+.nav-home-dropdown .nav-link { display: inline-flex; align-items: center; gap: .35rem; }
+.nav-shortcut-menu { min-width: 12rem; padding: .5rem; border: 1px solid rgba(19,197,109,.18); border-radius: 16px; box-shadow: 0 12px 28px rgba(16,32,61,.14); }
+.nav-shortcut-menu .dropdown-item { display: flex; align-items: center; gap: .55rem; padding: .6rem .75rem; border-radius: 10px; }
+.nav-shortcut-menu .dropdown-item:not(.nav-shortcut-seller), .nav-shortcut-menu .dropdown-item:not(.nav-shortcut-seller).active { background: transparent !important; color: var(--wp-deep) !important; }
+.nav-shortcut-menu .dropdown-item i { width: 1.1rem; color: var(--wp-green); font-size: 1.05rem; }
+.nav-shortcut-menu .dropdown-item:not(.nav-shortcut-seller):hover, .nav-shortcut-menu .dropdown-item:not(.nav-shortcut-seller):focus { background: rgba(19,197,109,.1) !important; color: var(--wp-deep) !important; }
+.nav-shortcut-menu .nav-shortcut-seller { color: var(--wp-deep); font-weight: 400; }
+.nav-shortcut-menu .nav-shortcut-seller i { color: var(--wp-green); }
+.nav-shortcut-menu .nav-shortcut-seller:hover, .nav-shortcut-menu .nav-shortcut-seller:focus { background: rgba(19,197,109,.1) !important; color: var(--wp-deep) !important; }
 .neighbourhood-hero h1 { max-width: 620px; font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: clamp(3.5rem, 7vw, 6.5rem); line-height: .92 !important; letter-spacing: -.04em; }
 .neighbourhood-hero .hero-body-copy { max-width: 430px; color: #ffffff !important; font-size: 1.18rem; }
 .neighbourhood-hero .hero-download-copy { color: #d6f1dc; }
