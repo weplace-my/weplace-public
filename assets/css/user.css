@@ -2241,6 +2241,8 @@ html, body, main, .content { background: #fff !important; color: var(--wp-deep);
 .neighbourhood-hero .container { position: relative; z-index: 2; }
 .hero-copy { padding-top: 5rem; }
 .hero-kicker, .section-kicker { color: var(--wp-yellow); font-size: .75rem; font-weight: 800; letter-spacing: .15em; margin-bottom: 1rem; }
+.nav-link-seller { display: inline-flex; align-items: center; gap: .3rem; padding-inline: .85rem !important; border: 1px solid rgba(19,197,109,.65); border-radius: 999px; color: var(--wp-green) !important; }
+.nav-link-seller:hover, .nav-link-seller:focus-visible { background: var(--wp-green); color: #fff !important; }
 .neighbourhood-hero h1 { max-width: 620px; font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: clamp(3.5rem, 7vw, 6.5rem); line-height: .92 !important; letter-spacing: -.04em; }
 .neighbourhood-hero .hero-body-copy { max-width: 430px; color: #ffffff !important; font-size: 1.18rem; }
 .neighbourhood-hero .hero-download-copy { color: #d6f1dc; }
