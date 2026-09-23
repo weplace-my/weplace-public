@@ -2336,8 +2336,8 @@ main .mb-8.mb-lg-13 { margin-bottom: 4rem !important; }
   .neighbourhood-hero-art { min-height: 330px; }
   .hero-sticker { font-size: .78rem; padding: .45rem .75rem; }
   .marketplace-journey-section { padding-top: 2rem; }
-  .marketplace-steps::before, .marketplace-steps::after { flex-basis: 11%; }
-  .marketplace-step { flex-basis: 78%; }
+  .marketplace-steps::before, .marketplace-steps::after { flex-basis: 1%; }
+  .marketplace-step { flex-basis: 98%; }
   .marketplace-step { padding: .65rem .65rem 1.4rem; }
   .marketplace-step::before { top: .95rem; left: .95rem; }
   .marketplace-step-layout { grid-template-columns: minmax(0, 1fr) 86px; gap: .55rem; }
