@@ -112,7 +112,7 @@ const TRANSLATIONS = {
       ]
     },
     gettingStarted: {
-      eyebrow: 'GET STARTED WITH WEPLACE', title: 'One app, more ways to connect.',
+      eyebrow: 'GET STARTED WITH WEPLACE', title: 'One app, more ways to connect.', subtitle: 'Join your community, discover what is nearby, and get the support you need.',
       steps: [
         { title: 'Download & register', text: 'Get Weplace and create your account in just a few simple steps.' },
         { title: 'Create or join a community', text: 'Find your neighbourhood or start a community close to home.' },
@@ -261,8 +261,8 @@ const TRANSLATIONS = {
         text: 'Penanda lokasi melambangkan rumah - tempat bermulanya kehidupan harian kita.'
       },
       connection: {
-        title: 'Hubungan',
-        text: 'Bunga melambangkan hubungan, keprihatinan, dan pertumbuhan dalam komuniti.'
+        title: 'Komuniti',
+        text: 'Bunga melambangkan komuniti, keprihatinan, dan pertumbuhan dalam komuniti.'
       },
       weplace: {
         title: 'Weplace',
@@ -347,7 +347,7 @@ const TRANSLATIONS = {
       ]
     },
     gettingStarted: {
-      eyebrow: 'MULA DENGAN WEPLACE', title: 'Satu aplikasi, lebih banyak cara untuk berhubung.',
+      eyebrow: 'MULA DENGAN WEPLACE', title: 'Satu aplikasi, lebih banyak cara untuk berhubung.', subtitle: 'Sertai komuniti anda, temui apa yang berdekatan, dan dapatkan sokongan yang anda perlukan.',
       steps: [
         { title: 'Muat turun & daftar', text: 'Muat turun Weplace dan cipta akaun anda dalam beberapa langkah mudah.' },
         { title: 'Cipta atau sertai komuniti', text: 'Cari kejiranan anda atau mulakan komuniti berdekatan rumah.' },
@@ -520,6 +520,25 @@ const applyTranslations = (language) => {
     }
   });
 
+  const carouselCopy = [
+    ['#getting-started', 'gettingStarted'],
+    ['#marketplace', 'marketplace'],
+    ['#seller-journey', 'sellerJourney']
+  ];
+  carouselCopy.forEach(([sectionSelector, key]) => {
+    const section = document.querySelector(sectionSelector);
+    const steps = getValueByPath(selected, `${key}.steps`);
+    if (!section || !Array.isArray(steps)) return;
+    section.querySelectorAll('.marketplace-step').forEach((step, index) => {
+      const copy = steps[index];
+      if (!copy) return;
+      const title = step.querySelector('.marketplace-step-copy h3');
+      const text = step.querySelector('.marketplace-step-copy p');
+      if (title) title.textContent = copy.title;
+      if (text) text.textContent = copy.text;
+    });
+  });
+
   setActiveLanguage(language);
   localStorage.setItem(STORAGE_KEY, language);
 };
@@ -540,25 +559,6 @@ const initTranslations = () => {
     });
   });
 
-  // Localise the carousel copy that is intentionally kept compact in the HTML.
-  const carouselCopy = [
-    ['#getting-started', 'gettingStarted'],
-    ['#marketplace', 'marketplace'],
-    ['#seller-journey', 'sellerJourney']
-  ];
-  carouselCopy.forEach(([sectionSelector, key]) => {
-    const section = document.querySelector(sectionSelector);
-    const steps = getValueByPath(selected, `${key}.steps`);
-    if (!section || !Array.isArray(steps)) return;
-    section.querySelectorAll('.marketplace-step').forEach((step, index) => {
-      const copy = steps[index];
-      if (!copy) return;
-      const title = step.querySelector('.marketplace-step-copy h3');
-      const text = step.querySelector('.marketplace-step-copy p');
-      if (title) title.textContent = copy.title;
-      if (text) text.textContent = copy.text;
-    });
-  });
 };
 
 const initHeroDownloadLinks = () => {
