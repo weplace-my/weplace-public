@@ -11,7 +11,9 @@ const TRANSLATIONS = {
       home: 'Home',
       about: 'About us',
       support: 'Support',
-      contact: 'Contact'
+      contact: 'Contact',
+      seller: 'Seller',
+      marketplace: 'Marketplace'
     },
     hero: {
       title: 'Connecting Community. Improving Everyday Life.',
@@ -107,6 +109,44 @@ const TRANSLATIONS = {
           title: 'Fulfil with confidence',
           text: 'Arrange a nearby pickup or short-distance delivery and grow through local connections.'
         }
+      ]
+    },
+    gettingStarted: {
+      eyebrow: 'GET STARTED WITH WEPLACE', title: 'One app, more ways to connect.',
+      steps: [
+        { title: 'Download & register', text: 'Get Weplace and create your account in just a few simple steps.' },
+        { title: 'Create or join a community', text: 'Find your neighbourhood or start a community close to home.' },
+        { title: 'Social', text: 'Share updates, discover local conversations, and stay connected with neighbours.' },
+        { title: 'Marketplace', text: 'Buy and sell nearby products, food, services, and everyday finds.' },
+        { title: 'Held events', text: 'Discover local activities and join moments happening around you.' },
+        { title: 'Request help', text: 'Ask for nearby support when you need an extra hand.' }
+      ]
+    },
+    map: {
+      eyebrow: 'WEPLACE ACROSS MALAYSIA', title: 'Growing neighbourhoods, one community at a time.',
+      subtitle: 'Discover the communities bringing local people, sellers, and everyday support closer together.',
+      communities: 'Communities', users: 'Users'
+    },
+    marketplace: {
+      eyebrow: 'FROM NEARBY ORDER TO HAPPY PICKUP', title: 'How Marketplace Works',
+      subtitle: 'Like any online purchase — only faster, simpler, and local. Everything feels more convenient when it’s nearby.',
+      steps: [
+        { title: 'Browse and order nearby', text: 'Explore available items from nearby sellers and place your order.' },
+        { title: 'Seller prepares the order', text: 'The seller receives your order notification and gets it ready.' },
+        { title: 'Order updates and delivery', text: 'The seller delivers your order and keeps you updated along the way.' },
+        { title: 'Meet at the lobby', text: 'Head to the lobby at the agreed time to collect your order.' },
+        { title: 'Meet and complete payment', text: 'Meet your seller, receive your order, and complete the payment.' }
+      ]
+    },
+    sellerJourney: {
+      eyebrow: 'HOW TO BE A SELLER', title: 'Start selling, your way.',
+      subtitle: 'Set up your shop, manage your products, and grow at a pace that works for you.',
+      steps: [
+        { title: 'Register as a seller', text: 'Register in the app on a trusted platform. Personal sellers verify with a Malaysian IC, while companies register with Malaysian SSM details.' },
+        { title: 'Shop profile', text: 'Set up your shop name, description, gallery, and validation details so buyers know who they are buying from.' },
+        { title: 'Manage products', text: 'Add and update products, prices, availability, and photos from one place.' },
+        { title: 'Manage selling', text: 'Set payment, delivery or pickup, selling area, options, and business hours. Sell when and how it works for you.' },
+        { title: 'Manage orders', text: 'Track orders from preparing to delivering and completing, with clear updates at every step.' }
       ]
     },
     sellerIdeas: {
@@ -206,7 +246,9 @@ const TRANSLATIONS = {
       home: 'Utama',
       about: 'Tentang kami',
       support: 'Sokongan',
-      contact: 'Hubungi'
+      contact: 'Hubungi',
+      seller: 'Penjual',
+      marketplace: 'Pasaran'
     },
     hero: {
       title: 'Menghubungkan Komuniti. Memperbaiki Kehidupan Harian.',
@@ -302,6 +344,42 @@ const TRANSLATIONS = {
           title: 'Sokongan komuniti',
           text: 'Penduduk boleh menyokong penjual tempatan dengan lebih konteks, kepercayaan, dan rasa kebersamaan.'
         }
+      ]
+    },
+    gettingStarted: {
+      eyebrow: 'MULA DENGAN WEPLACE', title: 'Satu aplikasi, lebih banyak cara untuk berhubung.',
+      steps: [
+        { title: 'Muat turun & daftar', text: 'Muat turun Weplace dan cipta akaun anda dalam beberapa langkah mudah.' },
+        { title: 'Cipta atau sertai komuniti', text: 'Cari kejiranan anda atau mulakan komuniti berdekatan rumah.' },
+        { title: 'Sosial', text: 'Kongsi kemas kini, ikuti perbualan tempatan, dan kekal berhubung dengan jiran.' },
+        { title: 'Pasaran', text: 'Beli dan jual barangan, makanan, perkhidmatan, dan keperluan harian berdekatan.' },
+        { title: 'Acara komuniti', text: 'Temui aktiviti tempatan dan sertai acara yang berlangsung di sekeliling anda.' },
+        { title: 'Mohon bantuan', text: 'Minta sokongan berdekatan apabila anda memerlukan bantuan tambahan.' }
+      ]
+    },
+    map: {
+      eyebrow: 'WEPLACE DI SELURUH MALAYSIA', title: 'Kejiranan berkembang, satu komuniti pada satu masa.',
+      subtitle: 'Temui komuniti yang mendekatkan penduduk, penjual, dan sokongan harian tempatan.', communities: 'Komuniti', users: 'Pengguna'
+    },
+    marketplace: {
+      eyebrow: 'DARIPADA PESANAN BERDEKATAN KEPADA PENGAMBILAN MUDAH', title: 'Cara Pasaran Berfungsi',
+      subtitle: 'Seperti pembelian dalam talian biasa — cuma lebih pantas, mudah, dan tempatan. Segalanya terasa lebih mudah apabila berdekatan.',
+      steps: [
+        { title: 'Cari dan pesan berdekatan', text: 'Lihat barangan daripada penjual berdekatan dan buat pesanan anda.' },
+        { title: 'Penjual menyediakan pesanan', text: 'Penjual menerima notifikasi pesanan anda dan menyediakannya.' },
+        { title: 'Kemas kini dan penghantaran', text: 'Penjual menghantar pesanan anda dan memberi kemas kini sepanjang proses.' },
+        { title: 'Jumpa di lobi', text: 'Pergi ke lobi pada masa yang dipersetujui untuk mengambil pesanan anda.' },
+        { title: 'Jumpa dan lengkapkan bayaran', text: 'Jumpa penjual, terima pesanan, dan lengkapkan bayaran.' }
+      ]
+    },
+    sellerJourney: {
+      eyebrow: 'CARA MENJADI PENJUAL', title: 'Mulakan jualan mengikut cara anda.', subtitle: 'Sediakan kedai, urus produk, dan berkembang mengikut kadar yang sesuai untuk anda.',
+      steps: [
+        { title: 'Daftar sebagai penjual', text: 'Daftar dalam aplikasi melalui platform yang dipercayai. Penjual individu mengesahkan menggunakan IC Malaysia, manakala syarikat mendaftar dengan maklumat SSM Malaysia.' },
+        { title: 'Profil kedai', text: 'Sediakan nama kedai, penerangan, galeri, dan maklumat pengesahan supaya pembeli tahu dengan siapa mereka berurusan.' },
+        { title: 'Urus produk', text: 'Tambah dan kemas kini produk, harga, ketersediaan, serta foto di satu tempat.' },
+        { title: 'Urus jualan', text: 'Tetapkan bayaran, penghantaran atau pengambilan, kawasan jualan, pilihan, dan waktu operasi. Jual bila dan bagaimana yang sesuai untuk anda.' },
+        { title: 'Urus pesanan', text: 'Jejaki pesanan daripada penyediaan hingga penghantaran dan selesai, dengan kemas kini yang jelas pada setiap langkah.' }
       ]
     },
     sellerIdeas: {
