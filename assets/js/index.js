@@ -539,6 +539,26 @@ const initTranslations = () => {
       applyTranslations(nextLanguage);
     });
   });
+
+  // Localise the carousel copy that is intentionally kept compact in the HTML.
+  const carouselCopy = [
+    ['#getting-started', 'gettingStarted'],
+    ['#marketplace', 'marketplace'],
+    ['#seller-journey', 'sellerJourney']
+  ];
+  carouselCopy.forEach(([sectionSelector, key]) => {
+    const section = document.querySelector(sectionSelector);
+    const steps = getValueByPath(selected, `${key}.steps`);
+    if (!section || !Array.isArray(steps)) return;
+    section.querySelectorAll('.marketplace-step').forEach((step, index) => {
+      const copy = steps[index];
+      if (!copy) return;
+      const title = step.querySelector('.marketplace-step-copy h3');
+      const text = step.querySelector('.marketplace-step-copy p');
+      if (title) title.textContent = copy.title;
+      if (text) text.textContent = copy.text;
+    });
+  });
 };
 
 const initHeroDownloadLinks = () => {
