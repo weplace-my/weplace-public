@@ -542,7 +542,7 @@ const initCommunityMap = async () => {
     const markerIconForZoom = (zoom) => {
       const size = zoom <= 7 ? 8 : zoom <= 8 ? 14 : Math.min(36, 26 + (zoom - 9) * 3);
       return {
-        url: 'assets/img/logos/logo.svg',
+        url: 'assets/img/icons/logo_b_512.png',
         scaledSize: new google.maps.Size(size, size),
         anchor: new google.maps.Point(size / 2, size / 2),
       };
