@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en-US" dir="ltr">
+<html data-bs-theme="light" lang="en-MY" dir="ltr">
 
   <head>
     <meta charset="utf-8">
@@ -7,30 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- ===============================================--><!--    Document Title--><!-- ===============================================-->
-    <title>Weplace | Neighborhood Social Commerce for Malaysia</title>
+    <title>Weplace Malaysia | Hyperlocal Social Marketplace</title>
+    <link rel="canonical" href="https://weplace.my/">
 
     <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
     <link rel="icon" href="assets/img/favicons/favicon.ico">
     <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Weplace helps neighbours buy, sell, support, and connect within their own communities - making daily life more convenient, affordable, and meaningful.">
+    <meta name="description" content="Weplace is a hyperlocal social marketplace helping Malaysian neighbours buy, sell, connect, join communities, and support one another locally.">
+    <meta name="google-maps-api-key" content="AIzaSyDb6t0wKvzUEbULE03KP0Y5VTfA8tlpIos">
 
     <!-- ===============================================--><!--    Open Graph / Social Preview--><!-- ===============================================-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://weplace.my/">
-    <meta property="og:title" content="Weplace | Neighborhood Social Commerce for Malaysia">
-    <meta property="og:description" content="Weplace helps neighbours buy, sell, support, and connect within their own communities - making daily life more convenient, affordable, and meaningful.">
-    <meta property="og:image" content="https://weplace.my/assets/img/gallery/banner.png">
+    <meta property="og:title" content="Weplace Malaysia | Hyperlocal Social Marketplace">
+    <meta property="og:description" content="A hyperlocal social marketplace helping Malaysian neighbours buy, sell, connect, join communities, and support one another locally.">
+    <meta property="og:image" content="https://weplace.my/assets/img/gallery/banner.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Weplace">
 
     <!-- ===============================================--><!--    Twitter Card--><!-- ===============================================-->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Weplace | Neighborhood Social Commerce for Malaysia">
-    <meta name="twitter:description" content="Weplace helps neighbours buy, sell, support, and connect within their own communities - making daily life more convenient, affordable, and meaningful.">
+    <meta name="twitter:title" content="Weplace Malaysia | Hyperlocal Social Marketplace">
+    <meta name="twitter:description" content="A hyperlocal social marketplace helping Malaysian neighbours buy, sell, connect, join communities, and support one another locally.">
     <meta name="twitter:image" content="https://weplace.my/assets/img/Hero/Community.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://weplace.my/#organization",
+          "name": "Weplace",
+          "url": "https://weplace.my/",
+          "logo": "https://weplace.my/assets/img/icons/logo_full.png",
+          "sameAs": [
+            "https://www.facebook.com/weplace.my",
+            "https://www.instagram.com/weplacemy/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://weplace.my/#website",
+          "url": "https://weplace.my/",
+          "name": "Weplace Malaysia",
+          "publisher": { "@id": "https://weplace.my/#organization" },
+          "inLanguage": "en-MY"
+        },
+        {
+          "@type": "MobileApplication",
+          "name": "Weplace",
+          "operatingSystem": "iOS, Android",
+          "applicationCategory": "SocialNetworkingApplication",
+          "url": "https://weplace.my/",
+          "downloadUrl": [
+            "https://apps.apple.com/my/app/weplace-my/id6768859795",
+            "https://play.google.com/store/apps/details?id=my.weplace.app"
+          ],
+          "publisher": { "@id": "https://weplace.my/#organization" }
+        }
+      ]
+    }
+    </script>
 
     <!-- ===============================================--><!--    Stylesheets--><!-- ===============================================-->
     <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
@@ -51,11 +91,17 @@
           <div class="container-fluid px-0"><a href="/" class="navbar-brand d-flex align-items-center"><img src="assets/img/logos/logo.svg" alt="logo" class="d-inline-block" style="height: 70px; width: auto; filter: brightness(0) invert(1);" /><span class="brand-name d-none d-md-block">Weplace</span></a><button class="navbar-toggler border-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="#navbar-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-md-end" id="navbar-content" data-navbar-collapse="data-navbar-collapse">
               <ul class="navbar-nav gap-md-2 gap-lg-3 pt-x1 pb-1 pt-md-0 pb-md-0" data-navbar-nav="data-navbar-nav">
-                <li class="nav-item"> <a class="nav-link lh-xl" href="#home" data-i18n="nav.home">Home</a></li>
-                <li class="nav-item"> <a class="nav-link lh-xl" href="#about" data-i18n="nav.about">About us</a></li>
-                <li class="nav-item"> <a class="nav-link lh-xl" href="#priority-support" data-i18n="nav.support">Support</a></li>
-                <li class="nav-item"> <a class="nav-link lh-xl" href="guide/">Guide</a></li>
-                <li class="nav-item"> <a class="nav-link lh-xl" href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-item dropdown nav-home-dropdown">
+                  <a class="nav-link lh-xl dropdown-toggle" href="#home" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="uil uil-estate" aria-hidden="true"></i> <span data-i18n="nav.home">Home</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end nav-shortcut-menu">
+                    <li><a class="dropdown-item" href="#home"><i class="uil uil-estate" aria-hidden="true"></i> <span data-i18n="nav.home">Home</span></a></li>
+                    <li><a class="dropdown-item nav-shortcut-seller" href="#seller-journey"><i class="uil uil-store" aria-hidden="true"></i> <span data-i18n="nav.seller">Seller</span></a></li>
+                    <li><a class="dropdown-item" href="#priority-support"><i class="uil uil-heart" aria-hidden="true"></i> <span data-i18n="nav.support">Support</span></a></li>
+                    <li><a class="dropdown-item" href="#marketplace"><i class="uil uil-shopping-bag" aria-hidden="true"></i> <span data-i18n="nav.marketplace">Marketplace</span></a></li>
+                    <li><a class="dropdown-item" href="#contact"><i class="uil uil-envelope" aria-hidden="true"></i> <span data-i18n="nav.contact">Contact</span></a></li>
+                    <li><a class="dropdown-item" href="#about"><i class="uil uil-info-circle" aria-hidden="true"></i> <span data-i18n="nav.about">About us</span></a></li>
+                  </ul>
+                </li>
               </ul>
               <div class="dropdown language-switcher ms-md-3">
                 <button class="btn btn-sm dropdown-toggle language-switcher__toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-language-current>EN</button>
@@ -68,54 +114,22 @@
           </div>
         </nav>
         <div data-bs-target="#navbar" data-bs-spy="scroll" tabindex="0">
-          <section class="hero-section overflow-hidden position-relative z-0 mb-4 mb-lg-0" id="home">
+          <section class="hero-section neighbourhood-hero overflow-hidden position-relative z-0 mb-4 mb-lg-0" id="home">
             <div class="hero-background">
               <div class="container">
                 <div class="row gy-4 gy-md-8 pt-9 pt-lg-0">
                   <div class="col-12 col-lg-6 text-center text-lg-start hero-copy">
-                    <h1 class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-3 mt-lg-0" style="text-shadow: 0 6px 18px rgba(15, 23, 42, 0.28);" data-i18n="hero.title">Connecting Community. Improving Everyday Life.</h1>
-                    <p class="fs-8 text-dark mb-3 mb-lg-4 lh-lg hero-body-copy" data-i18n="hero.body">Weplace helps neighbours buy, sell, support, and connect within their own communities — making daily life more convenient, affordable, and meaningful.</p>
+                    <p class="hero-kicker">LOCAL PEOPLE · BRIGHTER LIVES</p>
+                    <h1 class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-3 mt-lg-0" data-i18n="hero.title">Connecting Community. Improving Everyday Life.</h1>
+                    <p class="fs-8 text-dark mb-3 mb-lg-4 lh-lg hero-body-copy" data-i18n-html="hero.body">Weplace is a hyperlocal social marketplace inspired by <strong>Kita Jaga Kita</strong> — helping neighbours buy, sell, support, and connect.</p>
                     <p class="hero-download-copy" data-i18n="hero.download">Available on iOS and Android.</p>
                     <div class="store-badge-group hero-download-actions"><a class="store-badge-link" href="https://apps.apple.com/my/app/weplace-my/id6768859795" target="_blank" rel="noopener noreferrer" aria-label="Download Weplace on the App Store"> <img class="img-fluid" src="assets/img/logos/App_Store.webp" alt="Download on the App Store" /></a><a class="store-badge-link" href="https://play.google.com/store/apps/details?id=my.weplace.app" target="_blank" rel="noopener noreferrer" aria-label="Get Weplace on Google Play"> <img class="img-fluid" src="assets/img/logos/Play_Store.webp" alt="Download on Google Play" /></a></div>
                     <div class="hero-social-links" aria-label="Weplace social media"><a class="hero-social-link social-facebook" href="https://www.facebook.com/weplace.my" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Facebook"><span class="uil uil-facebook-f"></span></a><a class="hero-social-link social-instagram" href="https://www.instagram.com/weplacemy/" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Instagram"><span class="uil uil-instagram"></span></a><a class="hero-social-link" href="http://xhslink.com/m/1DI3xcjVUHd" target="_blank" rel="noopener noreferrer" aria-label="Weplace on Xiaohongshu"><span class="xhs-mark" aria-hidden="true">小</span></a></div>
                   </div>
-                  <div class="col-12 col-lg-6 position-lg-relative hero-visual">
-                    <div class="position-lg-absolute text-center hero-phone-stage">
-                      <div class="app-showcase-wrap app-showcase-wrap-hero mx-auto">
-                        <div class="app-showcase-glow"></div>
-                        <div class="phone-shell phone-shell-hero">
-                          <div class="phone-notch"></div>
-                          <div class="phone-screen phone-screen-hero">
-                            <div class="carousel app-phone-carousel" id="heroStoryCarousel" data-bs-ride="carousel" data-bs-interval="5000">
-                              <div class="carousel-indicators app-carousel-indicators">
-                                <button class="active" type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Hero story 1"></button>
-                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="1" aria-label="Hero story 2"></button>
-                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="2" aria-label="Hero story 3"></button>
-                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="3" aria-label="Hero story 4"></button>
-                                <button type="button" data-bs-target="#heroStoryCarousel" data-bs-slide-to="4" aria-label="Hero story 5"></button>
-                              </div>
-                              <div class="carousel-inner h-100">
-                                <div class="carousel-item active h-100">
-                                  <img class="app-story-image" src="assets/img/gallery/hero-1.jpg" alt="Weplace hero story 1" />
-                                </div>
-                                <div class="carousel-item h-100">
-                                  <img class="app-story-image" src="assets/img/gallery/hero-2.jpg" alt="Weplace hero story 2" />
-                                </div>
-                                <div class="carousel-item h-100">
-                                  <img class="app-story-image" src="assets/img/gallery/hero-3.jpg" alt="Weplace hero story 3" />
-                                </div>
-                                <div class="carousel-item h-100">
-                                  <img class="app-story-image" src="assets/img/gallery/hero-4.jpg" alt="Weplace hero story 4" />
-                                </div>
-                                <div class="carousel-item h-100">
-                                  <img class="app-story-image" src="assets/img/gallery/hero-5.jpg" alt="Weplace hero story 5" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col-12 col-lg-6 position-lg-relative hero-visual neighbourhood-hero-art">
+                    <img src="assets/img/redesign/concept_nearby.webp" alt="Neighbours discovering local coffee around their neighbourhood" class="img-fluid neighbourhood-map-art" />
+                    <span class="hero-sticker hero-sticker-one">Nearby is convenient!</span>
+                    <span class="hero-sticker hero-sticker-two">Jom! Download today.</span>
                   </div>
                 </div>
               </div>
@@ -124,119 +138,81 @@
               <div class="bg-white py-2 py-md-5"></div>
             </div>
           </section>
-          <section class="container proof-strip border-bottom mb-8 mb-lg-10">
-            <div class="row pb-6 pb-lg-8 g-3 g-lg-8 px-3">
-              <div class="col-12 col-md-4">
-                <div class="logo-explain text-center">
-                  <div class="logo-explain-media">
-                    <img class="logo-explain-image logo-explain-image-home" src="assets/img/icons/logo_geo.png" alt="Weplace home icon" />
-                  </div>
-                    <h3 class="logo-explain-title" data-i18n="logo.home.title">Home</h3>
-                    <p class="logo-explain-text mb-0" data-i18n="logo.home.text">The marker stands for home - the place where daily life begins.</p>
-                </div>
+          <section class="container mb-8 mb-lg-13 marketplace-journey-section app-journey-section" id="getting-started">
+            <div class="marketplace-journey-heading text-center">
+                <p class="section-kicker" data-i18n="gettingStarted.eyebrow">GET STARTED WITH WEPLACE</p>
+                <h2 data-i18n="gettingStarted.title">One app, more ways to connect.</h2>
+              <p data-i18n="gettingStarted.subtitle">Join your community, discover what is nearby, and get the support you need.</p>
+            </div>
+            <div class="marketplace-carousel" data-marketplace-carousel>
+              <button class="marketplace-carousel-control marketplace-carousel-prev" type="button" aria-label="Previous getting started step" data-marketplace-prev>&lsaquo;</button>
+              <div class="marketplace-steps" data-marketplace-track tabindex="0">
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/onboarding-1.webp" alt="Download and register for Weplace" /><h3 data-i18n="gettingStarted.steps.0.title">Download &amp; register</h3><p data-i18n="gettingStarted.steps.0.text">Get Weplace and create your account in just a few simple steps.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/hero-1.jpg" alt="Weplace registration screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/onboarding-2.webp" alt="Create or join a Weplace community" /><h3 data-i18n="gettingStarted.steps.1.title">Create or join a community</h3><p data-i18n="gettingStarted.steps.1.text">Find your neighbourhood or start a community close to home.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/hero-2.jpg" alt="Weplace community screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/onboarding-3.webp" alt="Connect with neighbours on Weplace" /><h3 data-i18n="gettingStarted.steps.2.title">Social</h3><p data-i18n="gettingStarted.steps.2.text">Share updates, discover local conversations, and stay connected with neighbours.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/hero-3.jpg" alt="Weplace social screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/onboarding-4.webp" alt="Browse the Weplace marketplace" /><h3>Marketplace</h3><p>Buy, sell, and discover everyday essentials from people in your local or nearby communities.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/hero-4.jpg" alt="Weplace marketplace screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/onboarding-5.webp" alt="Join an event in your community" /><h3>Held events</h3><p>Discover local activities and join moments happening around you.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/hero-5.jpg" alt="Weplace events screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/onboarding-6.webp" alt="Request help from the local community" /><h3>Request help</h3><p>Ask for nearby support when you need an extra hand.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/hero-6.jpg" alt="Weplace help request screen" /></div></article>
               </div>
-              <div class="col-12 col-md-4">
-                <div class="logo-explain text-center">
-                  <div class="logo-explain-media">
-                    <img class="logo-explain-image logo-explain-image-flower" src="assets/img/icons/logo_flower.png" alt="Weplace connection icon" />
-                  </div>
-                    <h3 class="logo-explain-title" data-i18n="logo.connection.title">Connection</h3>
-                    <p class="logo-explain-text mb-0" data-i18n="logo.connection.text">The flower stands for connection, care, and growth in every community.</p>
-                </div>
+              <button class="marketplace-carousel-control marketplace-carousel-next" type="button" aria-label="Next getting started step" data-marketplace-next>&rsaquo;</button>
+            </div>
+          </section>
+          <section class="community-map-section mb-8 mb-lg-13" id="community-map">
+            <div class="container">
+              <div class="community-map-heading text-center">
+                <p class="section-kicker" data-i18n="map.eyebrow">WEPLACE ACROSS MALAYSIA</p>
+                <h2 data-i18n="map.title">Growing neighbourhoods, one community at a time.</h2>
+                <p data-i18n="map.subtitle">Discover the communities bringing local people, sellers, and everyday support closer together.</p>
               </div>
-              <div class="col-12 col-md-4">
-                <div class="logo-explain text-center">
-                  <div class="logo-explain-media">
-                    <img class="logo-explain-image logo-explain-image-full" src="assets/img/icons/logo_full.png" alt="Full Weplace logo" />
-                  </div>
-                    <h3 class="logo-explain-title" data-i18n="logo.weplace.title">Weplace</h3>
-                    <p class="logo-explain-text mb-0" data-i18n="logo.weplace.text">Weplace is built to bring more value back to the places we call home.</p>
+              <div class="community-map-shell">
+                <div id="community-map-canvas" class="community-map-canvas" role="img" aria-label="Weplace communities across Malaysia"></div>
+                <div id="community-map-status" class="community-map-status">Loading communities…</div>
+                <div class="community-map-stats" aria-label="Weplace community statistics">
+                  <div class="community-map-stat"><span class="community-map-stat-icon uil uil-map-marker" aria-hidden="true"></span><div><strong id="community-count">—</strong><span class="community-map-stat-label" data-i18n="map.communities">Communities</span></div></div>
+                  <div class="community-map-stat"><span class="community-map-stat-icon uil uil-users-alt" aria-hidden="true"></span><div><strong id="user-count">—</strong><span class="community-map-stat-label" data-i18n="map.users">Users</span></div></div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="container mb-8 mb-lg-13" id="about">
-            <div class="row align-items-center">
-              <div class="col-12 col-lg-6 col-xl-7"><img class="img-fluid" src="assets/img/Hero/Community.jpg" alt="" /></div>
-              <div class="col-12 col-lg-6 col-xl-5">
-                <div class="row justify-content-center justify-content-lg-start">
-                  <div class="col-sm-10 col-md-8 col-lg-12">
-                    <h2 class="fs-5 fs-lg-4 fw-bold mb-2 text-center text-lg-start lh-sm" data-i18n="about.title">Made for Malaysian neighbourhoods.</h2>
-                    <p class="fs-8 mb-2 mb-lg-3 lh-lg text-center text-lg-start fw-normal" style="font-size: 0.96rem;" data-i18n="about.subtitle">Inspired by the Kita Jaga Kita spirit, Weplace helps neighbours discover local food, goods, services, vouchers, events, and support close to home.</p>
-                  </div>
-                  <div class="col-12">
-                    <div class="mb-2 mb-lg-2">
-                      <h5 class="fs-8 fw-bold lh-base mb-1" style="font-size: 1.05rem;" data-i18n="about.market.title">A place for local ideas</h5>
-                      <p class="mb-0 lh-lg" style="font-size: 0.96rem;" data-i18n="about.market.text">From home-cooked favourites to small reseller finds and weekend pasar ideas, Weplace gives local sellers a simple way to start and be discovered by nearby neighbours.</p>
-                    </div>
-                    <div>
-                      <h5 class="fs-8 fw-bold lh-base mb-1" style="font-size: 1.05rem;" data-i18n="about.events.title">Help and moments nearby</h5>
-                      <p class="lh-lg mb-0" style="font-size: 0.96rem;" data-i18n="about.events.text">Looking for a badminton kaki, a quick favour, or help when something goes wrong? Weplace makes it easier to reach people around you and keep community support moving.</p>
-                    </div>
-                  </div>
+          <section class="container mb-8 mb-lg-13 neighbourhood-intro" id="about">
+            <div class="neighbourhood-intro-heading text-center">
+              <p class="section-kicker">WHAT IS WEPLACE</p>
+              <h2 class="fw-bold mb-2 lh-sm" data-i18n="about.title">What Is Weplace?</h2>
+              <p class="fs-8 mb-4 mb-lg-5 lh-lg fw-normal" data-i18n="about.subtitle">From home-cooked favourites to a nearby coffee pickup, Weplace makes it easier to discover, support, and connect with the people around you.</p>
+            </div>
+            <div class="proof-strip proof-strip-local mb-4 mb-lg-6">
+              <div class="row g-1">
+                <div class="col-12 col-md-4"><div class="logo-explain text-center"><div class="logo-explain-media"><img class="logo-explain-image logo-explain-image-home" src="assets/img/icons/logo_geo.png" alt="Weplace home icon" /></div><h3 class="logo-explain-title" data-i18n="logo.home.title">Home</h3><p class="logo-explain-text mb-0" data-i18n="logo.home.text">Every community starts at home — where everyday life begins.</p></div></div>
+                <div class="col-12 col-md-4"><div class="logo-explain text-center"><div class="logo-explain-media"><img class="logo-explain-image logo-explain-image-flower" src="assets/img/icons/logo_flower.png" alt="Weplace connection icon" /></div><h3 class="logo-explain-title" data-i18n="logo.connection.title">Connection</h3><p class="logo-explain-text mb-0" data-i18n="logo.connection.text">The flower represents the care and connection that help communities grow.</p></div></div>
+                <div class="col-12 col-md-4"><div class="logo-explain text-center"><div class="logo-explain-media"><img class="logo-explain-image logo-explain-image-full" src="assets/img/icons/logo_full.png" alt="Full Weplace logo" /></div><h3 class="logo-explain-title" data-i18n="logo.weplace.title">Weplace</h3><p class="logo-explain-text mb-0" data-i18n="logo.weplace.text">Weplace helps neighbours build better places to live — together.</p></div></div>
+              </div>
+            </div>
+            <div class="row align-items-center g-4 g-lg-6">
+              <div class="col-12 col-lg-6"><img class="img-fluid neighbourhood-building-art" src="assets/img/redesign/concept_local.webp" alt="A Malaysian apartment neighbourhood connected through Weplace" /></div>
+              <div class="col-12 col-lg-6">
+                <div class="neighbourhood-intro-copy">
+                  <div class="mb-3"><h5 class="fs-8 fw-bold lh-base mb-1" data-i18n="about.market.title">A place for local ideas</h5><p class="mb-0 lh-lg" data-i18n="about.market.text">From home-cooked favourites to small reseller finds and weekend pasar ideas, Weplace gives local sellers a simple way to start and be discovered by nearby neighbours.</p></div>
+                  <div><h5 class="fs-8 fw-bold lh-base mb-1" data-i18n="about.events.title">Help and moments nearby</h5><p class="lh-lg mb-0" data-i18n="about.events.text">Looking for a badminton kaki, a quick favour, or help when something goes wrong? Weplace makes it easier to reach people around you and keep community support moving.</p></div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="container mb-8 mb-lg-13">
-            <div class="journey-layout">
-              <div class="journey-intro text-center">
-                <span class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="journey.eyebrow">For buyers, sellers, and neighbours</span>
-                <h2 class="fs-4 fs-lg-3 fw-bold mb-2" data-i18n="journey.title">Built around everyday Malaysian life.</h2>
-                <p class="fs-8 mb-0 lh-lg fw-normal" data-i18n="journey.subtitle">Weplace connects local discovery with simple selling tools, so residents can find what they need nearby while small sellers grow from the communities that know them best.</p>
+          <section class="container mb-8 mb-lg-13 marketplace-journey-section" id="marketplace">
+            <div class="marketplace-journey-heading text-center">
+              <p class="section-kicker" data-i18n="marketplace.eyebrow">FROM NEARBY ORDER TO HAPPY PICKUP</p>
+              <h2 data-i18n="marketplace.title">How Marketplace Works</h2>
+              <p data-i18n="marketplace.subtitle">Like any online purchase — only faster, simpler, and local. Everything feels more convenient when it’s nearby.</p>
+            </div>
+            <div class="marketplace-carousel" data-marketplace-carousel>
+              <button class="marketplace-carousel-control marketplace-carousel-prev" type="button" aria-label="Previous marketplace step" data-marketplace-prev>&lsaquo;</button>
+              <div class="marketplace-steps" data-marketplace-track tabindex="0">
+              <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/order-step-1.webp" alt="A buyer browses and orders items from a nearby seller" /><h3>Browse and order nearby</h3><p>Explore available items from nearby sellers and place your order.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/seller-1.jpg" alt="Weplace seller app screen" /></div></article>
+              <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/order-step-2.webp" alt="A seller receives a notification and prepares the order" /><h3>Seller prepares the order</h3><p>The seller receives your order notification and gets it ready.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/seller-2.jpg" alt="Weplace seller app screen" /></div></article>
+              <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/order-step-3.webp" alt="A seller delivers the order and updates the buyer" /><h3>Order updates and delivery</h3><p>The seller delivers your order and keeps you updated along the way.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/seller-3.jpg" alt="Weplace seller app screen" /></div></article>
+              <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/order-step-4.webp" alt="A buyer goes to the lobby to collect an order" /><h3>Meet at the lobby</h3><p>Head to the lobby at the agreed time to collect your order.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/seller-4.jpg" alt="Weplace seller app screen" /></div></article>
+              <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/order-step-5.webp" alt="A buyer meets the seller and completes payment" /><h3>Meet and complete payment</h3><p>Meet your seller, receive your order, and complete the payment.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/seller-5.jpg" alt="Weplace seller app screen" /></div></article>
               </div>
-              <article class="journey-card buyer journey-card-buyer">
-                <img class="journey-card-image" src="assets/img/gallery/market-1.png" alt="Buyer marketplace preview" />
-                <div class="journey-card-top">
-                  <span class="journey-chip" data-i18n="journey.buyer.chip">For Buyers</span>
-                  <h5 class="fs-8 fw-bold lh-lg mb-1" data-i18n="journey.buyer.title">Find useful things closer to home.</h5>
-                  <p class="lh-xl mb-0" data-i18n="journey.buyer.text">From lauk and kuih to services, vouchers, and local deals, Weplace helps buyers discover everyday value from people nearby.</p>
-                </div>
-              </article>
-              <div class="journey-phone-stage">
-                <div class="app-showcase-wrap mx-auto">
-                  <div class="app-showcase-glow"></div>
-                  <div class="phone-shell">
-                    <div class="phone-notch"></div>
-                    <div class="phone-screen">
-                      <div class="carousel slide app-phone-carousel" id="appShowcaseCarousel" data-bs-ride="carousel" data-bs-interval="5000">
-                        <div class="carousel-indicators app-carousel-indicators">
-                          <button class="active" type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Seller story 1"></button>
-                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="1" aria-label="Seller story 2"></button>
-                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="2" aria-label="Seller story 3"></button>
-                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="3" aria-label="Seller story 4"></button>
-                          <button type="button" data-bs-target="#appShowcaseCarousel" data-bs-slide-to="4" aria-label="Seller story 5"></button>
-                        </div>
-                        <div class="carousel-inner h-100">
-                          <div class="carousel-item active h-100">
-                            <img class="app-story-image" src="assets/img/gallery/seller-1.jpg" alt="Weplace seller story 1" />
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img class="app-story-image" src="assets/img/gallery/seller-2.jpg" alt="Weplace seller story 2" />
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img class="app-story-image" src="assets/img/gallery/seller-3.jpg" alt="Weplace seller story 3" />
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img class="app-story-image" src="assets/img/gallery/seller-4.jpg" alt="Weplace seller story 4" />
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img class="app-story-image" src="assets/img/gallery/seller-5.jpg" alt="Weplace seller story 5" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <article class="journey-card seller journey-card-seller">
-                <img class="journey-card-image" src="assets/img/gallery/market-2.png" alt="Seller marketplace preview" />
-                <div class="journey-card-top">
-                  <span class="journey-chip" data-i18n="journey.seller.chip">For Sellers</span>
-                  <h5 class="fs-8 fw-bold lh-lg mb-1" data-i18n="journey.seller.title">Start from home, grow with your neighbourhood.</h5>
-                  <p class="lh-xl mb-0" data-i18n="journey.seller.text">Test new ideas, manage orders, and learn from real neighbour feedback before growing your small business further.</p>
-                </div>
-              </article>
+              <button class="marketplace-carousel-control marketplace-carousel-next" type="button" aria-label="Next marketplace step" data-marketplace-next>&rsaquo;</button>
             </div>
           </section>
           <section class="container mb-8 mb-lg-10">
@@ -268,67 +244,58 @@
               </div>
             </div>
           </section>
-          <section class="proof-section">
-            <div class="container">
-              <div class="proof-panel">
-                <div class="proof-panel-header">
-                  <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="proof.eyebrow">Made for everyday Malaysian life</p>
-                  <h2 class="fs-4 fs-lg-3 fw-bold mb-0 lh-sm" data-i18n="proof.title">More value from the people and places nearby.</h2>
-                </div>
-                <div class="proof-grid">
-                  <article class="proof-item">
-                    <span class="proof-icon"><i class="uil uil-shopping-bag" aria-hidden="true"></i></span>
-                    <h3 data-i18n="proof.items.0.title">For nearby buyers</h3>
-                    <p data-i18n="proof.items.0.text">Discover foods, goods, services, vouchers, events, and help requests around your own area.</p>
-                  </article>
-                  <article class="proof-item">
-                    <span class="proof-icon"><i class="uil uil-store" aria-hidden="true"></i></span>
-                    <h3 data-i18n="proof.items.1.title">For home sellers</h3>
-                    <p data-i18n="proof.items.1.text">Start small, test ideas, manage orders, and grow with feedback from local buyers.</p>
-                  </article>
-                  <article class="proof-item">
-                    <span class="proof-icon"><i class="uil uil-heart" aria-hidden="true"></i></span>
-                    <h3 data-i18n="proof.items.2.title">For community support</h3>
-                    <p data-i18n="proof.items.2.text">Help residents notice local sellers and support needs that might otherwise stay unseen.</p>
-                  </article>
-                </div>
+          <section class="container mb-8 mb-lg-13 marketplace-journey-section seller-journey-section" id="seller-journey">
+            <div class="marketplace-journey-heading text-center">
+              <p class="section-kicker" data-i18n="sellerJourney.eyebrow">HOW TO BE A SELLER</p>
+              <h2 data-i18n="sellerJourney.title">Start selling, your way.</h2>
+              <p data-i18n="sellerJourney.subtitle">Set up your shop, manage your products, and grow at a pace that works for you.</p>
+            </div>
+            <div class="marketplace-carousel" data-marketplace-carousel>
+              <button class="marketplace-carousel-control marketplace-carousel-prev" type="button" aria-label="Previous seller step" data-marketplace-prev>&lsaquo;</button>
+              <div class="marketplace-steps" data-marketplace-track tabindex="0">
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/selling-1.webp" alt="Register as a Weplace seller" /><h3>Register as a seller</h3><p>Register in the app on a trusted platform. Personal sellers verify with a Malaysian IC, while companies register with Malaysian SSM details.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/selling-1.jpg" alt="Seller registration screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/selling-2.webp" alt="Create a Weplace shop profile" /><h3>Shop profile</h3><p>Set up your shop name, description, gallery, and validation details so buyers know who they are buying from.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/selling-2.jpg" alt="Shop profile screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/selling-3.webp" alt="Manage products on Weplace" /><h3>Manage products</h3><p>Add and update products, prices, availability, and photos from one place.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/selling-3.jpg" alt="Product management screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/selling-4.webp" alt="Manage selling options on Weplace" /><h3>Manage selling</h3><p>Set payment, delivery or pickup, selling area, options, and business hours. Sell when and how it works for you.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/selling-4.jpg" alt="Selling settings screen" /></div></article>
+                <article class="marketplace-step"><div class="marketplace-step-layout"><div class="marketplace-step-copy"><img src="assets/img/redesign/selling-5.webp" alt="Manage orders on Weplace" /><h3>Manage orders</h3><p>Track orders from preparing to delivering and completing, with clear updates at every step.</p></div><img class="marketplace-step-phone" src="assets/img/gallery/selling-5.jpg" alt="Order management screen" /></div></article>
               </div>
+              <button class="marketplace-carousel-control marketplace-carousel-next" type="button" aria-label="Next seller step" data-marketplace-next>&rsaquo;</button>
             </div>
           </section>
           <section class="priority-support-section mb-8 mb-lg-13" id="priority-support">
             <div class="container">
               <div class="priority-support-header text-center">
-                <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="priority.eyebrow">Priority Support</p>
-                <h3 class="fs-4 fs-lg-3 fw-bold mb-2 mb-lg-x1 lh-sm" data-i18n="priority.title">Helping local sellers be seen.</h3>
-                <p class="fs-8 mb-0 lh-lg fw-normal priority-support-copy" data-i18n="priority.subtitle">Priority Support gives extra visibility to community sellers who may need a stronger starting point, so residents can choose to support with clearer context.</p>
+                <p class="text-primary fw-semibold text-uppercase ls-2 mb-2" data-i18n="priority.eyebrow">LOCAL OPPORTUNITY</p>
+                <h3 class="fs-4 fs-lg-3 fw-bold mb-2 mb-lg-x1 lh-sm" data-i18n="priority.title">More Ways to Earn, Closer to Home</h3>
+                <p class="fs-8 mb-0 lh-lg fw-normal priority-support-copy" data-i18n="priority.subtitle">Weplace makes it easier for local sellers to turn their skills and products into nearby orders — with less travel and more opportunity.</p>
               </div>
               <div class="priority-support-layout">
                 <div class="priority-support-content">
                   <img
                     class="img-fluid w-100 mb-3"
-                    src="assets/img/gallery/priority-1.jpg"
+                    src="assets/img/gallery/priority-1.webp"
                     alt="Priority Support preview"
                   />
                   <div class="priority-support-steps">
                     <article class="seller-plan-step priority-support-step">
-                      <span class="seller-plan-step-number"><i class="uil uil-wheelchair" aria-hidden="true"></i></span>
+                      <span class="seller-plan-step-number"><i class="uil uil-coffee" aria-hidden="true"></i></span>
                       <div>
-                        <h5 data-i18n="priority.cards.0.title">Clearer visibility</h5>
-                        <p data-i18n="priority.cards.0.text">Supported sellers can be highlighted so nearby residents understand who they are helping.</p>
+                        <h5 data-i18n="priority.cards.0.title">Start with what you can make</h5>
+                        <p data-i18n="priority.cards.0.text">Share homemade food, drinks, goods, services, or handmade ideas from home.</p>
                       </div>
                     </article>
                     <article class="seller-plan-step priority-support-step">
                       <span class="seller-plan-step-number"><i class="uil uil-home" aria-hidden="true"></i></span>
                       <div>
-                        <h5 data-i18n="priority.cards.1.title">Start from home</h5>
-                        <p data-i18n="priority.cards.1.text">Good for small home-based foods, goods, services, vouchers, and everyday ideas that begin in the neighbourhood.</p>
+                        <h5 data-i18n="priority.cards.1.title">Receive nearby orders</h5>
+                        <p data-i18n="priority.cards.1.text">Digital ordering helps neighbours discover you without requiring long-distance travel.</p>
                       </div>
                     </article>
                     <article class="seller-plan-step priority-support-step">
                       <span class="seller-plan-step-number"><i class="uil uil-users-alt" aria-hidden="true"></i></span>
                       <div>
-                        <h5 data-i18n="priority.cards.2.title">Community-first support</h5>
-                        <p data-i18n="priority.cards.2.text">Residents can support local sellers with more context, trust, and a stronger sense of shared community.</p>
+                        <h5 data-i18n="priority.cards.2.title">Fulfil with confidence</h5>
+                        <p data-i18n="priority.cards.2.text">Arrange a nearby pickup or short-distance delivery and grow through local connections.</p>
                       </div>
                     </article>
                   </div>
