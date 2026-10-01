@@ -591,6 +591,18 @@ const initCommunityMap = async () => {
   if (!mapCanvas) return;
 
   const status = document.querySelector('#community-map-status');
+  const mapShell = mapCanvas.closest('.community-map-shell');
+  const query = new URLSearchParams(window.location.search);
+  const requestedPinColor = query.get('pin')?.trim() || '';
+  const isLargeMap = query.get('size')?.trim().toLowerCase() === 'lg';
+  const isSafeColor = (value) => {
+    if (!value || /[<>'"`]/.test(value)) return false;
+    if (/^#[\da-f]{3,4}$|^#[\da-f]{6}$|^#[\da-f]{8}$/i.test(value)) return true;
+    return /^[a-z]+$/i.test(value) && CSS.supports('color', value);
+  };
+  const pinColor = isSafeColor(requestedPinColor) ? requestedPinColor : null;
+  mapShell?.classList.toggle('community-map-size-lg', isLargeMap);
+  mapCanvas.classList.toggle('community-map-size-lg', isLargeMap);
   const apiKey = document.querySelector('meta[name="google-maps-api-key"]')?.content?.trim();
   const apiUrl = 'https://api.weplace.my/api/v1/public/community-map/';
   const setStatus = (message) => { if (status) status.textContent = message; };
@@ -637,10 +649,23 @@ const initCommunityMap = async () => {
       fullscreenControl: false,
       styles: [{ featureType: 'poi', stylers: [{ visibility: 'off' }] }],
     });
+    const coloredPinUrls = new Map();
+    const coloredPinUrlFor = (color) => {
+      if (!color) return null;
+      if (coloredPinUrls.has(color)) return coloredPinUrls.get(color);
+
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64">
+        <path d="M24 2C11.85 2 2 11.85 2 24c0 15.5 22 38 22 38s22-22.5 22-38C46 11.85 36.15 2 24 2Z" fill="${color}" stroke="#fff" stroke-width="3"/>
+        <circle cx="24" cy="24" r="8" fill="#fff" fill-opacity=".92"/>
+      </svg>`;
+      const url = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+      coloredPinUrls.set(color, url);
+      return url;
+    };
     const markerIconForZoom = (zoom) => {
       const size = zoom <= 7 ? 10 : zoom <= 8 ? 18 : Math.min(44, 34 + (zoom - 9) * 4);
       return {
-        url: 'assets/img/icons/weplace_pin.svg',
+        url: coloredPinUrlFor(pinColor) || 'assets/img/icons/weplace_pin.svg',
         scaledSize: new google.maps.Size(size, size),
         anchor: new google.maps.Point(size / 2, size / 2),
       };

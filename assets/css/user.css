@@ -2316,6 +2316,7 @@ main .mb-8.mb-lg-13 { margin-bottom: 4rem !important; }
 .community-map-heading p:last-child { color: rgba(16,32,61,.7); margin-bottom: 0; }
 .community-map-shell { position: relative; overflow: hidden; min-height: 430px; border: 4px solid #fff; border-radius: 28px; background: #dcefe5; box-shadow: 0 1rem 2.5rem rgba(16,32,61,.12); }
 .community-map-canvas { width: 100%; min-height: 430px; }
+.community-map-shell.community-map-size-lg, .community-map-canvas.community-map-size-lg { min-height: 620px; }
 .community-map-status { position: absolute; inset: 0; display: grid; place-items: center; padding: 1rem; color: var(--wp-deep); font-weight: 700; pointer-events: none; text-align: center; }
 .community-map-status:empty { display: none; }
 .community-map-stats { position: absolute; right: 1rem; bottom: 1rem; left: 1rem; display: flex; justify-content: center; gap: .7rem; max-width: 35rem; margin: 0 auto; }
@@ -2324,7 +2325,7 @@ main .mb-8.mb-lg-13 { margin-bottom: 4rem !important; }
 .community-map-stat-icon { display: grid; flex: 0 0 2.35rem; place-items: center; width: 2.35rem; height: 2.35rem; border-radius: 12px; background: rgba(12,155,97,.12); color: var(--wp-green); font-size: 1.2rem; }
 .community-map-stat strong { display: block; color: var(--wp-deep); font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: .95; }
 .community-map-stat-label { display: block; margin-top: .25rem; color: rgba(16,32,61,.66); font-size: .63rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
-@media (max-width: 575.98px) { .community-map-shell, .community-map-canvas { min-height: 330px; } .community-map-stats { right: .75rem; bottom: .75rem; left: .75rem; gap: .45rem; } .community-map-stat { gap: .45rem; padding: .65rem .55rem; } .community-map-stat-icon { flex-basis: 2rem; width: 2rem; height: 2rem; font-size: 1rem; } }
+@media (max-width: 575.98px) { .community-map-shell, .community-map-canvas { min-height: 330px; } .community-map-shell.community-map-size-lg, .community-map-canvas.community-map-size-lg { min-height: 480px; } .community-map-stats { right: .75rem; bottom: .75rem; left: .75rem; gap: .45rem; } .community-map-stat { gap: .45rem; padding: .65rem .55rem; } .community-map-stat-icon { flex-basis: 2rem; width: 2rem; height: 2rem; font-size: 1rem; } }
 @keyframes map-float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
 @media (max-width: 991px) {
   .marketplace-carousel { gap: .5rem; }
