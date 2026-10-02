@@ -656,6 +656,7 @@ const initCommunityMap = async () => {
     const coloredPinUrls = new Map();
     const coloredPinUrlFor = (color) => {
       if (!color) return null;
+      if (color.toLowerCase() === 'red') return 'assets/img/icons/weplace_pin_red.svg';
       if (coloredPinUrls.has(color)) return coloredPinUrls.get(color);
 
       const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64">
