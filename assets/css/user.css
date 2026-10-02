@@ -4,7 +4,7 @@
 /* prettier-ignore */
 
 .brand-name {
-  margin-left: 0.35rem;
+  margin-left: 0;
   font-family: "Baloo Bhaijaan 2", sans-serif;
   font-size: 2.12rem;
   font-weight: 800;
@@ -23,8 +23,16 @@ body {
   padding-bottom: 0.45rem !important;
 }
 
+.navbar-brand {
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .navbar-brand img {
-  height: 72px !important;
+  display: block;
+  flex-shrink: 0;
+  height: 40px !important;
+  width: auto;
 }
 
 .nav-link,
@@ -1856,7 +1864,7 @@ footer .icons:focus .xhs-mark {
   }
 
   .navbar-brand img {
-    height: 46px !important;
+    height: 32px !important;
   }
 
   .hero-section {
