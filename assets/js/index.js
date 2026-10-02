@@ -125,7 +125,7 @@ const TRANSLATIONS = {
     map: {
       eyebrow: 'WEPLACE ACROSS MALAYSIA', title: 'Growing neighbourhoods, one community at a time.',
       subtitle: 'Discover the communities bringing local people, sellers, and everyday support closer together.',
-      communities: 'Communities', users: 'Users'
+      communities: 'Communities', users: 'Users', sellers: 'Sellers'
     },
     marketplace: {
       eyebrow: 'FROM NEARBY ORDER TO HAPPY PICKUP', title: 'How Marketplace Works',
@@ -359,7 +359,7 @@ const TRANSLATIONS = {
     },
     map: {
       eyebrow: 'WEPLACE DI SELURUH MALAYSIA', title: 'Kejiranan berkembang, satu komuniti pada satu masa.',
-      subtitle: 'Temui komuniti yang mendekatkan penduduk, penjual, dan sokongan harian tempatan.', communities: 'Komuniti', users: 'Pengguna'
+      subtitle: 'Temui komuniti yang mendekatkan penduduk, penjual, dan sokongan harian tempatan.', communities: 'Komuniti', users: 'Pengguna', sellers: 'Penjual'
     },
     marketplace: {
       eyebrow: 'DARIPADA PESANAN BERDEKATAN KEPADA PENGAMBILAN MUDAH', title: 'Cara Pasaran Berfungsi',
@@ -624,6 +624,10 @@ const initCommunityMap = async () => {
     const data = await response.json();
     animateCounter(document.querySelector('#community-count'), Number(data.communities) || 0);
     animateCounter(document.querySelector('#user-count'), Number(data.users) || 0);
+    animateCounter(
+      document.querySelector('#seller-count'),
+      Number(data.sellers ?? data.sellerCount ?? data.totalSellers) || 0,
+    );
     if (!apiKey) {
       setStatus('Add a Google Maps API key to display the live map.');
       return;
