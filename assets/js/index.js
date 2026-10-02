@@ -657,6 +657,7 @@ const initCommunityMap = async () => {
     const coloredPinUrlFor = (color) => {
       if (!color) return null;
       if (color.toLowerCase() === 'red') return 'assets/img/icons/weplace_pin_red.svg';
+      if (color.toLowerCase() === 'blue') return 'assets/img/icons/weplace_pin_blue.svg';
       if (coloredPinUrls.has(color)) return coloredPinUrls.get(color);
 
       const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64">
@@ -668,11 +669,15 @@ const initCommunityMap = async () => {
       return url;
     };
     const markerIconForZoom = (zoom) => {
-      const size = zoom <= 7 ? 10 : zoom <= 8 ? 18 : Math.min(44, 34 + (zoom - 9) * 4);
+      const height = Math.max(10, Math.min(56, 10 + ((zoom ?? 9) - 6) * 4));
+      const aspectRatio = !pinColor || pinColor.toLowerCase() === 'blue'
+        ? 151.8383 / 196.69342
+        : pinColor.toLowerCase() === 'red' ? 1794 / 2324 : 48 / 64;
+      const width = height * aspectRatio;
       return {
-        url: coloredPinUrlFor(pinColor) || 'assets/img/icons/weplace_pin.svg',
-        scaledSize: new google.maps.Size(size, size),
-        anchor: new google.maps.Point(size / 2, size / 2),
+        url: coloredPinUrlFor(pinColor) || 'assets/img/icons/weplace_pin_blue.svg',
+        scaledSize: new google.maps.Size(width, height),
+        anchor: new google.maps.Point(width / 2, height),
       };
     };
     const markers = (data.locations || []).map((location, index) => {

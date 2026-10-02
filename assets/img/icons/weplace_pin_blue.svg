@@ -31,7 +31,10 @@
        bleed="0" /></sodipodi:namedview><defs
      id="defs1" /><g
      id="layer1"
-     transform="translate(-36.93898,-5.945447)"><g
+     transform="translate(-36.93898,-5.945447)"
+     inkscape:export-filename="weplace_pin.svg"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"><g
        stroke-linecap="round"
        stroke-linejoin="round"
        stroke-miterlimit="14"
@@ -46,7 +49,7 @@
          stroke="#121331"
          d="m -155.00829,80.921378 c -8.96611,-27.489875 -14.15703,-56.624474 -14.15703,-86.9338399 0,-157.6556981 133.312075,-284.0621981 293.99444,-273.7241381 136.1435,8.69339 246.80433,118.18306 256.4783,253.517892 2.59548,35.2434448 -1.88757,69.312117 -11.32561,101.031224 -44.3587,147.787524 -263.55684,365.592064 -263.55684,365.592064 0,0 -206.220829,-189.3748 -261.43326,-359.483202"
          id="path1-1"
-         style="fill:#0cc56d;fill-opacity:1;stroke:#ffffff;stroke-width:22.6772;stroke-dasharray:none;stroke-opacity:1" /></g><g
+         style="fill:#499dff;fill-opacity:1;stroke:#ffffff;stroke-width:22.6772;stroke-dasharray:none;stroke-opacity:1" /></g><g
        style="display:none;fill:none;stroke-width:3.77953;stroke-dasharray:none"
        id="g1"
        transform="matrix(0.26458333,0,0,0.26458333,83.274281,82.261456)"><path

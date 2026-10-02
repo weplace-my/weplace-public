@@ -2325,7 +2325,14 @@ main .mb-8.mb-lg-13 { margin-bottom: 4rem !important; }
 .community-map-stat-icon { display: grid; flex: 0 0 2.35rem; place-items: center; width: 2.35rem; height: 2.35rem; border-radius: 12px; background: rgba(12,155,97,.12); color: var(--wp-green); font-size: 1.2rem; }
 .community-map-stat strong { display: block; color: var(--wp-deep); font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: .95; }
 .community-map-stat-label { display: block; margin-top: .25rem; color: rgba(16,32,61,.66); font-size: .63rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
-@media (max-width: 575.98px) { .community-map-stats { right: .75rem; bottom: .75rem; left: .75rem; gap: .45rem; } .community-map-stat { gap: .45rem; padding: .65rem .55rem; } .community-map-stat-icon { flex-basis: 2rem; width: 2rem; height: 2rem; font-size: 1rem; } }
+@media (max-width: 767.98px) {
+  .community-map-stats { right: .65rem; bottom: 1.5rem; left: .65rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+  .community-map-stat { flex-direction: column; gap: .5rem; padding: .75rem .35rem; border-radius: 14px; text-align: center; }
+  .community-map-stat > div { width: 100%; min-width: 0; }
+  .community-map-stat-icon { flex-basis: 2rem; width: 2rem; height: 2rem; font-size: 1rem; }
+  .community-map-stat strong { font-size: clamp(1.35rem, 5vw, 1.8rem); line-height: 1.1; overflow-wrap: anywhere; }
+  .community-map-stat-label { margin-top: .35rem; font-size: .58rem; letter-spacing: .04em; overflow-wrap: anywhere; }
+}
 @keyframes map-float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
 @media (max-width: 991px) {
   .marketplace-carousel { gap: .5rem; }
