@@ -32,7 +32,7 @@ body {
 .navbar-brand img {
   display: block;
   flex-shrink: 0;
-  height: 40px !important;
+  height: 56px !important;
   width: auto;
   filter: brightness(0) invert(1);
 }
@@ -1866,7 +1866,7 @@ footer .icons:focus .xhs-mark {
   }
 
   .navbar-brand img {
-    height: 32px !important;
+    height: 44px !important;
     transform: none;
   }
 
