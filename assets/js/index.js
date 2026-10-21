@@ -688,7 +688,9 @@ const initCommunityMap = async () => {
         icon: markerIconForZoom(map.getZoom()),
         animation: google.maps.Animation.DROP,
       });
-      const infoWindow = new google.maps.InfoWindow({ content: `<strong>${location.name}</strong>` });
+      const locationLabel = document.createElement('strong');
+      locationLabel.textContent = String(location.name ?? '');
+      const infoWindow = new google.maps.InfoWindow({ content: locationLabel });
       marker.addListener('click', () => infoWindow.open({ map, anchor: marker }));
       window.setTimeout(() => marker.setAnimation(null), 700 + index * 45);
       return marker;
