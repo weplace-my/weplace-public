@@ -28,11 +28,44 @@
     }
   };
 
+  const appendReply = (message, text) => {
+    const links = /\[[^\]\n]*\]\(((?:[^\s<>()]|\([^()\s<>]*\))+)\)|(https?:\/\/(?:[^\s<>()\[\]"']|\([^()\s<>]*\))+)/gi;
+    let end = 0;
+
+    for (const match of text.matchAll(links)) {
+      const [original, markdownUrl, plainUrl] = match;
+      const destination = markdownUrl ?? plainUrl.replace(/[.,!?;:*]+$/, '');
+      let url;
+      try {
+        url = new URL(destination);
+      } catch {
+        continue;
+      }
+      if (url.protocol !== 'https:' && url.protocol !== 'http:') continue;
+
+      message.append(text.slice(end, match.index));
+      const link = document.createElement('a');
+      link.href = url.href;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'here';
+      message.append(link);
+      if (plainUrl) message.append(original.slice(destination.length));
+      end = match.index + original.length;
+    }
+
+    message.append(text.slice(end));
+  };
+
   const addMessage = (text, fromVisitor = false) => {
     const message = document.createElement('p');
     message.className = 'weplace-chat__message';
-    if (fromVisitor) message.classList.add('weplace-chat__message--visitor');
-    message.textContent = text;
+    if (fromVisitor) {
+      message.classList.add('weplace-chat__message--visitor');
+      message.textContent = text;
+    } else {
+      appendReply(message, text);
+    }
     messages.append(message);
     scrollToLatest();
     return message;

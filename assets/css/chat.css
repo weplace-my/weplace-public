@@ -1,20 +1,21 @@
 :root {
   --floating-right: calc(max(1rem, 2vw) + env(safe-area-inset-right));
   --floating-bottom: calc(5vh + env(safe-area-inset-bottom));
-  --scroll-top-size: 40px;
+  --floating-button-size: 40px;
+  --floating-button-gap: .75rem;
 }
 
 .scroll-to-top[data-scroll-top] {
   right: var(--floating-right);
   bottom: var(--floating-bottom);
-  width: var(--scroll-top-size);
-  height: var(--scroll-top-size);
+  width: var(--floating-button-size);
+  height: var(--floating-button-size);
 }
 
 .weplace-chat {
   --chat-gap: 1rem;
-  --chat-green: #14c56c;
-  --chat-bottom: calc(var(--floating-bottom) + var(--scroll-top-size) + .75rem);
+  --chat-panel-offset: calc(var(--floating-button-size) + var(--floating-button-gap));
+  --chat-bottom: calc(var(--floating-bottom) + var(--chat-panel-offset));
   position: fixed;
   z-index: 1035;
   right: var(--floating-right);
@@ -37,17 +38,17 @@
 
 .weplace-chat__launcher,
 .weplace-chat__send {
-  background: var(--chat-green);
   transition: background-color 150ms ease;
 }
 
 .weplace-chat__launcher {
   display: grid;
   place-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: var(--floating-button-size);
+  height: var(--floating-button-size);
   padding: 0;
   border-radius: 50%;
+  background: #13c56d;
   box-shadow: 0 4px 20px rgba(18, 59, 53, .24);
 }
 
@@ -59,12 +60,12 @@
 .weplace-chat__panel:not([hidden]) {
   position: absolute;
   right: 0;
-  bottom: 4.25rem;
+  bottom: var(--chat-panel-offset);
   display: flex;
   flex-direction: column;
   width: min(23rem, calc(100vw - var(--floating-right) - var(--chat-gap) - env(safe-area-inset-left)));
-  height: min(29rem, calc(100vh - var(--chat-bottom) - 5rem));
-  height: min(29rem, calc(100dvh - var(--chat-bottom) - 5rem - env(safe-area-inset-top)));
+  height: min(29rem, calc(100vh - var(--chat-bottom) - var(--chat-panel-offset) - var(--floating-button-gap)));
+  height: min(29rem, calc(100dvh - var(--chat-bottom) - var(--chat-panel-offset) - var(--floating-button-gap) - env(safe-area-inset-top)));
   border: 1px solid #d6e4dd;
   border-radius: 1.1rem;
   background: #fff;
@@ -139,6 +140,12 @@
   background: #d6f5e3;
 }
 
+.weplace-chat__message a {
+  color: #067046;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
 .weplace-chat__status p {
   margin: 0;
   padding: .4rem .875rem 0;
@@ -170,6 +177,7 @@
 .weplace-chat__send {
   padding: .5rem .75rem;
   border-radius: .65rem;
+  background: #14c56c;
 }
 
 .weplace-chat__send:disabled {
