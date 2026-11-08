@@ -80,6 +80,7 @@
     <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
     <link href="assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
     <link href="assets/css/user.css?v=20260527-4" rel="stylesheet" id="user-style-default">
+    <link href="assets/css/chat.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   </head>
 
@@ -500,6 +501,41 @@
       </div>
     </main><!-- ===============================================--><!--    End of Main Content--><!-- ===============================================-->
 
+    <div class="weplace-chat" data-chat-url="https://n8n.shincy.my/webhook/9e36d2ac-13d1-41c9-ab93-7fb855b5f5df/chat" hidden>
+      <button class="weplace-chat__launcher" type="button" aria-expanded="false" aria-controls="weplace-chat-panel">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 11.5a8 8 0 0 1-8.5 8 9 9 0 0 1-3.5-.7L4 20l1.2-3.8A7.4 7.4 0 0 1 3.5 11.5 8 8 0 0 1 12 3.5a8 8 0 0 1 8.5 8Z"/>
+          <path d="M8.5 11.5h7"/>
+        </svg>
+        <span data-i18n="chat.launcher">Chat with us</span>
+      </button>
+
+      <section class="weplace-chat__panel" id="weplace-chat-panel" aria-labelledby="weplace-chat-title" hidden>
+        <header class="weplace-chat__header">
+          <div>
+            <h2 id="weplace-chat-title" tabindex="-1" data-i18n="chat.title">Weplace Assistant</h2>
+            <p data-i18n="chat.subtitle">Ask us about Weplace.</p>
+          </div>
+          <button class="weplace-chat__close" type="button">
+            <span aria-hidden="true">×</span>
+            <span class="visually-hidden" data-i18n="chat.close">Close chat</span>
+          </button>
+        </header>
+        <div class="weplace-chat__messages" role="log" aria-labelledby="weplace-chat-title" tabindex="0">
+          <p class="weplace-chat__message" data-i18n="chat.greeting">Hi! How can I help you today?</p>
+        </div>
+        <div class="weplace-chat__status" role="status">
+          <p data-i18n="chat.pending" hidden>Waiting for a reply…</p>
+          <p data-i18n="chat.error" hidden>We couldn’t get a reply. Please try again.</p>
+        </div>
+        <form class="weplace-chat__form">
+          <label class="visually-hidden" for="weplace-chat-message" data-i18n="chat.input">Your message</label>
+          <input id="weplace-chat-message" type="text" required maxlength="2000" autocomplete="off" enterkeyhint="send">
+          <button class="weplace-chat__send" type="submit" data-i18n="chat.send">Send</button>
+        </form>
+      </section>
+    </div>
+
     <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
     <script src="vendors/popper/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
@@ -508,7 +544,8 @@
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="vendors/lodash/lodash.min.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/index.js?v=20261002-3"></script>
+    <script src="assets/js/index.js?v=20261108-1"></script>
+    <script src="assets/js/chat.js"></script>
   </body>
 
 </html>

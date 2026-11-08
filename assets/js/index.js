@@ -7,6 +7,17 @@ const LANGUAGE_LABELS = {
 
 const TRANSLATIONS = {
   en: {
+    chat: {
+      launcher: 'Chat with us',
+      title: 'Weplace Assistant',
+      subtitle: 'Ask us about Weplace.',
+      close: 'Close chat',
+      greeting: 'Hi! How can I help you today?',
+      input: 'Your message',
+      send: 'Send',
+      pending: 'Waiting for a reply…',
+      error: 'We couldn’t get a reply. Please try again.'
+    },
     nav: {
       home: 'Home',
       about: 'About us',
@@ -242,6 +253,17 @@ const TRANSLATIONS = {
     }
   },
   ms: {
+    chat: {
+      launcher: 'Sembang dengan kami',
+      title: 'Pembantu Weplace',
+      subtitle: 'Tanya kami tentang Weplace.',
+      close: 'Tutup sembang',
+      greeting: 'Hai! Bagaimana saya boleh membantu anda hari ini?',
+      input: 'Mesej anda',
+      send: 'Hantar',
+      pending: 'Menunggu balasan…',
+      error: 'Kami tidak dapat menerima balasan. Sila cuba lagi.'
+    },
     nav: {
       home: 'Utama',
       about: 'Tentang kami',
@@ -568,6 +590,8 @@ const initHeroDownloadLinks = () => {
   if (!heroLinks.length) return;
 
   document.addEventListener('click', (event) => {
+    if (event.target.closest?.('[data-chat-url]')) return;
+
     if (event.target.closest?.('.hero-download-actions .store-badge-link, .hero-social-links .hero-social-link')) {
       return;
     }
