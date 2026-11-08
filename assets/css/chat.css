@@ -175,10 +175,14 @@
   font-size: 1rem;
 }
 
-.weplace-chat__send {
-  padding: .5rem .75rem;
+.weplace-chat .weplace-chat__send {
+  display: grid;
+  place-items: center;
+  min-width: 2.75rem;
+  padding: 0;
   border-radius: .65rem;
   background: #14c56c;
+  color: #fff;
 }
 
 .weplace-chat__send:disabled {
