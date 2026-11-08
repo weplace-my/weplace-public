@@ -89,7 +89,7 @@
     input.readOnly = true;
     input.value = '';
     error.hidden = true;
-    const message = addMessage(chatInput, true);
+    const visitorMessage = addMessage(chatInput, true);
     messages.append(pending);
     pending.hidden = false;
     scrollToLatest();
@@ -99,19 +99,22 @@
       const response = await fetch(chat.dataset.chatUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'sendMessage', sessionId, chatInput }),
+        body: JSON.stringify({
+          widgetId: chat.dataset.chatWidgetId,
+          sessionId,
+          message: chatInput
+        }),
         signal: AbortSignal.timeout(60000)
       });
       if (!response.ok) throw new Error('Chat request failed');
 
-      const result = await response.json();
-      const data = Array.isArray(result) ? result[0] : result;
-      const reply = typeof data === 'string' ? data : data?.output ?? data?.text;
+      const data = await response.json();
+      const reply = data?.reply;
       if (typeof reply !== 'string' || !reply.trim()) throw new Error('Empty chat reply');
 
       addMessage(reply);
     } catch {
-      message.remove();
+      visitorMessage.remove();
       input.value = chatInput;
       error.hidden = false;
     } finally {
