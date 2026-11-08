@@ -6,7 +6,7 @@
   const panel = chat.querySelector('.weplace-chat__panel');
   const heading = panel.querySelector('h2');
   const messages = panel.querySelector('.weplace-chat__messages');
-  const pending = panel.querySelector('[data-i18n="chat.pending"]');
+  const pending = messages.querySelector('.weplace-chat__pending');
   const error = panel.querySelector('[data-i18n="chat.error"]');
   const form = panel.querySelector('form');
   const input = form.querySelector('input');
@@ -89,8 +89,10 @@
     input.readOnly = true;
     input.value = '';
     error.hidden = true;
-    pending.hidden = false;
     const message = addMessage(chatInput, true);
+    messages.append(pending);
+    pending.hidden = false;
+    scrollToLatest();
 
     try {
       sessionId ??= crypto.randomUUID();

@@ -15,7 +15,7 @@ const TRANSLATIONS = {
       greeting: 'Hi! How can I help you today?',
       input: 'Your message',
       send: 'Send',
-      pending: 'Waiting for a reply…',
+      pending: 'Bloomy is replying',
       error: 'We couldn’t get a reply. Please try again.'
     },
     nav: {
@@ -261,7 +261,7 @@ const TRANSLATIONS = {
       greeting: 'Hai! Bagaimana saya boleh membantu anda hari ini?',
       input: 'Mesej anda',
       send: 'Hantar',
-      pending: 'Menunggu balasan…',
+      pending: 'Bloomy sedang membalas',
       error: 'Kami tidak dapat menerima balasan. Sila cuba lagi.'
     },
     nav: {

@@ -147,6 +147,22 @@
   text-decoration: underline;
 }
 
+.weplace-chat__pending {
+  font-size: .875rem;
+}
+
+.weplace-chat__dots span {
+  animation: weplace-chat-dot 1.2s ease-in-out infinite;
+}
+
+.weplace-chat__dots span:nth-child(2) {
+  animation-delay: .15s;
+}
+
+.weplace-chat__dots span:nth-child(3) {
+  animation-delay: .3s;
+}
+
 .weplace-chat__status p {
   margin: 0;
   padding: .4rem .875rem 0;
@@ -194,7 +210,13 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes weplace-chat-dot {
+  0%, 60%, 100% { opacity: .45; }
+  30% { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .weplace-chat__panel:not([hidden]) { animation: none; }
+  .weplace-chat__dots span { animation: none; }
   .weplace-chat button { transition: none; }
 }
