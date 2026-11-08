@@ -41,7 +41,7 @@
   transition: background-color 150ms ease;
 }
 
-.weplace-chat__launcher {
+.weplace-chat .weplace-chat__launcher {
   display: grid;
   place-items: center;
   width: var(--floating-button-size);
@@ -49,6 +49,7 @@
   padding: 0;
   border-radius: 50%;
   background: #13c56d;
+  color: #fff;
   box-shadow: 0 4px 20px rgba(18, 59, 53, .24);
 }
 
