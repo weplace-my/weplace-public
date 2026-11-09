@@ -7,17 +7,6 @@ const LANGUAGE_LABELS = {
 
 const TRANSLATIONS = {
   en: {
-    chat: {
-      launcher: 'Chat with us',
-      title: 'Weplace Assistant',
-      subtitle: 'Ask us about Weplace.',
-      close: 'Close chat',
-      greeting: 'Hi! How can I help you today?',
-      input: 'Your message',
-      send: 'Send',
-      pending: 'Bloomy is replying',
-      error: 'We couldn’t get a reply. Please try again.'
-    },
     nav: {
       home: 'Home',
       about: 'About us',
@@ -253,17 +242,6 @@ const TRANSLATIONS = {
     }
   },
   ms: {
-    chat: {
-      launcher: 'Sembang dengan kami',
-      title: 'Pembantu Weplace',
-      subtitle: 'Tanya kami tentang Weplace.',
-      close: 'Tutup sembang',
-      greeting: 'Hai! Bagaimana saya boleh membantu anda hari ini?',
-      input: 'Mesej anda',
-      send: 'Hantar',
-      pending: 'Bloomy sedang membalas',
-      error: 'Kami tidak dapat menerima balasan. Sila cuba lagi.'
-    },
     nav: {
       home: 'Utama',
       about: 'Tentang kami',
