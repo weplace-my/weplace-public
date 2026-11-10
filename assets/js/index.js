@@ -568,7 +568,7 @@ const initHeroDownloadLinks = () => {
   if (!heroLinks.length) return;
 
   document.addEventListener('click', (event) => {
-    if (event.target.closest?.('[data-chat-url]')) return;
+    if (event.target.closest?.('#chatbot-plugin')) return;
 
     if (event.target.closest?.('.hero-download-actions .store-badge-link, .hero-social-links .hero-social-link')) {
       return;

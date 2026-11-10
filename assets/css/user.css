@@ -2243,6 +2243,10 @@ footer .icons:focus .xhs-mark {
 }
 
 html, body, main, .content { background: #fff !important; color: var(--wp-deep); }
+
+body:has(> #chatbot-plugin[data-chatbot-mounted]) [data-scroll-top] {
+  bottom: max(5%, calc(82px + env(safe-area-inset-bottom)));
+}
 .navbar { background: rgba(12, 155, 97, .96); border-bottom: 2px solid rgba(255,255,255,.18); }
 .navbar .nav-link, .navbar .brand-name { color: #fff !important; }
 .navbar .nav-link:hover { color: var(--wp-yellow) !important; }
